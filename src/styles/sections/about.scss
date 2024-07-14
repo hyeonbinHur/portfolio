@@ -1,43 +1,111 @@
 .card {
+    &__1,&__2,&__3{
+        height: 60rem;
+        position: relative;
+        background-color: transparent;
+    }
+    &__1:hover &--back__1{
+        transform: rotateY(0deg);
+    }
+    &__1:hover &--front__1{
+        transform: rotateY(-180deg);
+    }
+    &__2:hover &--back__2{
+        transform: rotateY(0deg);
+    }
+    &__2:hover &--front__2{
+        transform: rotateY(-180deg);
+    }
+    &__3:hover &--back__3{
+        transform: rotateY(0deg);
+    }
+    &__3:hover &--front__3{
+        transform: rotateY(-180deg);
+    }
+  
+  
+    &--side{
+        backface-visibility: hidden;
+    }
 
-    &--side {
+    
+    &--front {
+        &__1,&__2,&__3{
         box-shadow: 0rem 1rem 1rem rgba($color-black, .2);
 
-    }
-    &--front {
-        border-radius: 25px;
-        padding: 3rem;
-        line-height: 90rem;
-        background-image: linear-gradient(to right bottom,
-                rgba($color-brown-dark, .1), rgba($color-brown-dark, .1),
-                rgba($color-white, .2)), linear-gradient(to right top,
-                rgba($color-brown-dark, .7), rgba($color-brown-dark, .9),
-                rgba($color-brown-dark, .9)), ;
-        position: relative;
-        height: 60rem;
-        text-align: center;
+            width: 100%;
+            border-radius: 25px;
+            padding: 3rem;
+            height: 60rem;
+            line-height: 90rem;
+            background-image: linear-gradient(to right bottom,
+                    rgba($color-brown-dark, .1), rgba($color-brown-dark, .1),
+                    rgba($color-white, .2)), linear-gradient(to right top,
+                    rgba($color-brown-dark, .7), rgba($color-brown-dark, .9),
+                    rgba($color-brown-dark, .9)), ;
+            position: absolute;
+            top: 0;
+            left: 0;
+            text-align: center;
+            transition: 0.8s;
+        }
+       
+       
     }
     &--back {
-        border-radius: 25px;
+        &__1, &__2, &__3{
+        box-shadow: 0rem 1rem 1rem rgba($color-black, .2);
+
+            height: 60rem;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            line-height: 4rem;
+            background-image: linear-gradient(to right bottom,
+            rgba($color-brown-dark, .1), rgba($color-brown-dark, .1),
+            rgba($color-white, .2)), linear-gradient(to right top,
+            rgba($color-brown-dark, .7), rgba($color-brown-dark, .9),
+            rgba($color-brown-dark, .9)), ;
+            color: $color-grey-light-1;
+            padding: 2rem;
+            transform: rotateY(180deg);
+            position: absolute;
+            top: 0;
+            left:0 ;
+            transition: 0.8s;
+
+        }
+
     }
     &--img {
-        height: 25rem;
-        width: 25rem;
-        background-image: url(../assets/images/responsibility.jpg);
-        background-size: cover;
-        background-position: center;
-        border-radius: 50%;
-        margin: 0 auto;
-        @include absCustom(40%, 50%);
-        &::after {
-            content: " ";
-            @include absCustom(50%, 50%);
+        &__1,&__2,&__3{
+            height: 25rem;
+            width: 25rem;
+            background-size: cover;
+            background-position: center;
             border-radius: 50%;
-            width: 120%;
-            height: 120%;
-            border: 7px dotted rgba($color-white, .7);
-            z-index: 1;
-            animation: hoverRotate 10s infinite;
+            margin: 0 auto;
+            @include absCustom(40%, 50%);
+            &::after {
+                content: " ";
+                @include absCustom(50%, 50%);
+                border-radius: 50%;
+                width: 120%;
+                height: 120%;
+                border: 7px dotted rgba($color-white, .7);
+                z-index: 1;
+                animation: hoverRotate 10s infinite;
+            }
+        }
+        &__1{
+            background-image: url(../assets/images/responsibility.jpg);
+        }
+        &__2{
+            background-image: url(../assets/images/bright.jpg);
+        }
+        &__3{
+            background-image: url(../assets/images/Cheerful.jpg);
         }
     }
     &--name {
@@ -46,5 +114,7 @@
         font-weight: 700;
         color: $color-grey-light-1;
     }
-    &--paragraph {}
+    &--paragraph {
+
+    }
 }
