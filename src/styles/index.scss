@@ -1,5 +1,8 @@
-@import './base/global.scss';
 @import './base/variable.scss';
+@import './base/global.scss';
 @import './base/mixin.scss';
+
+@import './sections/header.scss';
+@import './page/main.scss';
 
 @import './layout/grid.scss';
