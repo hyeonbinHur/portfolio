@@ -1,6 +1,8 @@
 export default function AboutMe() {
     return (
         <>
+            <h3 className="heading--tertiary">About Me</h3>
+
             <div className="row">
                 <div className="col-1-of-3">
                     <div className="card__1">

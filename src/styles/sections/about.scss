@@ -34,7 +34,7 @@
         box-shadow: 0rem 1rem 1rem rgba($color-black, .2);
 
             width: 100%;
-            border-radius: 25px;
+            border-radius: 10px;
             padding: 3rem;
             height: 60rem;
             line-height: 90rem;
@@ -49,15 +49,12 @@
             text-align: center;
             transition: 0.8s;
         }
-       
-       
     }
     &--back {
         &__1, &__2, &__3{
         box-shadow: 0rem 1rem 1rem rgba($color-black, .2);
-
             height: 60rem;
-            border-radius: 25px;
+            border-radius: 10px;
             display: flex;
             align-items: center;
             text-align: center;
