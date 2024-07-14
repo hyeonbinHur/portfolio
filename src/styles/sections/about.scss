@@ -1,0 +1,50 @@
+.card {
+
+    &--side {
+        box-shadow: 0rem 1rem 1rem rgba($color-black, .2);
+
+    }
+    &--front {
+        border-radius: 25px;
+        padding: 3rem;
+        line-height: 90rem;
+        background-image: linear-gradient(to right bottom,
+                rgba($color-brown-dark, .1), rgba($color-brown-dark, .1),
+                rgba($color-white, .2)), linear-gradient(to right top,
+                rgba($color-brown-dark, .7), rgba($color-brown-dark, .9),
+                rgba($color-brown-dark, .9)), ;
+        position: relative;
+        height: 60rem;
+        text-align: center;
+    }
+    &--back {
+        border-radius: 25px;
+    }
+    &--img {
+        height: 25rem;
+        width: 25rem;
+        background-image: url(../assets/images/responsibility.jpg);
+        background-size: cover;
+        background-position: center;
+        border-radius: 50%;
+        margin: 0 auto;
+        @include absCustom(40%, 50%);
+        &::after {
+            content: " ";
+            @include absCustom(50%, 50%);
+            border-radius: 50%;
+            width: 120%;
+            height: 120%;
+            border: 7px dotted rgba($color-white, .7);
+            z-index: 1;
+            animation: hoverRotate 10s infinite;
+        }
+    }
+    &--name {
+        text-transform: uppercase;
+        font-size: 4rem;
+        font-weight: 700;
+        color: $color-grey-light-1;
+    }
+    &--paragraph {}
+}

@@ -7,3 +7,10 @@
     background-position: center;
     clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
 }
+
+.about{
+    background-color: $color-grey-dark-1;
+    height: 130vh;
+    margin-top: -15vh;
+    padding-top: 30vh;
+}
