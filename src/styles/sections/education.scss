@@ -2,10 +2,11 @@
     &--container {
         display: flex;
     }
+
     &--text {
         flex: 1;
-        &__content{
-            border: 1px solid red;
+
+        &__content {
             padding: 3rem;
             font-size: 2rem;
             line-height: 4rem;
@@ -14,25 +15,72 @@
 
     &--animation {
         flex: 1;
-        border: 1px solid red;
         position: relative;
+        overflow: hidden;
     }
 
     &--image {
         &__content {
             width: 10rem;
+
             &__java {
                 width: 6rem;
             }
         }
-        
+
         &__container {
-            display: flex;
-            justify-content: center;
-            height: 17rem;
-            align-items: center;
-            border-radius: 50% ;
-            background-color: $color-white;
+            &__android,
+            &__aws,
+            &__java,
+            &__js,
+            &__react,
+            &__rmit,
+            &__sass,
+            &__spring {
+                display: flex;
+                justify-content: center;
+                height: 17rem;
+                align-items: center;
+                border-radius: 50%;
+                background-color: $color-white;
+                opacity: 0;
+            }
+
+            &__android{
+                animation: bubble 8s ease-in infinite 1.5s;
+
+            }
+            &__aws{
+                animation: bubble 8s ease infinite .5s;
+
+            }
+            &__java{
+                animation: bubble 8s ease-in infinite 2.3s;
+
+            }
+            &__js{
+                animation: bubble 8s ease infinite .5s;
+
+            }
+            &__react{
+                animation: bubble 8s ease-in infinite;
+
+            }
+            &__rmit{
+                animation: bubble 8s ease infinite 1.3s;
+
+            }
+            &__sass{
+                animation: bubble 8s ease-in infinite 2s;
+
+            }
+            &__spring{
+                animation: bubble 8s ease infinite 1.5s;
+
+            }
+
         }
+
+
     }
 }

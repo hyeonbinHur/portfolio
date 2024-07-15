@@ -48,28 +48,28 @@ export default function Education() {
 
                 <div className="education--animation">
                     <div className="row--md">
-                        <div className="col-1-of-4 education--image__container">
+                        <div className="col-1-of-4 education--image__container__android">
                             <img
                                 src={Android}
                                 alt=""
                                 className="education--image__content"
                             />
                         </div>
-                        <div className="col-1-of-4 education--image__container">
+                        <div className="col-1-of-4 education--image__container__aws">
                             <img
                                 src={AWS}
                                 alt=""
                                 className="education--image__content"
                             />
                         </div>
-                        <div className="col-1-of-4 education--image__container">
+                        <div className="col-1-of-4 education--image__container__java">
                             <img
                                 src={Java}
                                 alt=""
                                 className="education--image__content__java"
                             />
                         </div>
-                        <div className="col-1-of-4 education--image__container">
+                        <div className="col-1-of-4 education--image__container__js">
                             <img
                                 src={JS}
                                 alt=""
@@ -78,28 +78,28 @@ export default function Education() {
                         </div>
                     </div>
                     <div className="row--md">
-                        <div className="col-1-of-4 education--image__container">
+                        <div className="col-1-of-4 education--image__container__react">
                             <img
                                 src={React}
                                 alt=""
                                 className="education--image__content"
                             />
                         </div>
-                        <div className="col-1-of-4 education--image__container">
+                        <div className="col-1-of-4 education--image__container__rmit">
                             <img
                                 src={RMIT}
                                 alt=""
                                 className="education--image__content"
                             />
                         </div>
-                        <div className="col-1-of-4 education--image__container">
+                        <div className="col-1-of-4 education--image__container__sass">
                             <img
                                 src={SASS}
                                 alt=""
                                 className="education--image__content"
                             />
                         </div>
-                        <div className="col-1-of-4 education--image__container ">
+                        <div className="col-1-of-4 education--image__container__spring ">
                             <img
                                 src={Spring}
                                 alt=""
