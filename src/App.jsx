@@ -3,6 +3,7 @@ import Header from './sections/Header';
 import AboutMe from './sections/AboutMe';
 import Education from './sections/Education';
 import Skills from './sections/Skills';
+import Projects from './sections/Projects';
 
 function App() {
     return (
@@ -18,6 +19,9 @@ function App() {
             </section>
             <section className="skills">
                 <Skills />
+            </section>
+            <section className="projects">
+                <Projects />
             </section>
         </>
     );
