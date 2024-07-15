@@ -2,6 +2,7 @@ import './styles/index.scss';
 import Header from './sections/Header';
 import AboutMe from './sections/AboutMe';
 import Education from './sections/Education';
+import Skills from './sections/Skills';
 
 function App() {
     return (
@@ -14,6 +15,9 @@ function App() {
             </section>
             <section className="education">
                 <Education />
+            </section>
+            <section className="skills">
+                <Skills />
             </section>
         </>
     );
