@@ -10,7 +10,15 @@
 
 .about{
     background-color: $color-grey-dark-1;
-    height: 130vh;
+    height: 120vh;
     margin-top: -15vh;
     padding-top: 10vh;
+}
+.education{
+    padding-top: 20vh;
+    height: 130vh;
+    margin-top: -25vh;
+    background-color: rgba($color-brown-dark, 1);
+    clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
+    color: $color-grey-light-1;
 }

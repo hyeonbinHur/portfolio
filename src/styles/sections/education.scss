@@ -1,0 +1,38 @@
+.education {
+    &--container {
+        display: flex;
+    }
+    &--text {
+        flex: 1;
+        &__content{
+            border: 1px solid red;
+            padding: 3rem;
+            font-size: 2rem;
+            line-height: 4rem;
+        }
+    }
+
+    &--animation {
+        flex: 1;
+        border: 1px solid red;
+        position: relative;
+    }
+
+    &--image {
+        &__content {
+            width: 10rem;
+            &__java {
+                width: 6rem;
+            }
+        }
+        
+        &__container {
+            display: flex;
+            justify-content: center;
+            height: 17rem;
+            align-items: center;
+            border-radius: 50% ;
+            background-color: $color-white;
+        }
+    }
+}
