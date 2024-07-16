@@ -1,3 +1,4 @@
+import { BiImageAlt } from 'react-icons/bi';
 import { AiFillPlaySquare } from 'react-icons/ai';
 import BUYY from '../assets/projects/buyy.png';
 import Cpt from '../assets/projects/cpt.svg';
@@ -23,18 +24,27 @@ import Query from '../assets/logos/query.svg';
 import JWT from '../assets/logos/jwt.png';
 import AI from '../assets/logos/openai.png';
 import SCSS from '../assets/logos/sass.png';
-
+import ImageModal from '../modal/Images';
 import Video from '../modal/Video';
 import { useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { openVideoModal } from '../store/videoSlice';
+import { openImageModal } from '../store/imageSlice';
 // import GH from '../assets/logos/github.png';
 
 export default function Projects() {
     const videoModal = useRef(null);
+    const imageModal = useRef(null);
     const dispatch = useDispatch();
     const sliceVideoTopic = useSelector((state) => state.videoSlice.topic);
     const sliceVideoIsOpen = useSelector((state) => state.videoSlice.isOpen);
+
+    const sliceImageTopic = useSelector((state) => state.imageSlice.topic);
+    const sliceImageIsOpen = useSelector((state) => state.imageSlice.isOpen);
+
+    const handleOpenImageModal = (topic) => {
+        dispatch(openImageModal({ topic: topic }));
+    };
 
     const handleOpenVideoModal = (topic) => {
         dispatch(openVideoModal({ topic: topic }));
@@ -47,6 +57,14 @@ export default function Projects() {
             }
         }
     }, [sliceVideoIsOpen, sliceVideoTopic]);
+
+    useEffect(() => {
+        if (sliceImageIsOpen) {
+            if (sliceImageTopic !== null) {
+                imageModal.current.open();
+            }
+        }
+    }, [sliceImageIsOpen, sliceImageTopic]);
 
     return (
         <>
@@ -235,52 +253,130 @@ export default function Projects() {
                                 <h3 className="heading--tertiary">Features</h3>
                                 <ul className="content__ul">
                                     <li className="content--features__li">
-                                        Basic - Authentication
+                                        All features
                                         <AiFillPlaySquare className="detail__video" />
+                                    </li>
+                                    <li className="content--features__li">
+                                        Basic - Authentication
+                                        <BiImageAlt
+                                            className="detail__video"
+                                            onClick={() =>
+                                                handleOpenImageModal('CPT_Auth')
+                                            }
+                                        />
                                     </li>
                                     <li className="content--features__li">
                                         Basic - Visit detail page
-                                        <AiFillPlaySquare className="detail__video" />
+                                        <BiImageAlt
+                                            className="detail__video"
+                                            onClick={() =>
+                                                handleOpenImageModal(
+                                                    'CPT_Detail'
+                                                )
+                                            }
+                                        />
                                     </li>
                                     <li className="content--features__li">
                                         Basic - Search users & groups & company
-                                        <AiFillPlaySquare className="detail__video" />
+                                        & projects
+                                        <BiImageAlt
+                                            className="detail__video"
+                                            onClick={() =>
+                                                handleOpenImageModal(
+                                                    'CPT_Search'
+                                                )
+                                            }
+                                        />
                                     </li>
                                     <li className="content--features__li">
                                         Student - join & create group
-                                        <AiFillPlaySquare className="detail__video" />
+                                        <BiImageAlt
+                                            className="detail__video"
+                                            onClick={() =>
+                                                handleOpenImageModal(
+                                                    'CPT_Student_group'
+                                                )
+                                            }
+                                        />
                                     </li>
                                     <li className="content--features__li">
                                         Student - apply capstone project
-                                        <AiFillPlaySquare className="detail__video" />
+                                        <BiImageAlt
+                                            className="detail__video"
+                                            onClick={() =>
+                                                handleOpenImageModal(
+                                                    'CPT_student_capstone'
+                                                )
+                                            }
+                                        />
                                     </li>
                                     <li className="content--features__li">
                                         Company - Create capstone project
-                                        <AiFillPlaySquare className="detail__video" />
+                                        <BiImageAlt
+                                            className="detail__video"
+                                            onClick={() =>
+                                                handleOpenImageModal(
+                                                    'CPT_company_create_capstone'
+                                                )
+                                            }
+                                        />
                                     </li>
                                     <li className="content--features__li">
                                         Company - View capstone project status
-                                        <AiFillPlaySquare className="detail__video" />
+                                        <BiImageAlt
+                                            className="detail__video"
+                                            onClick={() =>
+                                                handleOpenImageModal(
+                                                    'CPT_company_view_capstone'
+                                                )
+                                            }
+                                        />
                                     </li>
                                     <li className="content--features__li">
-                                        Supervisor - Edit capstone project
-                                        <AiFillPlaySquare className="detail__video" />
+                                        Supervisor - Edit & View capstone
+                                        project
+                                        <BiImageAlt
+                                            className="detail__video"
+                                            onClick={() =>
+                                                handleOpenImageModal(
+                                                    'CPT_supervisor_capstone'
+                                                )
+                                            }
+                                        />
                                     </li>
                                     <li className="content--features__li">
-                                        Admin - Review capstone project
-                                        <AiFillPlaySquare className="detail__video" />
+                                        Admin - Review & Edit capstone project
+                                        <BiImageAlt
+                                            className="detail__video"
+                                            onClick={() =>
+                                                handleOpenImageModal(
+                                                    'CPT_admin_capstone'
+                                                )
+                                            }
+                                        />
                                     </li>
-                                    <li className="content--features__li">
-                                        Admin - Change capstone project status
-                                        <AiFillPlaySquare className="detail__video" />
-                                    </li>
+
                                     <li className="content--features__li">
                                         Bsic - usecase diagram
-                                        <AiFillPlaySquare className="detail__video" />
+                                        <BiImageAlt
+                                            className="detail__video"
+                                            onClick={() =>
+                                                handleOpenImageModal(
+                                                    'CPT_basic_diagram'
+                                                )
+                                            }
+                                        />
                                     </li>
                                     <li className="content--features__li">
                                         Specific - usecase diagram
-                                        <AiFillPlaySquare className="detail__video" />
+                                        <BiImageAlt
+                                            className="detail__video"
+                                            onClick={() =>
+                                                handleOpenImageModal(
+                                                    'CPT_specific_diagram'
+                                                )
+                                            }
+                                        />
                                     </li>
                                 </ul>
                             </div>
@@ -654,6 +750,7 @@ export default function Projects() {
                 </div>
             </div>
             <Video ref={videoModal} />
+            <ImageModal ref={imageModal} />
         </>
     );
 }

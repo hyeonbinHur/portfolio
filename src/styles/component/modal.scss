@@ -1,25 +1,54 @@
-.modal{
+.modal {
     width: 100rem;
     height: 60rem;
     overflow: hidden;
     border: transparent;
-    position: absolute;
+    position: fixed;
+    border: none;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: transparent;
-    &--close{
+    &:focus{
+        outline: none;
+    }
+    &--close {
         position: absolute;
         top: 7%;
         right: 2.5%;
         transform: translate(-5%, -5%);
-        z-index: 1;
-        color: $color-grey;
-        font-size: 3rem;
-        transition: all .2s;
-        &:hover{
-            transform: scale(1.1) translateY(-5px);
-            color: $color-red;
+        &,
+        &__image {
+            transition: all .2s;
+            z-index: 1;
+            color: $color-grey;
+            font-size: 3rem;
+            &:hover {
+                transform: scale(1.1) translateY(-5px);
+                color: $color-red;
+            }
+        }
+        
+        &__image {
+            position: absolute;
+            top: 3%;
+            right: 2.5%;
+        }
+    }
+
+    &--images {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 120rem;
+        height: 80rem;
+        border: none;
+        overflow: hidden;
+        padding: 3rem;
+    
+        &:focus{
+            outline: none;
         }
     }
 }
