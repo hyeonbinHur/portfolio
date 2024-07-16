@@ -6,10 +6,24 @@ import NG from '../assets/projects/ng.png';
 
 import React from '../assets/logos/react.png';
 import JS from '../assets/logos/js.png';
-import S3 from '../assets/logos/s3.svg';
+import S3 from '../assets/logos/s3.png';
 import EC2 from '../assets/logos/ec2.png';
 import Node from '../assets/logos/node.png';
 import Mongo from '../assets/logos/mongo.png';
+import Spring from '../assets/logos/spring.png';
+import PG from '../assets/logos/pg.png';
+import RDS from '../assets/logos/rds.png';
+import Tailwind from '../assets/logos/tailwind.png';
+import GoogleMap from '../assets/logos/googlemap.png';
+import API from '../assets/logos/api.png';
+import NAT from '../assets/logos/nat.png';
+import Lambda from '../assets/logos/lambda.png';
+import Redux from '../assets/logos/redux.png';
+import Query from '../assets/logos/query.svg';
+import JWT from '../assets/logos/jwt.png';
+import AI from '../assets/logos/openai.png';
+import SCSS from '../assets/logos/sass.png';
+
 // import GH from '../assets/logos/github.png';
 
 export default function Projects() {
@@ -241,21 +255,21 @@ export default function Projects() {
                                     <li className="content--tool__li">
                                         <img
                                             className="content--tool__logo"
-                                            src={EC2}
+                                            src={Spring}
                                         />
                                         Springboot
                                     </li>
                                     <li className="content--tool__li">
                                         <img
                                             className="content--tool__logo"
-                                            src={Node}
+                                            src={PG}
                                         />
                                         PostgreSQL
                                     </li>
                                     <li className="content--tool__li">
                                         <img
                                             className="content--tool__logo"
-                                            src={Node}
+                                            src={RDS}
                                         />
                                         RDS
                                     </li>
@@ -349,6 +363,13 @@ export default function Projects() {
                                     <li className="content--tool__li">
                                         <img
                                             className="content--tool__logo"
+                                            src={Redux}
+                                        />
+                                        Redux
+                                    </li>
+                                    <li className="content--tool__li">
+                                        <img
+                                            className="content--tool__logo"
                                             src={JS}
                                         />
                                         JavaScript
@@ -377,21 +398,21 @@ export default function Projects() {
                                     <li className="content--tool__li">
                                         <img
                                             className="content--tool__logo"
-                                            src={Node}
+                                            src={React}
                                         />
                                         Context API
                                     </li>
                                     <li className="content--tool__li">
                                         <img
                                             className="content--tool__logo"
-                                            src={Node}
+                                            src={Tailwind}
                                         />
                                         Tailwind
                                     </li>
                                     <li className="content--tool__li">
                                         <img
                                             className="content--tool__logo"
-                                            src={Node}
+                                            src={GoogleMap}
                                         />
                                         Google Map
                                     </li>
@@ -482,70 +503,70 @@ export default function Projects() {
                                     <li className="content--tool__li">
                                         <img
                                             className="content--tool__logo"
-                                            src={Mongo}
+                                            src={SCSS}
                                         />
                                         SCSS
                                     </li>
                                     <li className="content--tool__li">
                                         <img
                                             className="content--tool__logo"
-                                            src={S3}
+                                            src={RDS}
                                         />
                                         AWS-RDS
                                     </li>
                                     <li className="content--tool__li">
                                         <img
                                             className="content--tool__logo"
-                                            src={EC2}
+                                            src={NAT}
                                         />
                                         AWS-NAT gateway
                                     </li>
                                     <li className="content--tool__li">
                                         <img
                                             className="content--tool__logo"
-                                            src={Node}
+                                            src={API}
                                         />
                                         AWS-API gateway
                                     </li>
                                     <li className="content--tool__li">
                                         <img
                                             className="content--tool__logo"
-                                            src={Node}
+                                            src={Lambda}
                                         />
                                         AWS-API Lambda function
                                     </li>
                                     <li className="content--tool__li">
                                         <img
                                             className="content--tool__logo"
-                                            src={Node}
+                                            src={PG}
                                         />
                                         PostgreSQL
                                     </li>
                                     <li className="content--tool__li">
                                         <img
                                             className="content--tool__logo"
-                                            src={Node}
+                                            src={Redux}
                                         />
                                         Redux
                                     </li>
                                     <li className="content--tool__li">
                                         <img
                                             className="content--tool__logo"
-                                            src={Node}
+                                            src={Query}
                                         />
                                         React Query
                                     </li>
                                     <li className="content--tool__li">
                                         <img
                                             className="content--tool__logo"
-                                            src={Node}
+                                            src={React}
                                         />
                                         Context API
                                     </li>
                                     <li className="content--tool__li">
                                         <img
                                             className="content--tool__logo"
-                                            src={Node}
+                                            src={JWT}
                                         />
                                         JWT
                                     </li>
@@ -559,7 +580,7 @@ export default function Projects() {
                                     <li className="content--tool__li">
                                         <img
                                             className="content--tool__logo"
-                                            src={Node}
+                                            src={AI}
                                         />
                                         Assistant API
                                     </li>
