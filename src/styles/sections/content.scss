@@ -9,6 +9,9 @@
         border-radius: 5px;
 
     }
+    &--features__li{
+        position: relative;
+    }
     &--body {
         display: flex;
         width: 90vw;
@@ -25,10 +28,12 @@
     }
     &__ul{
         list-style: none;
+        height: 70vh;
         padding-left: 5rem;
         padding-right: 5rem;
         line-height: 5rem;
         font-size: 2rem;
+        overflow-y: scroll;
         & > :not(:last-child){
             padding-bottom: 2rem;
             margin-bottom: 2rem;
