@@ -18,6 +18,7 @@ export default function Projects() {
             <div className="row">
                 <div className="col-1-of-4 project--card">
                     <img className="project--image__buyy" src={BUYY}></img>
+
                     <div className="project--text">
                         <div className="project--name">BUYY</div>
                         <ul className="project--ul">
@@ -30,14 +31,17 @@ export default function Projects() {
                     </div>
                     <input
                         type="checkbox"
-                        className="detail--checkbox"
-                        id="detail_toggle"
+                        className="detail--checkbox__1"
+                        id="detail_toggle__1"
                     />
-                    <label htmlFor="detail_toggle" className="detail--button">
-                        <span className="detail--icon">&nbsp;</span>
+                    <label
+                        htmlFor="detail_toggle__1"
+                        className="detail--button__1"
+                    >
+                        <span className="detail--icon__1">&nbsp;</span>
                     </label>
-                    <div className="detail--background">&nbsp;</div>
-                    <div className="detail--content">
+                    <div className="detail--background__1">&nbsp;</div>
+                    <div className="detail--content__1">
                         <header className="content__header">
                             <img src={BUYY} alt="" className="content__logo" />
                         </header>
@@ -46,7 +50,7 @@ export default function Projects() {
                                 <h3 className="heading--tertiary">Features</h3>
                                 <ul className="content__ul">
                                     <li className="content--features__li">
-                                        Authentication{' '}
+                                        Authentication
                                         <AiFillPlaySquare className="detail__video" />
                                     </li>
                                     <li className="content--features__li">
@@ -133,6 +137,101 @@ export default function Projects() {
                             <li className="project--basic-info"> -- / 2023</li>
                         </ul>
                     </div>
+                    <input
+                        type="checkbox"
+                        className="detail--checkbox__2"
+                        id="detail_toggle"
+                    />
+                    <label
+                        htmlFor="detail_toggle"
+                        className="detail--button__2"
+                    >
+                        <span className="detail--icon__2">&nbsp;</span>
+                    </label>
+                    <div className="detail--background__2">&nbsp;</div>
+                    <div className="detail--content__2">
+                        <header className="content__header">
+                            <img src={Cpt} alt="" className="content__logo" />
+                        </header>
+                        <main className="content--body">
+                            <div className="content--body__1">
+                                <h3 className="heading--tertiary">Features</h3>
+                                <ul className="content__ul">
+                                    <li className="content--features__li">
+                                        Authentication
+                                        <AiFillPlaySquare className="detail__video" />
+                                    </li>
+                                    <li className="content--features__li">
+                                        Filtering
+                                        <AiFillPlaySquare className="detail__video" />
+                                    </li>
+                                    <li className="content--features__li">
+                                        Edit Item
+                                        <AiFillPlaySquare className="detail__video" />
+                                    </li>
+                                    <li className="content--features__li">
+                                        Detail page &rarr; purchase Item
+                                        <AiFillPlaySquare className="detail__video" />
+                                    </li>
+                                    <li className="content--features__li">
+                                        Personal page
+                                        <AiFillPlaySquare className="detail__video" />
+                                    </li>
+                                    <li className="content--features__li">
+                                        Detail page &rarr; Comment
+                                        <AiFillPlaySquare className="detail__video" />
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="content--body__2">
+                                <h3 className="heading--tertiary">Tools</h3>
+                                <ul className="content__ul">
+                                    <li className="content--tool__li">
+                                        <img
+                                            className="content--tool__logo"
+                                            src={React}
+                                        />
+                                        React
+                                    </li>
+                                    <li className="content--tool__li">
+                                        <img
+                                            className="content--tool__logo"
+                                            src={JS}
+                                        />
+                                        JavaScript
+                                    </li>
+                                    <li className="content--tool__li">
+                                        <img
+                                            className="content--tool__logo"
+                                            src={Mongo}
+                                        />
+                                        Mongo DB
+                                    </li>
+                                    <li className="content--tool__li">
+                                        <img
+                                            className="content--tool__logo"
+                                            src={S3}
+                                        />
+                                        AWS-S3
+                                    </li>
+                                    <li className="content--tool__li">
+                                        <img
+                                            className="content--tool__logo"
+                                            src={EC2}
+                                        />
+                                        AWS-EC2
+                                    </li>
+                                    <li className="content--tool__li">
+                                        <img
+                                            className="content--tool__logo"
+                                            src={Node}
+                                        />
+                                        Node.js
+                                    </li>
+                                </ul>
+                            </div>
+                        </main>
+                    </div>
                 </div>
                 <div className="col-1-of-4 project--card">
                     <img className="project--image__pocket" src={Pocket}></img>
@@ -148,6 +247,101 @@ export default function Projects() {
                             <li className="project--basic-info">May / 2024</li>
                         </ul>
                     </div>
+                    <input
+                        type="checkbox"
+                        className="detail--checkbox__3"
+                        id="detail_toggle"
+                    />
+                    <label
+                        htmlFor="detail_toggle"
+                        className="detail--button__3"
+                    >
+                        <span className="detail--icon__3">&nbsp;</span>
+                    </label>
+                    <div className="detail--background__3">&nbsp;</div>
+                    <div className="detail--content__3">
+                        <header className="content__header">
+                            <img src={BUYY} alt="" className="content__logo" />
+                        </header>
+                        <main className="content--body">
+                            <div className="content--body__1">
+                                <h3 className="heading--tertiary">Features</h3>
+                                <ul className="content__ul">
+                                    <li className="content--features__li">
+                                        Authentication
+                                        <AiFillPlaySquare className="detail__video" />
+                                    </li>
+                                    <li className="content--features__li">
+                                        Filtering
+                                        <AiFillPlaySquare className="detail__video" />
+                                    </li>
+                                    <li className="content--features__li">
+                                        Edit Item
+                                        <AiFillPlaySquare className="detail__video" />
+                                    </li>
+                                    <li className="content--features__li">
+                                        Detail page &rarr; purchase Item
+                                        <AiFillPlaySquare className="detail__video" />
+                                    </li>
+                                    <li className="content--features__li">
+                                        Personal page
+                                        <AiFillPlaySquare className="detail__video" />
+                                    </li>
+                                    <li className="content--features__li">
+                                        Detail page &rarr; Comment
+                                        <AiFillPlaySquare className="detail__video" />
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="content--body__2">
+                                <h3 className="heading--tertiary">Tools</h3>
+                                <ul className="content__ul">
+                                    <li className="content--tool__li">
+                                        <img
+                                            className="content--tool__logo"
+                                            src={React}
+                                        />
+                                        React
+                                    </li>
+                                    <li className="content--tool__li">
+                                        <img
+                                            className="content--tool__logo"
+                                            src={JS}
+                                        />
+                                        JavaScript
+                                    </li>
+                                    <li className="content--tool__li">
+                                        <img
+                                            className="content--tool__logo"
+                                            src={Mongo}
+                                        />
+                                        Mongo DB
+                                    </li>
+                                    <li className="content--tool__li">
+                                        <img
+                                            className="content--tool__logo"
+                                            src={S3}
+                                        />
+                                        AWS-S3
+                                    </li>
+                                    <li className="content--tool__li">
+                                        <img
+                                            className="content--tool__logo"
+                                            src={EC2}
+                                        />
+                                        AWS-EC2
+                                    </li>
+                                    <li className="content--tool__li">
+                                        <img
+                                            className="content--tool__logo"
+                                            src={Node}
+                                        />
+                                        Node.js
+                                    </li>
+                                </ul>
+                            </div>
+                        </main>
+                    </div>
                 </div>
                 <div className="col-1-of-4 project--card">
                     <img className="project--image__ng" src={NG}></img>
@@ -160,6 +354,101 @@ export default function Projects() {
                             <li className="project--basic-info">React + AWS</li>
                             <li className="project--basic-info">July / 2024</li>
                         </ul>
+                    </div>
+                    <input
+                        type="checkbox"
+                        className="detail--checkbox__4"
+                        id="detail_toggle"
+                    />
+                    <label
+                        htmlFor="detail_toggle"
+                        className="detail--button__4"
+                    >
+                        <span className="detail--icon__4">&nbsp;</span>
+                    </label>
+                    <div className="detail--background__4">&nbsp;</div>
+                    <div className="detail--content__4">
+                        <header className="content__header">
+                            <img src={BUYY} alt="" className="content__logo" />
+                        </header>
+                        <main className="content--body">
+                            <div className="content--body__1">
+                                <h3 className="heading--tertiary">Features</h3>
+                                <ul className="content__ul">
+                                    <li className="content--features__li">
+                                        Authentication
+                                        <AiFillPlaySquare className="detail__video" />
+                                    </li>
+                                    <li className="content--features__li">
+                                        Filtering
+                                        <AiFillPlaySquare className="detail__video" />
+                                    </li>
+                                    <li className="content--features__li">
+                                        Edit Item
+                                        <AiFillPlaySquare className="detail__video" />
+                                    </li>
+                                    <li className="content--features__li">
+                                        Detail page &rarr; purchase Item
+                                        <AiFillPlaySquare className="detail__video" />
+                                    </li>
+                                    <li className="content--features__li">
+                                        Personal page
+                                        <AiFillPlaySquare className="detail__video" />
+                                    </li>
+                                    <li className="content--features__li">
+                                        Detail page &rarr; Comment
+                                        <AiFillPlaySquare className="detail__video" />
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="content--body__2">
+                                <h3 className="heading--tertiary">Tools</h3>
+                                <ul className="content__ul">
+                                    <li className="content--tool__li">
+                                        <img
+                                            className="content--tool__logo"
+                                            src={React}
+                                        />
+                                        React
+                                    </li>
+                                    <li className="content--tool__li">
+                                        <img
+                                            className="content--tool__logo"
+                                            src={JS}
+                                        />
+                                        JavaScript
+                                    </li>
+                                    <li className="content--tool__li">
+                                        <img
+                                            className="content--tool__logo"
+                                            src={Mongo}
+                                        />
+                                        Mongo DB
+                                    </li>
+                                    <li className="content--tool__li">
+                                        <img
+                                            className="content--tool__logo"
+                                            src={S3}
+                                        />
+                                        AWS-S3
+                                    </li>
+                                    <li className="content--tool__li">
+                                        <img
+                                            className="content--tool__logo"
+                                            src={EC2}
+                                        />
+                                        AWS-EC2
+                                    </li>
+                                    <li className="content--tool__li">
+                                        <img
+                                            className="content--tool__logo"
+                                            src={Node}
+                                        />
+                                        Node.js
+                                    </li>
+                                </ul>
+                            </div>
+                        </main>
                     </div>
                 </div>
             </div>

@@ -42,3 +42,149 @@
         opacity: 1;
     }
 }
+
+@mixin detailCheckbox($modifier) {
+
+    display: none;
+
+    &:checked+.detail--button__#{$modifier} {
+        position: fixed;
+        top: 2%;
+        left: 2%;
+        background-color: white;
+        border-radius: 50%;
+        z-index: 101;
+
+        &:hover {
+            scale: 1.1;
+            transition: all .2s;
+            box-shadow: 1rem 1rem 1rem rgba($color-black, .2);
+        }
+    }
+
+    &:checked~.detail--content__#{$modifier} {
+        position: fixed;
+        top: 0;
+        left: 0;
+        visibility: visible;
+        width: 100vw;
+        height: 100vh;
+        opacity: 1;
+        z-index: 12;
+        text-align: center;
+        background-color: transparent;
+        padding: 5rem 3rem;
+        color: $color-grey;
+        display: flex;
+        transition: opacity .7s;
+    }
+
+    &:checked+.detail--button__#{$modifier} .detail--icon__#{$modifier} {
+        background-color: transparent;
+        transition: all .3s;
+
+        &::before,
+        &::after {
+            width: 4rem;
+            height: 2px;
+            background-color: $color-grey;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0%) scale(1.2);
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+        }
+
+        &::before {
+            transform: translate(-50%, -50%) rotate(135deg);
+            left: 50%;
+            top: 50%;
+        }
+
+        &::after {
+            transform: translate(-50%, -50%) rotate(-135deg);
+            left: 50%;
+            top: 50%;
+        }
+    }
+
+    &:checked~.detail--background__#{$modifier} {
+        position: fixed;
+        opacity: 1;
+        z-index: 10;
+        top: 50%;
+        left: 50%;
+        transform: scale(5000%);
+        transition: transform 1s;
+    }
+}
+
+@mixin detailIcon($modifier) {
+    top: 2.3rem;
+    &,
+    &::before,
+    &::after {
+        width: 3rem;
+        height: 2px;
+        background-color: $color-grey;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        transition: all .2s;
+    }
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+    }
+    &::before {
+        top: -.9rem;
+    }
+
+    &::after {
+        top: .9rem;
+    }
+}
+
+@mixin detailButton($modifier) {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: 5rem;
+    height: 5rem;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    transition: all .8s;
+    &:hover .detail--icon__#{$modifier}::before {
+        top: -1.2rem;
+    }
+    &:hover .detail--icon__#{$modifier}::after {
+        top: 1.2rem;
+    }
+}
+
+
+@mixin detainContent($modifier) {
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+    transition: opacity 2s;
+}
+
+@mixin detailBackground($modifier) {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 10rem;
+    height: 10rem;
+    z-index: -1;
+    opacity: 0;
+    background-color: $color-grey-light-2;
+    transition: all .8s;
+    border-radius: 2px;
+}
