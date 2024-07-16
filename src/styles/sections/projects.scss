@@ -7,11 +7,8 @@
         border-radius: 5px;
         position: relative;
         transition: all .4s;
-        &:hover{
-            transform: scale(1.1) translateY(-10px);
-        }
+        
     }
-
     &--image {
         &__buyy,
         &__cpt,
@@ -41,12 +38,10 @@
             width: 12rem;
         }
     }
-
     &--ul {
         list-style: none;
         line-height: 4rem;
     }
-
     &--basic-info{
         &:not(:last-child){
             padding-bottom: 1rem;
@@ -54,7 +49,6 @@
             margin:0 5rem ;
         }
     }
-
     &--text {
         position: absolute;
         top: 60%;
@@ -62,7 +56,6 @@
         transform: translate(-50%, -60%);
         font-size: 1.9rem;
     }
-
     &--name {
         font-size: 3rem;
         font-weight: 600;
