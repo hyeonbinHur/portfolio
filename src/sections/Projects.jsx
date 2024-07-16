@@ -24,9 +24,30 @@ import JWT from '../assets/logos/jwt.png';
 import AI from '../assets/logos/openai.png';
 import SCSS from '../assets/logos/sass.png';
 
+import Video from '../modal/Video';
+import { useEffect, useRef } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { openVideoModal } from '../store/videoSlice';
 // import GH from '../assets/logos/github.png';
 
 export default function Projects() {
+    const videoModal = useRef(null);
+    const dispatch = useDispatch();
+    const sliceVideoTopic = useSelector((state) => state.videoSlice.topic);
+    const sliceVideoIsOpen = useSelector((state) => state.videoSlice.isOpen);
+
+    const handleOpenVideoModal = (topic) => {
+        dispatch(openVideoModal({ topic: topic }));
+    };
+
+    useEffect(() => {
+        if (sliceVideoIsOpen) {
+            if (sliceVideoTopic !== null) {
+                videoModal.current.open();
+            }
+        }
+    }, [sliceVideoIsOpen, sliceVideoTopic]);
+
     return (
         <>
             <div className="row">
@@ -65,27 +86,69 @@ export default function Projects() {
                                 <ul className="content__ul">
                                     <li className="content--features__li">
                                         Authentication
-                                        <AiFillPlaySquare className="detail__video" />
+                                        <AiFillPlaySquare
+                                            onClick={() =>
+                                                handleOpenVideoModal(
+                                                    'BUYY_Auth'
+                                                )
+                                            }
+                                            className="detail__video"
+                                        />
                                     </li>
                                     <li className="content--features__li">
                                         Filtering
-                                        <AiFillPlaySquare className="detail__video" />
+                                        <AiFillPlaySquare
+                                            onClick={() =>
+                                                handleOpenVideoModal(
+                                                    'BUYY_Pagination'
+                                                )
+                                            }
+                                            className="detail__video"
+                                        />
                                     </li>
                                     <li className="content--features__li">
                                         Edit Item
-                                        <AiFillPlaySquare className="detail__video" />
+                                        <AiFillPlaySquare
+                                            onClick={() =>
+                                                handleOpenVideoModal(
+                                                    'BUYY_Edit'
+                                                )
+                                            }
+                                            className="detail__video"
+                                        />
                                     </li>
                                     <li className="content--features__li">
                                         Detail page &rarr; purchase Item
-                                        <AiFillPlaySquare className="detail__video" />
+                                        <AiFillPlaySquare
+                                            onClick={() =>
+                                                handleOpenVideoModal(
+                                                    'BUYY_Purchase'
+                                                )
+                                            }
+                                            className="detail__video"
+                                        />
                                     </li>
                                     <li className="content--features__li">
                                         Personal page
-                                        <AiFillPlaySquare className="detail__video" />
+                                        <AiFillPlaySquare
+                                            onClick={() =>
+                                                handleOpenVideoModal(
+                                                    'BUYY_PersonalPage'
+                                                )
+                                            }
+                                            className="detail__video"
+                                        />
                                     </li>
                                     <li className="content--features__li">
                                         Detail page &rarr; Comment
-                                        <AiFillPlaySquare className="detail__video" />
+                                        <AiFillPlaySquare
+                                            onClick={() =>
+                                                handleOpenVideoModal(
+                                                    'BUYY_Comment'
+                                                )
+                                            }
+                                            className="detail__video"
+                                        />
                                     </li>
                                 </ul>
                             </div>
@@ -590,6 +653,7 @@ export default function Projects() {
                     </div>
                 </div>
             </div>
+            <Video ref={videoModal} />
         </>
     );
 }
