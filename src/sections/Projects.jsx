@@ -76,6 +76,8 @@ export default function Projects() {
 
     return (
         <>
+            <h3 className="heading--tertiary project--heading">Projects</h3>
+
             <div className="row">
                 <div className="col-1-of-4 project--card">
                     <img className="project--image__buyy" src={BUYY}></img>

@@ -4,6 +4,7 @@ import AboutMe from './sections/AboutMe';
 import Education from './sections/Education';
 import Skills from './sections/Skills';
 import Projects from './sections/Projects';
+import Learning from './sections/Learning';
 
 function App() {
     return (
@@ -22,6 +23,9 @@ function App() {
             </section>
             <section className="projects">
                 <Projects />
+            </section>
+            <section className="currently-learning">
+                <Learning />
             </section>
         </>
     );

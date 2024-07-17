@@ -1,4 +1,10 @@
 .project {
+    &--heading{
+        color:$color-grey-light-2;
+        margin-top: 0;
+        padding-top: 0;
+        margin-bottom: 10vh;
+    }
     &--card {
         height: 50rem;
         background-color: rgba($color-white, .7);

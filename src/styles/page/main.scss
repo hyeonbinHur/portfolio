@@ -7,14 +7,12 @@
     background-position: center;
     clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
 }
-
 .about {
     background-color: $color-grey-dark-1;
     height: 120vh;
     margin-top: -15vh;
     padding-top: 10vh;
 }
-
 .education {
     padding-top: 20vh;
     height: 130vh;
@@ -23,7 +21,6 @@
     clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
     color: $color-grey-light-1;
 }
-
 .skills {
     padding-bottom: 10rem;
     padding-top: 25vh;
@@ -31,14 +28,18 @@
     margin-top: -25vh;
     background-color: rgba($color-grey-dark-1, .7);
 }
-
 .projects {
-    margin-bottom: 10rem;
-    padding-top: 25vh;
+    padding-top: 7vh;
     height: 100vh;
     background-image: linear-gradient(to right,
             rgba($color-green-dark, .95),
             rgba($color-green-dark, .95)), url(../assets/images/coding.jpg);
     background-size:cover ;
     background-position: center;
+}
+.currently-learning{
+    height: 100vh;
+    padding-top: 5rem;
+    background-color: rgba($color-brown-dark, .7);
+    padding: 4rem;
 }
