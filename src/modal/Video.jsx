@@ -19,6 +19,13 @@ import Pocket_U from '../assets/Pocket/uItem.mp4';
 import Pocket_UU from '../assets/Pocket/uuser.mp4';
 import Pocket_Search from '../assets/Pocket/search.mp4';
 
+import NG_Auth from '../assets/Ng/auth.mp4';
+import NG_Ai from '../assets/Ng/aiChat.mp4';
+import NG_Detail from '../assets/Ng/detailPage.mp4';
+import NG_Sidebar from '../assets/Ng/sidebar.mp4';
+import NG_Error from '../assets/Ng/errorHandling.mp4';
+import NG_Response from '../assets/Ng/response.mp4';
+
 import { closeVideoModal } from '../store/videoSlice';
 import { useSelector, useDispatch } from 'react-redux';
 
@@ -54,6 +61,18 @@ const VideoModal = forwardRef(function VideoModal(props, ref) {
             setVideoUrl(Pocket_UU);
         } else if (sliceVideoTopic === 'Pocket_Search') {
             setVideoUrl(Pocket_Search);
+        } else if (sliceVideoTopic === 'NG_Auth') {
+            setVideoUrl(NG_Auth);
+        } else if (sliceVideoTopic === 'NG_Side') {
+            setVideoUrl(NG_Sidebar);
+        } else if (sliceVideoTopic === 'NG_AI') {
+            setVideoUrl(NG_Ai);
+        } else if (sliceVideoTopic === 'NG_Detail') {
+            setVideoUrl(NG_Detail);
+        } else if (sliceVideoTopic === 'NG_ERROR') {
+            setVideoUrl(NG_Error);
+        } else if (sliceVideoTopic === 'NG_Response') {
+            setVideoUrl(NG_Response);
         }
     }, [sliceVideoTopic]);
 
@@ -79,13 +98,13 @@ const VideoModal = forwardRef(function VideoModal(props, ref) {
                 <ReactPlayer
                     url={videoUrl}
                     type="video/mp4"
-                    width="100rem" // 플레이어 크기 (가로)
-                    height="60rem" // 플레이어 크기 (세로)
-                    playing={true} // 자동 재생 on
-                    muted={true} // 자동 재생 on
-                    controls={true} // 플레이어 컨트롤 노출 여부
-                    light={false} // 플레이어 모드
-                    pip={true} // pip 모드 설정 여부
+                    width="100rem"
+                    height="60rem"
+                    playing={true}
+                    muted={true}
+                    controls={true}
+                    light={false}
+                    pip={true}
                     poster={
                         'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg'
                     }

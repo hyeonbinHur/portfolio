@@ -6,6 +6,10 @@
         padding-top: 12%;
         color: $color-grey-light-2;
     }
+    &--logo{
+        width: 4rem;
+        margin-right: 1rem;
+    }
     &--iam{
         font-size: 1.8rem;
     }
@@ -34,6 +38,36 @@
         &-container{
             flex: 1;
             position: relative;
+        }
+    }
+    &--links{
+        position: absolute;
+        bottom: 15%;
+        left: 50%;
+        transform: translate(-50%, 15%);
+        display: flex;
+        &__1,&__2{
+            list-style: none;
+            display: flex;
+            align-items: center;
+            font-size: 2rem;
+            transition: all .2s;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+        &__1{
+            margin-right: 3rem;
+        }
+
+    }
+
+    &--link{
+        &:link,
+        &:visited{
+            color: $color-black;
+            display: flex;
+            align-items: center;
         }
     }
 }

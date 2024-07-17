@@ -6,9 +6,10 @@
     box-sizing: inherit;
 }
 
-html{
+html {
     font-size: 62.5%;
 }
+
 body {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
@@ -16,6 +17,23 @@ body {
     line-height: 1.7;
     padding: 3rem;
     box-sizing: border-box;
-    color:$color-grey;
+    color: $color-grey;
 
+}
+
+.link {
+
+    &:link,
+    &:visited {
+        color: $color-grey;
+        display: inline-block;
+        font-size: 1.8rem;
+        transition: all .2s;
+        top: 2.5rem;
+        line-height: 1;
+    }
+
+    &:hover{
+        font-size: 2rem;
+    }
 }

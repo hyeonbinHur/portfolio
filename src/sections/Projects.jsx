@@ -1,9 +1,11 @@
+import { BsEyeFill } from 'react-icons/bs';
 import { BiImageAlt } from 'react-icons/bi';
 import { AiFillPlaySquare } from 'react-icons/ai';
 import BUYY from '../assets/projects/buyy.png';
 import Cpt from '../assets/projects/cpt.svg';
 import Pocket from '../assets/projects/pocket.png';
 import NG from '../assets/projects/ng.png';
+import CSS from '../assets/logos/css.png';
 
 import React from '../assets/logos/react.png';
 import JS from '../assets/logos/js.png';
@@ -24,6 +26,8 @@ import Query from '../assets/logos/query.svg';
 import JWT from '../assets/logos/jwt.png';
 import AI from '../assets/logos/openai.png';
 import SCSS from '../assets/logos/sass.png';
+import JAVA from '../assets/logos/java.png';
+import Git from '../assets/logos/github.png';
 
 import Storage from '../assets/logos/storage.png';
 import Real from '../assets/logos/realtime.png';
@@ -84,6 +88,15 @@ export default function Projects() {
                             </li>
                             <li className="project--basic-info">React + AWS</li>
                             <li className="project--basic-info"> -- / 2022</li>
+                            <li className="project--basic-info__link">
+                                <img src={Git} className="project--git" />
+                                <a
+                                    href="https://github.com/hyeonbinHur/onlineShoppingWebService"
+                                    className="link"
+                                >
+                                    BUYY Code
+                                </a>
+                            </li>
                         </ul>
                     </div>
                     <input
@@ -234,6 +247,15 @@ export default function Projects() {
                             </li>
                             <li className="project--basic-info">Spring Boot</li>
                             <li className="project--basic-info"> -- / 2023</li>
+                            <li className="project--basic-info__link">
+                                <img src={Git} className="project--git" />
+                                <a
+                                    href="https://github.com/hyeonbinHur/CapstoneProjectManagementSystem"
+                                    className="link"
+                                >
+                                    CPT MAnagement Code
+                                </a>
+                            </li>
                         </ul>
                     </div>
                     <input
@@ -397,21 +419,21 @@ export default function Projects() {
                                     <li className="content--tool__li">
                                         <img
                                             className="content--tool__logo"
-                                            src={JS}
+                                            src={CSS}
                                         />
                                         CSS
                                     </li>
                                     <li className="content--tool__li">
                                         <img
                                             className="content--tool__logo"
-                                            src={Mongo}
+                                            src={JS}
                                         />
                                         JavaScript
                                     </li>
                                     <li className="content--tool__li">
                                         <img
                                             className="content--tool__logo"
-                                            src={S3}
+                                            src={JAVA}
                                         />
                                         Java
                                     </li>
@@ -434,7 +456,7 @@ export default function Projects() {
                                             className="content--tool__logo"
                                             src={RDS}
                                         />
-                                        RDS
+                                        AWS-RDS
                                     </li>
                                 </ul>
                             </div>
@@ -453,6 +475,15 @@ export default function Projects() {
                                 React + Firebase
                             </li>
                             <li className="project--basic-info">May / 2024</li>
+                            <li className="project--basic-info__link">
+                                <img src={Git} className="project--git" />
+                                <a
+                                    href="https://github.com/hyeonbinHur/DDock-DDock"
+                                    className="link"
+                                >
+                                    Pocket Code
+                                </a>
+                            </li>
                         </ul>
                     </div>
                     <input
@@ -657,14 +688,41 @@ export default function Projects() {
                 </div>
                 <div className="col-1-of-4 project--card">
                     <img className="project--image__ng" src={NG}></img>
-                    <div className="project--text">
-                        <div className="project--name">Name Gacha</div>
+                    <div className="project--text__ng">
+                        <div className="project--name__ng">Name Gacha</div>
                         <ul className="project--ul">
                             <li className="project--basic-info">
                                 Ai-powered chatting
                             </li>
                             <li className="project--basic-info">React + AWS</li>
                             <li className="project--basic-info">July / 2024</li>
+                            <li className="project--basic-info__link">
+                                <img src={Git} className="project--git" />
+                                <a
+                                    href="https://github.com/hyeonbinHur/Name_Gacha_aws_lambda"
+                                    className="link"
+                                >
+                                    backend Code
+                                </a>
+                            </li>
+                            <li className="project--basic-info__link">
+                                <img src={Git} className="project--git" />
+                                <a
+                                    href="https://github.com/hyeonbinHur/namegacha_frontend"
+                                    className="link"
+                                >
+                                    frontend Code
+                                </a>
+                            </li>
+                            <li className="project--basic-info__link">
+                                <BsEyeFill />
+                                <a
+                                    href="https://hyeonbinhur.github.io/namegacha/"
+                                    className="link"
+                                >
+                                    Live server
+                                </a>
+                            </li>
                         </ul>
                     </div>
                     <input
@@ -689,31 +747,61 @@ export default function Projects() {
                                 <ul className="content__ul">
                                     <li className="content--features__li">
                                         Authentication & Authorization
-                                        <AiFillPlaySquare className="detail__video" />
+                                        <AiFillPlaySquare
+                                            className="detail__video"
+                                            onClick={() =>
+                                                handleOpenVideoModal('NG_Auth')
+                                            }
+                                        />
                                     </li>
                                     <li className="content--features__li">
-                                        CRUD Item
-                                        <AiFillPlaySquare className="detail__video" />
+                                        Sidebar Feature
+                                        <AiFillPlaySquare
+                                            className="detail__video"
+                                            onClick={() =>
+                                                handleOpenVideoModal('NG_Side')
+                                            }
+                                        />
                                     </li>
                                     <li className="content--features__li">
                                         AI chatting
-                                        <AiFillPlaySquare className="detail__video" />
+                                        <AiFillPlaySquare
+                                            className="detail__video"
+                                            onClick={() =>
+                                                handleOpenVideoModal('NG_AI')
+                                            }
+                                        />
                                     </li>
                                     <li className="content--features__li">
-                                        Edit Chatting history
-                                        <AiFillPlaySquare className="detail__video" />
+                                        DetailPage
+                                        <AiFillPlaySquare
+                                            className="detail__video"
+                                            onClick={() =>
+                                                handleOpenVideoModal(
+                                                    'NG_Detail'
+                                                )
+                                            }
+                                        />
+                                    </li>
+                                    <li className="content--features__li">
+                                        Error Handling
+                                        <AiFillPlaySquare
+                                            className="detail__video"
+                                            onClick={() =>
+                                                handleOpenVideoModal('NG_ERROR')
+                                            }
+                                        />
                                     </li>
                                     <li className="content--features__li">
                                         Responsible Design
-                                        <AiFillPlaySquare className="detail__video" />
-                                    </li>
-                                    <li className="content--features__li">
-                                        Error page
-                                        <AiFillPlaySquare className="detail__video" />
-                                    </li>
-                                    <li className="content--features__li">
-                                        Error modal
-                                        <AiFillPlaySquare className="detail__video" />
+                                        <AiFillPlaySquare
+                                            className="detail__video"
+                                            onClick={() =>
+                                                handleOpenVideoModal(
+                                                    'NG_Response'
+                                                )
+                                            }
+                                        />
                                     </li>
                                 </ul>
                             </div>
