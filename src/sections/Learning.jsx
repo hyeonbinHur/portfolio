@@ -16,9 +16,9 @@ export default function Learning() {
             <p className="learning--paragraph">
                 While trying to complete multiple projects, I am understanding
                 myself better, identifying my weaknesses and strengths. I
-                usually focus on implementing new features, but these days, I am
-                striving to create solid programs. Although these programs may
-                not include many features, I aim to handle errors as much as
+                usually focused on implementing new features, but these days, I
+                am striving to create solid programs. Although these programs
+                may not include many features, I aim to handle errors as much as
                 possible. Additionally, I am studying advanced CSS with SCSS,
                 which is one of the most fundamental skills for a Front-End
                 Engineer.

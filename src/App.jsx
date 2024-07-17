@@ -5,6 +5,7 @@ import Education from './sections/Education';
 import Skills from './sections/Skills';
 import Projects from './sections/Projects';
 import Learning from './sections/Learning';
+import Footer from './sections/Footer';
 
 function App() {
     return (
@@ -27,6 +28,9 @@ function App() {
             <section className="currently-learning">
                 <Learning />
             </section>
+            <footer className="footer">
+                <Footer />
+            </footer>
         </>
     );
 }

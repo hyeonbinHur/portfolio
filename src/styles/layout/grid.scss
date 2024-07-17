@@ -1,16 +1,13 @@
 .row {
-    max-width: 140rem;
+    max-width: 155rem;
     margin: 0 auto;
     @include clearFix;
-
     [class ^='col-'] {
         float: left;
-
         &:not(:last-child) {
             margin-right: 6rem;
         }
     }
-
     &--md {
         max-width: 45vw;
         margin: 0 auto;
@@ -22,11 +19,8 @@
                 margin-right: 6rem;
             }
         }
-
     }
-
 }
-
 .col-1-of-3 {
     width: calc((100% - 12rem)/3);
 }
