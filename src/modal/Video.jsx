@@ -11,6 +11,14 @@ import BUYY_Pagination from '../assets/BUYY/Pagination.mp4';
 import BUYY_PersonalPage from '../assets/BUYY/PersonalPage.mp4';
 import BUYY_Purchase from '../assets/BUYY/Purchase.mp4';
 import ReactPlayer from 'react-player';
+import Pocket_Auth from '../assets/Pocket/auth.mp4';
+import Pocket_Real from '../assets/Pocket/chatting.mp4';
+import Pocket_Comment from '../assets/Pocket/comment.mp4';
+import Pocket_CRD from '../assets/Pocket/crdItem.mp4';
+import Pocket_U from '../assets/Pocket/uItem.mp4';
+import Pocket_UU from '../assets/Pocket/uuser.mp4';
+import Pocket_Search from '../assets/Pocket/search.mp4';
+
 import { closeVideoModal } from '../store/videoSlice';
 import { useSelector, useDispatch } from 'react-redux';
 
@@ -32,6 +40,20 @@ const VideoModal = forwardRef(function VideoModal(props, ref) {
             setVideoUrl(BUYY_PersonalPage);
         } else if (sliceVideoTopic === 'BUYY_Purchase') {
             setVideoUrl(BUYY_Purchase);
+        } else if (sliceVideoTopic === 'Pocket_Auth') {
+            setVideoUrl(Pocket_Auth);
+        } else if (sliceVideoTopic === 'Pocket_Chat') {
+            setVideoUrl(Pocket_Real);
+        } else if (sliceVideoTopic === 'Pocket_Comment') {
+            setVideoUrl(Pocket_Comment);
+        } else if (sliceVideoTopic === 'Pocket_CRDItem') {
+            setVideoUrl(Pocket_CRD);
+        } else if (sliceVideoTopic === 'Pocket_UpdateItem') {
+            setVideoUrl(Pocket_U);
+        } else if (sliceVideoTopic === 'Pocket_Update_User') {
+            setVideoUrl(Pocket_UU);
+        } else if (sliceVideoTopic === 'Pocket_Search') {
+            setVideoUrl(Pocket_Search);
         }
     }, [sliceVideoTopic]);
 

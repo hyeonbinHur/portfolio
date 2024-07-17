@@ -24,6 +24,10 @@ import Query from '../assets/logos/query.svg';
 import JWT from '../assets/logos/jwt.png';
 import AI from '../assets/logos/openai.png';
 import SCSS from '../assets/logos/sass.png';
+
+import Storage from '../assets/logos/storage.png';
+import Real from '../assets/logos/realtime.png';
+
 import ImageModal from '../modal/Images';
 import Video from '../modal/Video';
 import { useEffect, useRef } from 'react';
@@ -477,35 +481,113 @@ export default function Projects() {
                                 <ul className="content__ul">
                                     <li className="content--features__li">
                                         Authentication
-                                        <AiFillPlaySquare className="detail__video" />
+                                        <AiFillPlaySquare
+                                            onClick={() =>
+                                                handleOpenVideoModal(
+                                                    'Pocket_Auth'
+                                                )
+                                            }
+                                            className="detail__video"
+                                        />
                                     </li>
                                     <li className="content--features__li">
                                         Realtime chatting
-                                        <AiFillPlaySquare className="detail__video" />
+                                        <AiFillPlaySquare
+                                            onClick={() =>
+                                                handleOpenVideoModal(
+                                                    'Pocket_Chat'
+                                                )
+                                            }
+                                            className="detail__video"
+                                        />
                                     </li>
                                     <li className="content--features__li">
                                         Comment & reply
-                                        <AiFillPlaySquare className="detail__video" />
+                                        <AiFillPlaySquare
+                                            onClick={() =>
+                                                handleOpenVideoModal(
+                                                    'Pocket_Comment'
+                                                )
+                                            }
+                                            className="detail__video"
+                                        />
                                     </li>
                                     <li className="content--features__li">
-                                        CRUD Item
-                                        <AiFillPlaySquare className="detail__video" />
+                                        Crate & Read & Delete Item
+                                        <AiFillPlaySquare
+                                            onClick={() =>
+                                                handleOpenVideoModal(
+                                                    'Pocket_CRDItem'
+                                                )
+                                            }
+                                            className="detail__video"
+                                        />
                                     </li>
                                     <li className="content--features__li">
-                                        CRUD User
-                                        <AiFillPlaySquare className="detail__video" />
+                                        Update Item
+                                        <AiFillPlaySquare
+                                            onClick={() =>
+                                                handleOpenVideoModal(
+                                                    'Pocket_UpdateItem'
+                                                )
+                                            }
+                                            className="detail__video"
+                                        />
                                     </li>
                                     <li className="content--features__li">
-                                        Detail page
-                                        <AiFillPlaySquare className="detail__video" />
+                                        Update User Info
+                                        <AiFillPlaySquare
+                                            onClick={() =>
+                                                handleOpenVideoModal(
+                                                    'Pocket_Update_User'
+                                                )
+                                            }
+                                            className="detail__video"
+                                        />
                                     </li>
                                     <li className="content--features__li">
-                                        Find user location
-                                        <AiFillPlaySquare className="detail__video" />
+                                        Update user location
+                                        <BiImageAlt
+                                            className="detail__video"
+                                            onClick={() =>
+                                                handleOpenImageModal(
+                                                    'CPT_company_view_capstone'
+                                                )
+                                            }
+                                        />
                                     </li>
                                     <li className="content--features__li">
-                                        Search & Filtering
-                                        <AiFillPlaySquare className="detail__video" />
+                                        Search & Filtering Items
+                                        <AiFillPlaySquare
+                                            onClick={() =>
+                                                handleOpenVideoModal(
+                                                    'Pocket_Search'
+                                                )
+                                            }
+                                            className="detail__video"
+                                        />
+                                    </li>
+                                    <li className="content--features__li">
+                                        Page Images
+                                        <BiImageAlt
+                                            className="detail__video"
+                                            onClick={() =>
+                                                handleOpenImageModal(
+                                                    'Pocket_Desk'
+                                                )
+                                            }
+                                        />
+                                    </li>
+                                    <li className="content--features__li">
+                                        Additional Responsive design
+                                        <BiImageAlt
+                                            className="detail__video"
+                                            onClick={() =>
+                                                handleOpenImageModal(
+                                                    'Pocket_Mobile'
+                                                )
+                                            }
+                                        />
                                     </li>
                                 </ul>
                             </div>
@@ -536,23 +618,16 @@ export default function Projects() {
                                     <li className="content--tool__li">
                                         <img
                                             className="content--tool__logo"
-                                            src={Mongo}
+                                            src={Real}
                                         />
                                         Firebase realtime database
                                     </li>
                                     <li className="content--tool__li">
                                         <img
                                             className="content--tool__logo"
-                                            src={S3}
+                                            src={Storage}
                                         />
                                         Firebase Storage
-                                    </li>
-                                    <li className="content--tool__li">
-                                        <img
-                                            className="content--tool__logo"
-                                            src={EC2}
-                                        />
-                                        Redux
                                     </li>
                                     <li className="content--tool__li">
                                         <img

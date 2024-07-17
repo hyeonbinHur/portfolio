@@ -33,6 +33,16 @@ import adminCapstone3 from '../assets/CPT/admin-capstone/capstone3.png';
 import basicDiagram from '../assets/CPT/diagram/basic-diagram.png';
 import specialDiagram from '../assets/CPT/diagram/special-diagram.png';
 
+import Pocket_Desk1 from '../assets/Pocket/desk/desk1.png';
+import Pocket_Desk2 from '../assets/Pocket/desk/desk2.png';
+import Pocket_Desk3 from '../assets/Pocket/desk/desk3.png';
+import Pocket_Desk4 from '../assets/Pocket/desk/desk4.png';
+
+import Pocket_Mobile1 from '../assets/Pocket/mobile/mobile1.png';
+import Pocket_Mobile2 from '../assets/Pocket/mobile/mobile2.png';
+import Pocket_Mobile3 from '../assets/Pocket/mobile/mobile3.png';
+import Pocket_Mobile4 from '../assets/Pocket/mobile/mobile4.png';
+
 const ImageModal = forwardRef(function ImageModal(props, ref) {
     const modal = useRef(null);
     // const [videoUrl, setVideoUrl] = useState('null');
@@ -61,6 +71,15 @@ const ImageModal = forwardRef(function ImageModal(props, ref) {
             setImages([basicDiagram]);
         } else if (sliceImageTopic === 'CPT_specific_diagram') {
             setImages([specialDiagram]);
+        } else if (sliceImageTopic === 'Pocket_Desk') {
+            setImages([Pocket_Desk1, Pocket_Desk2, Pocket_Desk3, Pocket_Desk4]);
+        } else if (sliceImageTopic === 'Pocket_Mobile') {
+            setImages([
+                Pocket_Mobile1,
+                Pocket_Mobile2,
+                Pocket_Mobile3,
+                Pocket_Mobile4,
+            ]);
         }
     }, [sliceImageTopic]);
 
