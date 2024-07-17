@@ -50,30 +50,58 @@ const ImageModal = forwardRef(function ImageModal(props, ref) {
     const sliceImageTopic = useSelector((state) => state.imageSlice.topic);
     // const [numOfImage, setNumOfImage] = useState(0);
     const [images, setImages] = useState([]);
+    const [heading, setHeading] = useState('');
+
     useEffect(() => {
         if (sliceImageTopic === 'CPT_Auth') {
             setImages([auth1, auth2, auth3]);
+            setHeading('CPT management - Authentication');
         } else if (sliceImageTopic === 'CPT_Detail') {
             setImages([detail1, detail2, detail3, detail4, detail5]);
+            setHeading('CPT management - Detail page');
         } else if (sliceImageTopic === 'CPT_Search') {
+            setHeading('CPT management - Search User');
+
             setImages([search1, search2, search3, search4, search5]);
         } else if (sliceImageTopic === 'CPT_Student_group') {
+            setHeading('CPT management - Student - Join & Create Group');
+
             setImages([group1, group2]);
         } else if (sliceImageTopic === 'CPT_student_capstone') {
+            setHeading('CPT management - Student  Apply Capstone Project');
+
             setImages([capstone1, capstone2]);
         } else if (sliceImageTopic === 'CPT_company_create_capstone') {
+            setHeading('CPT management - Company - Create capstone project');
+
             setImages([companyCapstone1, companyCapstone2, companyCapstone3]);
         } else if (sliceImageTopic === 'CPT_supervisor_capstone') {
+            setHeading(
+                'CPT management - Supervisor - Edit & View capstone project'
+            );
+
             setImages([supervisorCapstone1, supervisorCapstone2]);
         } else if (sliceImageTopic === 'CPT_admin_capstone') {
+            setHeading(
+                'CPT management - Admin - Edit & Review capstone project'
+            );
+
             setImages([adminCapstone1, adminCapstone2, adminCapstone3]);
         } else if (sliceImageTopic === 'CPT_basic_diagram') {
+            setHeading('CPT management - Basic usecase diagram');
+
             setImages([basicDiagram]);
         } else if (sliceImageTopic === 'CPT_specific_diagram') {
+            setHeading('CPT management - Specific usecase diagram');
+
             setImages([specialDiagram]);
         } else if (sliceImageTopic === 'Pocket_Desk') {
+            setHeading('Pocket - Desktop Images');
+
             setImages([Pocket_Desk1, Pocket_Desk2, Pocket_Desk3, Pocket_Desk4]);
         } else if (sliceImageTopic === 'Pocket_Mobile') {
+            setHeading('Pocket - Mobile Images');
+
             setImages([
                 Pocket_Mobile1,
                 Pocket_Mobile2,
@@ -98,6 +126,7 @@ const ImageModal = forwardRef(function ImageModal(props, ref) {
     return createPortal(
         <div>
             <dialog ref={modal} className="modal--images">
+                <h3 className="image--heading">{heading}</h3>
                 <AiOutlineClose
                     onClick={() => ref.current.close()}
                     className="modal--close__image"

@@ -18,6 +18,8 @@ import Pocket_CRD from '../assets/Pocket/crdItem.mp4';
 import Pocket_U from '../assets/Pocket/uItem.mp4';
 import Pocket_UU from '../assets/Pocket/uuser.mp4';
 import Pocket_Search from '../assets/Pocket/search.mp4';
+import Pocket_Place from '../assets/Pocket/placeSetting.mp4';
+import CPT_All from '../assets/CPT/all.mp4';
 
 import NG_Auth from '../assets/Ng/auth.mp4';
 import NG_Ai from '../assets/Ng/aiChat.mp4';
@@ -61,6 +63,8 @@ const VideoModal = forwardRef(function VideoModal(props, ref) {
             setVideoUrl(Pocket_UU);
         } else if (sliceVideoTopic === 'Pocket_Search') {
             setVideoUrl(Pocket_Search);
+        } else if (sliceVideoTopic === 'Pocket_Place') {
+            setVideoUrl(Pocket_Place);
         } else if (sliceVideoTopic === 'NG_Auth') {
             setVideoUrl(NG_Auth);
         } else if (sliceVideoTopic === 'NG_Side') {
@@ -73,6 +77,8 @@ const VideoModal = forwardRef(function VideoModal(props, ref) {
             setVideoUrl(NG_Error);
         } else if (sliceVideoTopic === 'NG_Response') {
             setVideoUrl(NG_Response);
+        } else if (sliceVideoTopic === 'CPT_All') {
+            setVideoUrl(CPT_All);
         }
     }, [sliceVideoTopic]);
 

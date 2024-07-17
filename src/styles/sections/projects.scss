@@ -5,6 +5,10 @@
         padding-top: 0;
         margin-bottom: 10vh;
     }
+    &--live{
+        margin-right: .5rem;
+        color: $color-grey;
+    }
     &--card {
         height: 50rem;
         background-color: rgba($color-white, .7);

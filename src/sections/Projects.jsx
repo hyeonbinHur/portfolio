@@ -282,7 +282,12 @@ export default function Projects() {
                                 <ul className="content__ul">
                                     <li className="content--features__li">
                                         All features
-                                        <AiFillPlaySquare className="detail__video" />
+                                        <AiFillPlaySquare
+                                            className="detail__video"
+                                            onClick={() =>
+                                                handleOpenVideoModal('CPT_All')
+                                            }
+                                        />
                                     </li>
                                     <li className="content--features__li">
                                         Basic - Authentication
@@ -349,17 +354,7 @@ export default function Projects() {
                                             }
                                         />
                                     </li>
-                                    <li className="content--features__li">
-                                        Company - View capstone project status
-                                        <BiImageAlt
-                                            className="detail__video"
-                                            onClick={() =>
-                                                handleOpenImageModal(
-                                                    'CPT_company_view_capstone'
-                                                )
-                                            }
-                                        />
-                                    </li>
+
                                     <li className="content--features__li">
                                         Supervisor - Edit & View capstone
                                         project
@@ -505,7 +500,7 @@ export default function Projects() {
                             <img
                                 src={Pocket}
                                 alt=""
-                                className="content__logo"
+                                className="content__logo__pocket"
                             />
                         </header>
                         <main className="content--body">
@@ -579,14 +574,14 @@ export default function Projects() {
                                         />
                                     </li>
                                     <li className="content--features__li">
-                                        Update user location
-                                        <BiImageAlt
-                                            className="detail__video"
+                                        Set Location
+                                        <AiFillPlaySquare
                                             onClick={() =>
-                                                handleOpenImageModal(
-                                                    'CPT_company_view_capstone'
+                                                handleOpenVideoModal(
+                                                    'Pocket_Place'
                                                 )
                                             }
+                                            className="detail__video"
                                         />
                                     </li>
                                     <li className="content--features__li">
@@ -644,27 +639,6 @@ export default function Projects() {
                                     <li className="content--tool__li">
                                         <img
                                             className="content--tool__logo"
-                                            src={JS}
-                                        />
-                                        JavaScript
-                                    </li>
-                                    <li className="content--tool__li">
-                                        <img
-                                            className="content--tool__logo"
-                                            src={Real}
-                                        />
-                                        Firebase realtime database
-                                    </li>
-                                    <li className="content--tool__li">
-                                        <img
-                                            className="content--tool__logo"
-                                            src={Storage}
-                                        />
-                                        Firebase Storage
-                                    </li>
-                                    <li className="content--tool__li">
-                                        <img
-                                            className="content--tool__logo"
                                             src={React}
                                         />
                                         Context API
@@ -679,9 +653,30 @@ export default function Projects() {
                                     <li className="content--tool__li">
                                         <img
                                             className="content--tool__logo"
+                                            src={JS}
+                                        />
+                                        JavaScript
+                                    </li>
+                                    <li className="content--tool__li">
+                                        <img
+                                            className="content--tool__logo"
                                             src={GoogleMap}
                                         />
                                         Google Map
+                                    </li>
+                                    <li className="content--tool__li">
+                                        <img
+                                            className="content--tool__logo"
+                                            src={Real}
+                                        />
+                                        Firebase realtime database
+                                    </li>
+                                    <li className="content--tool__li">
+                                        <img
+                                            className="content--tool__logo"
+                                            src={Storage}
+                                        />
+                                        Firebase Storage
                                     </li>
                                 </ul>
                             </div>
@@ -704,7 +699,7 @@ export default function Projects() {
                                     href="https://github.com/hyeonbinHur/Name_Gacha_aws_lambda"
                                     className="link"
                                 >
-                                    backend Code
+                                    Backend Code
                                 </a>
                             </li>
                             <li className="project--basic-info__link">
@@ -713,11 +708,11 @@ export default function Projects() {
                                     href="https://github.com/hyeonbinHur/namegacha_frontend"
                                     className="link"
                                 >
-                                    frontend Code
+                                    Frontend Code
                                 </a>
                             </li>
                             <li className="project--basic-info__link">
-                                <BsEyeFill />
+                                <BsEyeFill className="project--live" />
                                 <a
                                     href="https://hyeonbinhur.github.io/namegacha/"
                                     className="link"
@@ -741,7 +736,11 @@ export default function Projects() {
                     <div className="detail--background__4">&nbsp;</div>
                     <div className="detail--content__4">
                         <header className="content__header">
-                            <img src={NG} alt="" className="content__logo" />
+                            <img
+                                src={NG}
+                                alt=""
+                                className="content__logo__ng"
+                            />
                         </header>
                         <main className="content--body">
                             <div className="content--body__1">
@@ -820,6 +819,27 @@ export default function Projects() {
                                     <li className="content--tool__li">
                                         <img
                                             className="content--tool__logo"
+                                            src={Redux}
+                                        />
+                                        Redux
+                                    </li>
+                                    <li className="content--tool__li">
+                                        <img
+                                            className="content--tool__logo"
+                                            src={Query}
+                                        />
+                                        React Query
+                                    </li>
+                                    <li className="content--tool__li">
+                                        <img
+                                            className="content--tool__logo"
+                                            src={React}
+                                        />
+                                        Context API
+                                    </li>
+                                    <li className="content--tool__li">
+                                        <img
+                                            className="content--tool__logo"
                                             src={JS}
                                         />
                                         JavaScript
@@ -830,6 +850,13 @@ export default function Projects() {
                                             src={SCSS}
                                         />
                                         SCSS
+                                    </li>
+                                    <li className="content--tool__li">
+                                        <img
+                                            className="content--tool__logo"
+                                            src={AI}
+                                        />
+                                        Assistant API
                                     </li>
                                     <li className="content--tool__li">
                                         <img
@@ -866,27 +893,7 @@ export default function Projects() {
                                         />
                                         PostgreSQL
                                     </li>
-                                    <li className="content--tool__li">
-                                        <img
-                                            className="content--tool__logo"
-                                            src={Redux}
-                                        />
-                                        Redux
-                                    </li>
-                                    <li className="content--tool__li">
-                                        <img
-                                            className="content--tool__logo"
-                                            src={Query}
-                                        />
-                                        React Query
-                                    </li>
-                                    <li className="content--tool__li">
-                                        <img
-                                            className="content--tool__logo"
-                                            src={React}
-                                        />
-                                        Context API
-                                    </li>
+
                                     <li className="content--tool__li">
                                         <img
                                             className="content--tool__logo"
@@ -900,13 +907,6 @@ export default function Projects() {
                                             src={Node}
                                         />
                                         Node.js
-                                    </li>
-                                    <li className="content--tool__li">
-                                        <img
-                                            className="content--tool__logo"
-                                            src={AI}
-                                        />
-                                        Assistant API
                                     </li>
                                 </ul>
                             </div>
