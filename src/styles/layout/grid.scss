@@ -2,12 +2,36 @@
     max-width: 155rem;
     margin: 0 auto;
     @include clearFix;
+    @include respond(desk-md) {
+        max-width: 135rem;
+    }
+    @include respond(desk-sm) {
+        max-width: 120rem;
+    }
+    @include respond(tab-port) {
+        margin: 0 auto;
+        max-width: 90rem;
+    }
     [class ^='col-'] {
         float: left;
         &:not(:last-child) {
             margin-right: 6rem;
+            @include respond(tab-port) {
+                margin-right: 0rem;
+             }
         }
     }
+    [class ^='col-1-of-3'] {
+        float: left;
+        &:not(:last-child) {
+            margin-right: 6rem;
+            @include respond(tab-port) {
+               margin-right: 0rem;
+               margin-bottom: 8rem;
+            }
+        }
+    }
+
     &--md {
         max-width: 45vw;
         margin: 0 auto;
@@ -19,11 +43,27 @@
                 margin-right: 6rem;
             }
         }
+
     }
 }
+
 .col-1-of-3 {
     width: calc((100% - 12rem)/3);
+    @include respond(tab-port) {
+        width: 55%;
+        margin-left: 22.5%;        
+    }
 }
+
 .col-1-of-4 {
     width: calc((100% - 18rem)/4);
+    @include respond(tab-land) {
+        width: calc((100% - 14rem)/2);
+    }
+    @include respond(tab-port) {
+        width: calc((100% - 12rem)/2);
+        margin-right: 3rem;
+        margin-left: 4rem;
+      
+    }
 }

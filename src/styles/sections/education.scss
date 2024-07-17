@@ -1,24 +1,35 @@
 .education {
     &--container {
         display: flex;
+        @include respond(tab-land){
+            position: relative;
+        }
     }
-
     &--text {
         flex: 1;
-
         &__content {
             padding: 3rem;
             font-size: 2rem;
             line-height: 4rem;
         }
+        @include respond(tab-land){
+            position: absolute;
+        }
+       
     }
-
     &--animation {
         flex: 1;
         position: relative;
         overflow: hidden;
+        @include respond(tab-land){
+            position: absolute;
+            width: 120%;
+            height: 75vh;
+            top: 0;
+            left: 0;
+            opacity: .2;
+        }
     }
-
     &--image {
         &__content {
             width: 10rem;
@@ -26,7 +37,6 @@
                 width: 6rem;
             }
         }
-
         &__container {
             &__android,
             &__aws,

@@ -59,6 +59,12 @@
         &__1{
             margin-right: 3rem;
         }
+        @include respond (desk-sm){
+            bottom: 20%;
+        }
+        @include respond (tab-land){
+            bottom: 60%
+        }
 
     }
 

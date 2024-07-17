@@ -22,13 +22,9 @@
     &__3:hover &--front__3{
         transform: rotateY(-180deg);
     }
-  
-  
     &--side{
         backface-visibility: hidden;
     }
-
-    
     &--front {
         &__1,&__2,&__3{
         box-shadow: 0rem 1rem 1rem rgba($color-black, .2);

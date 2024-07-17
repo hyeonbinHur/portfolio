@@ -4,6 +4,9 @@
         margin-top: 0;
         padding-top: 0;
         margin-bottom: 10vh;
+        @include respond(tab-land){
+            margin-bottom: 5vh;
+        }
     }
     &--live{
         margin-right: .5rem;

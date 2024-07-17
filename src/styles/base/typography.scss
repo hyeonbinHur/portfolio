@@ -12,5 +12,8 @@
         &:hover{
             transform: skewX(2deg) skewY(1deg) scale(1.1);
         }
+        @include respond(desk-sm){
+            margin-top: 8rem;
+        }
     }
 }

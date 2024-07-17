@@ -13,7 +13,7 @@ export default function Skills() {
         <>
             <h3 className="heading--tertiary">Front-End Skills</h3>
             <div className="skills--container">
-                <div className="row ">
+                <div className="row">
                     <div className="col-1-of-4 skills--card">
                         <img src={HTML} alt="" className="skills--image" />
                         <h3 className="skills--name">HTML</h3>
