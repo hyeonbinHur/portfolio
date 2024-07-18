@@ -6,29 +6,36 @@
             rgba($color-brown-dark, 1) 35%), url(../assets/images/forest.jpg);
     background-position: center;
     clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
-    @include respond(tab-land){
+
+    @include respond(tab-land) {
         height: 50vh;
     }
 }
+
 .about {
     background-color: $color-grey-dark-1;
     height: 120vh;
     margin-top: -15vh;
     padding-top: 10vh;
-    @include respond(desk-md){
-        margin-top: -10vh;
-       height: 125vh;
+
+    @include respond(desk-md) {
+        padding-top: 13vh;
+
+        height: 125vh;
     }
-    @include respond(tab-land){
+
+    @include respond(tab-land) {
         margin-top: -10vh;
-       height: 70vh;
+        height: 70vh;
     }
-    @include respond(tab-port){
+
+    @include respond(tab-port) {
         height: auto;
         padding-bottom: 25rem;
     }
-   
+
 }
+
 .education {
     padding-top: 20vh;
     height: 130vh;
@@ -36,63 +43,80 @@
     background-color: rgba($color-brown-dark, 1);
     clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
     color: $color-grey-light-1;
-    @include respond(desk-sm){
+
+    @include respond(desk-sm) {
         clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
         padding-top: 10vh;
         height: 130vh;
     }
-    @include respond(tab-land){
+
+    @include respond(tab-land) {
         clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
         margin-top: -10vh;
         padding-top: 7vh;
         height: 55vh;
     }
-    @include respond(tab-port){
+
+    @include respond(tab-port) {
         margin-top: -15vh;
         height: 78vh;
     }
 }
+
 .skills {
     padding-bottom: 10rem;
     padding-top: 25vh;
     height: 130vh;
     margin-top: -25vh;
     background-color: rgba($color-grey-dark-1, .7);
-    @include respond(tab-land){
+
+    @include respond(tab-land) {
         margin-top: -10vh;
         padding-top: 10vh;
         height: 110vh;
     }
-    @include respond(tab-port){
+
+    @include respond(tab-port) {
         margin-top: -10vh;
         padding-top: 10vh;
         height: 130vh;
     }
 }
+
 .projects {
     padding-top: 7vh;
     height: 100vh;
     background-image: linear-gradient(to right,
             rgba($color-green-dark, .95),
             rgba($color-green-dark, .95)), url(../assets/images/coding.jpg);
-    background-size:cover ;
+    background-size: cover;
     background-position: center;
-    @include respond(tab-land){
+
+    @include respond(tab-land) {
         padding-top: 3vh;
-        height: 50vh;
+        height: 85vh;
+    }
+
+    @include respond(tab-port) {
+        padding-top: 3vh;
+        height: 100vh;
     }
 }
-.currently-learning{
+
+.currently-learning {
     height: 100vh;
     padding-top: 5rem;
     background-color: rgba($color-brown-dark, .7);
     padding: 4rem;
-    @include respond(tab-land){
+    @include respond(tab-land) {
         padding-top: 3vh;
         height: 50vh;
     }
+    @include respond(tab-port) {
+        height: 70vh;
+    }
 }
-.footer{
+.footer {
     background-color: $color-grey-dark-3;
 
 }

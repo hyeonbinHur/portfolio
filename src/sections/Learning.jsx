@@ -23,18 +23,18 @@ export default function Learning() {
                 which is one of the most fundamental skills for a Front-End
                 Engineer.
             </p>
-            <div className="row">
-                <div className="col-1-of-3 learning--card">
+            <div className="row learning--card__container">
+                <div className="col-1-of-3 learning--card__1 learning--card">
                     <img src={React} alt="" className="learning--image__1" />
                     <img src={Redux} alt="" className="learning--image__2" />
                     <img src={Query} alt="" className="learning--image__3" />
                     <h3 className="learning--name">React</h3>
                 </div>
-                <div className="col-1-of-3 learning--card">
+                <div className="col-1-of-3 learning--card__2 learning--card">
                     <img src={Jest} alt="" className="learning--image" />
                     <h3 className="learning--name">Jest</h3>
                 </div>
-                <div className="col-1-of-3 learning--card">
+                <div className="col-1-of-3 learning--card__3 learning--card">
                     <img src={SCSS} alt="" className="learning--image" />
                     <h3 className="learning--name">SCSS</h3>
                 </div>

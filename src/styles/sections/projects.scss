@@ -19,6 +19,11 @@
         box-shadow: 1rem 2rem 1rem rgba($color-black, .1);
         border-radius: 5px;
         position: relative;
+        @include respond (desk-sm){
+            height: 52rem;
+        }
+       
+       
     }
     &--git{
         width: 2rem;
@@ -34,6 +39,10 @@
             top: 7%;
             left: 50%;
             transform: translate(-50%, -7%);
+            @include respond (desk-sm){
+               top: 10%;
+               transform: translate(-50%, -10%);
+            }
         }
         &__buyy {
             width: 15rem;
@@ -41,6 +50,9 @@
         }
         &__cpt {
             width: 18rem;
+            @include respond (desk-sm){
+                width: 16rem;
+             }
         }
         &__pocket {
             width: 19rem;
@@ -48,6 +60,9 @@
             top: 10%;
             left: 50%;
             transform: translate(-50%, -10%);
+            @include respond (desk-sm){
+                width: 16rem;
+             }
         }
         &__ng {
             width: 12rem;
@@ -58,7 +73,6 @@
         line-height: 4rem;
     }
     &--basic-info{
-        
         &:not(:last-child){
             padding-bottom: 1rem;
             border-bottom: 2px solid rgba($color-grey, .4);

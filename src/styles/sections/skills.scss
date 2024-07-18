@@ -1,12 +1,10 @@
 .skills{
     &--container{
-        width: 140rem;
         margin: 0 auto;
         &:hover .skills--card:not(:hover){
             transform: scale(.95)
         }
         @include respond(tab-port) {
-            margin: 0 auto;
             max-width: 90rem;
         }
     }

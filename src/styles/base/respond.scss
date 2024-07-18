@@ -9,6 +9,7 @@
             @content;
         }
     }
+    
     @if $breakpoint == tab-land{
         @media (max-width: 75em) { //1200px
             @content;
@@ -20,6 +21,7 @@
             @content;
         }
     }
+
     @if $breakpoint == desk-md{
         @media (max-width: 90em) { //1440px
             @content;

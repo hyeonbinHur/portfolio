@@ -6,30 +6,13 @@
         max-width: 135rem;
     }
     @include respond(desk-sm) {
-        max-width: 120rem;
+        max-width: 130rem;
+    }
+    @include respond(tab-land) {
+        max-width: 90vw;
     }
     @include respond(tab-port) {
-        margin: 0 auto;
         max-width: 90rem;
-    }
-    [class ^='col-'] {
-        float: left;
-        &:not(:last-child) {
-            margin-right: 6rem;
-            @include respond(tab-port) {
-                margin-right: 0rem;
-             }
-        }
-    }
-    [class ^='col-1-of-3'] {
-        float: left;
-        &:not(:last-child) {
-            margin-right: 6rem;
-            @include respond(tab-port) {
-               margin-right: 0rem;
-               margin-bottom: 8rem;
-            }
-        }
     }
 
     &--md {
@@ -39,6 +22,7 @@
 
         [class ^='col-'] {
             float: left;
+
             &:not(:last-child) {
                 margin-right: 6rem;
             }
@@ -48,22 +32,41 @@
 }
 
 .col-1-of-3 {
+    float: left;
     width: calc((100% - 12rem)/3);
+    &:not(:last-child) {
+        margin-right: 6rem;
+        @include respond(tab-port) {
+            margin-right: 0rem;
+            margin-bottom: 8rem;
+        }
+    }
     @include respond(tab-port) {
         width: 55%;
-        margin-left: 22.5%;        
+        margin-left: 22.5%;
     }
 }
 
 .col-1-of-4 {
     width: calc((100% - 18rem)/4);
+    float: left;
+    &:not(:last-child) {
+        margin-right: 6rem;
+    }
     @include respond(tab-land) {
         width: calc((100% - 14rem)/2);
     }
     @include respond(tab-port) {
         width: calc((100% - 12rem)/2);
-        margin-right: 3rem;
-        margin-left: 4rem;
-      
+    }
+    @include respond(tab-land) {
+        margin-bottom: 8rem;
+        &:nth-child(odd) {
+            float: left;
+        }
+        &:nth-child(even) {
+            float: right;
+            margin-right: 0rem;
+        }
     }
 }
