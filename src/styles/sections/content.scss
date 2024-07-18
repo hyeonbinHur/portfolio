@@ -3,6 +3,7 @@
         padding-bottom: 1rem;
         padding-top: 5rem;
     }
+
     &__logo {
         width: 15rem;
         height: 10rem;
@@ -11,7 +12,8 @@
         top: 2%;
         left: 95%;
         transform: translate(-95%, -2%);
-        &__pocket{
+
+        &__pocket {
             width: 15rem;
             height: 7rem;
             border-radius: 5px;
@@ -20,7 +22,8 @@
             left: 95%;
             transform: translate(-95%, -4%);
         }
-        &__ng{
+
+        &__ng {
             width: 10rem;
             height: 10rem;
             border-radius: 5px;
@@ -30,25 +33,45 @@
             transform: translate(-95%, -4%);
         }
     }
-    &--features__li{
+
+    &--features__li {
         position: relative;
     }
+
     &--body {
         display: flex;
         width: 100vw;
         padding-top: 5rem;
+
         &__1 {
             flex: 1;
             text-align: left;
             border-right: 3px solid $color-grey-dark-2;
+            @include respond (tab-land) {
+                padding-top:10rem ;
+            }
+            @include respond (tab-port) {
+                padding-top:5rem ;
+            }
+
         }
+
         &__2 {
             flex: 1;
             text-align: left;
             padding-left: 5rem;
+            @include respond (tab-land) {
+                padding-top:10rem ;
+            }
+            @include respond (tab-port) {
+                padding-top:5rem ;
+            }
+
         }
+
     }
-    &__ul{
+
+    &__ul {
         list-style: none;
         height: 70vh;
         padding-left: 5rem;
@@ -56,23 +79,34 @@
         line-height: 5rem;
         font-size: 2rem;
         overflow-y: scroll;
-        & > :not(:last-child){
+        @include respond (tab-land) {
+            font-size: 3rem;
+            line-height: 9rem;
+        }
+        @include respond (tab-port) {
+            font-size: 2.5rem;
+            line-height: 7rem;
+        }
+
+        &> :not(:last-child) {
             padding-bottom: 2rem;
             margin-bottom: 2rem;
             border-bottom: 2px solid $color-grey-dark-2;
         }
     }
-    &--tool{
-        &__li{
+
+    &--tool {
+        &__li {
             display: flex;
             align-items: center;
         }
-        &__logo{
-            width:5rem;
+
+        &__logo {
+            width: 5rem;
             margin-right: 1rem;
         }
     }
 
-  
-   
+
+
 }

@@ -1,3 +1,4 @@
+import { BsLinkedin } from 'react-icons/bs';
 /* eslint-disable react/no-unknown-property */
 import Git from '../assets/logos/github.png';
 import Tstory from '../assets/logos/tstory.svg';
@@ -21,7 +22,16 @@ export default function Header() {
                         className="header--link"
                     >
                         <img src={Git} alt="" className="header--logo" />
-                        Github profile
+                        GitHub profile
+                    </a>
+                </li>
+                <li className="header--links__1">
+                    <a
+                        href="https://www.linkedin.com/in/hyeonbin-hur-755a87319/"
+                        className="header--link"
+                    >
+                        <BsLinkedin className="header--logo__linked-in" />
+                        Linked in
                     </a>
                 </li>
                 <li className="header--links__2">

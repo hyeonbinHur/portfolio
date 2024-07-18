@@ -1,37 +1,55 @@
-.footer{
-    &--heading{
+.footer {
+    &--heading {
         color: $color-grey-light-2;
-        margin-bottom: 3rem ;
+        margin-bottom: 3rem;
     }
-    &--icon{
+
+    &--icon {
         width: 3rem;
         margin-right: 2rem;
-        &__github{
+
+        &__github {
             font-size: 3rem;
             margin-right: 2rem;
         }
     }
-    &--ul{
+
+    &--ul {
         list-style: none;
         display: flex;
-        padding-left: 4rem;
-        margin-bottom: 3rem;
+        justify-content: space-between;
+        padding: 3rem 3rem 4rem 4rem;
+
     }
-    &--li{
+
+    &--li {
         color: $color-grey-light-2;
         display: flex;
         align-items: center;
-        &:not(:last-child){
+
+        &:not(:last-child) {
             margin-right: 3rem;
         }
-        
+
     }
-    &--sentence{
+
+    &--sentence {
         display: block;
         text-align: center;
         font-size: 2.5rem;
         color: $color-grey-dark-1;
         padding-bottom: 5rem;
+    }
+    &--link{
+        transition: all .2s;
+
+        &:link,
+        &:visited{
+            color: $color-grey-dark-1;
+        }
+        &:hover{
+            scale: 1.1;
+        }
     }
 
 }

@@ -1,6 +1,7 @@
 import { AiFillGithub } from 'react-icons/ai';
 import Gmail from '../assets/logos/gmail.png';
 import Out from '../assets/logos/outlook.png';
+import Linked from '../assets/logos/linked.png';
 
 export default function Footer() {
     return (
@@ -17,7 +18,21 @@ export default function Footer() {
                 </li>
                 <li className="footer--li">
                     <AiFillGithub className="footer--icon__github" />
-                    https://github.com/hyeonbinHur
+                    <a
+                        href="https://github.com/hyeonbinHur"
+                        className="footer--link"
+                    >
+                        GitHub Profile
+                    </a>
+                </li>
+                <li className="footer--li">
+                    <img src={Linked} alt="" className="footer--icon" />
+                    <a
+                        href="https://www.linkedin.com/in/hyeonbin-hur-755a87319/"
+                        className="footer--link"
+                    >
+                        Linkedin Profile
+                    </a>
                 </li>
             </ul>
             <div className="footer--sentence">

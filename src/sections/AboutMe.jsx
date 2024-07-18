@@ -22,7 +22,6 @@ export default function AboutMe() {
                         </div>
                     </div>
                 </div>
-
                 <div className="col-1-of-3">
                     <div className="card__2">
                         <div className="card--front__2 card--side">
@@ -47,7 +46,7 @@ export default function AboutMe() {
                     <div className="card__3">
                         <div className="card--front__3 card--side">
                             <div className="card--img__3"></div>
-                            <div className="card--name">Adventuros</div>
+                            <div className="card--name">Adventurous</div>
                         </div>
                         <div className="card--back__3 card--side">
                             <p className="card--paragraph">

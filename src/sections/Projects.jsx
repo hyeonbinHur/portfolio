@@ -6,6 +6,7 @@ import Cpt from '../assets/projects/cpt.svg';
 import Pocket from '../assets/projects/pocket.png';
 import NG from '../assets/projects/ng.png';
 import CSS from '../assets/logos/css.png';
+import HTML from '../assets/logos/html.png';
 
 import React from '../assets/logos/react.png';
 import JS from '../assets/logos/js.png';
@@ -245,7 +246,7 @@ export default function Projects() {
                         <div className="project--name__cpt">CPT management</div>
                         <ul className="project--ul">
                             <li className="project--basic-info">
-                                Project Managment
+                                Project Management
                             </li>
                             <li className="project--basic-info">Spring Boot</li>
                             <li className="project--basic-info"> -- / 2023</li>
@@ -255,7 +256,7 @@ export default function Projects() {
                                     href="https://github.com/hyeonbinHur/CapstoneProjectManagementSystem"
                                     className="link"
                                 >
-                                    CPT MAnagement Code
+                                    CPT Management Code
                                 </a>
                             </li>
                         </ul>
@@ -409,7 +410,7 @@ export default function Projects() {
                                     <li className="content--tool__li">
                                         <img
                                             className="content--tool__logo"
-                                            src={React}
+                                            src={HTML}
                                         />
                                         HTML
                                     </li>
