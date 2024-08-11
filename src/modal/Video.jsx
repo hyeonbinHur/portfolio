@@ -1,15 +1,8 @@
 import { AiOutlineClose } from 'react-icons/ai';
-/* eslint-disable react/prop-types */
 import { useEffect, useRef, useState } from 'react';
 import { forwardRef, useImperativeHandle } from 'react';
 import { createPortal } from 'react-dom';
 
-import BUYY_Auth from '../assets/BUYY/Auth.mp4';
-import BUYY_Comment from '../assets/BUYY/Comment.mp4';
-import BUYY_Edit from '../assets/BUYY/EditItem.mp4';
-import BUYY_Pagination from '../assets/BUYY/Pagination.mp4';
-import BUYY_PersonalPage from '../assets/BUYY/PersonalPage.mp4';
-import BUYY_Purchase from '../assets/BUYY/Purchase.mp4';
 import ReactPlayer from 'react-player';
 import Pocket_Auth from '../assets/Pocket/auth.mp4';
 import Pocket_Real from '../assets/Pocket/chatting.mp4';
@@ -37,19 +30,21 @@ const VideoModal = forwardRef(function VideoModal(props, ref) {
     const dispatch = useDispatch();
     const sliceVideoTopic = useSelector((state) => state.videoSlice.topic);
     useEffect(() => {
-        if (sliceVideoTopic === 'BUYY_Auth') {
-            setVideoUrl(BUYY_Auth);
-        } else if (sliceVideoTopic === 'BUYY_Comment') {
-            setVideoUrl(BUYY_Comment);
-        } else if (sliceVideoTopic === 'BUYY_Edit') {
-            setVideoUrl(BUYY_Edit);
-        } else if (sliceVideoTopic === 'BUYY_Pagination') {
-            setVideoUrl(BUYY_Pagination);
-        } else if (sliceVideoTopic === 'BUYY_PersonalPage') {
-            setVideoUrl(BUYY_PersonalPage);
-        } else if (sliceVideoTopic === 'BUYY_Purchase') {
-            setVideoUrl(BUYY_Purchase);
-        } else if (sliceVideoTopic === 'Pocket_Auth') {
+        // if (sliceVideoTopic === 'BUYY_Auth') {
+        //     setVideoUrl(BUYY_Auth);
+        // } else if (sliceVideoTopic === 'BUYY_Comment') {
+        //     setVideoUrl(BUYY_Comment);
+        // } else if (sliceVideoTopic === 'BUYY_Edit') {
+        //     setVideoUrl(BUYY_Edit);
+        // } else if (sliceVideoTopic === 'BUYY_Pagination') {
+        //     setVideoUrl(BUYY_Pagination);
+        // } else if (sliceVideoTopic === 'BUYY_PersonalPage') {
+        //     setVideoUrl(BUYY_PersonalPage);
+        // } else if (sliceVideoTopic === 'BUYY_Purchase') {
+        //     setVideoUrl(BUYY_Purchase);
+        // } else
+
+        if (sliceVideoTopic === 'Pocket_Auth') {
             setVideoUrl(Pocket_Auth);
         } else if (sliceVideoTopic === 'Pocket_Chat') {
             setVideoUrl(Pocket_Real);

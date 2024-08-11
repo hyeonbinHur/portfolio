@@ -1,19 +1,14 @@
 import { BsEyeFill } from 'react-icons/bs';
 import { BiImageAlt } from 'react-icons/bi';
 import { AiFillPlaySquare } from 'react-icons/ai';
-import BUYY from '../assets/projects/buyy.png';
 import Cpt from '../assets/projects/cpt.svg';
 import Pocket from '../assets/projects/pocket.png';
 import NG from '../assets/projects/ng.png';
 import CSS from '../assets/logos/css.png';
 import HTML from '../assets/logos/html.png';
-
 import React from '../assets/logos/react.png';
 import JS from '../assets/logos/js.png';
-import S3 from '../assets/logos/s3.png';
-import EC2 from '../assets/logos/ec2.png';
 import Node from '../assets/logos/node.png';
-import Mongo from '../assets/logos/mongo.png';
 import Spring from '../assets/logos/spring.png';
 import PG from '../assets/logos/pg.png';
 import RDS from '../assets/logos/rds.png';
@@ -35,6 +30,7 @@ import Real from '../assets/logos/realtime.png';
 
 import ImageModal from '../modal/Images';
 import Video from '../modal/Video';
+
 import { useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { openVideoModal } from '../store/videoSlice';
@@ -47,10 +43,8 @@ export default function Projects() {
     const dispatch = useDispatch();
     const sliceVideoTopic = useSelector((state) => state.videoSlice.topic);
     const sliceVideoIsOpen = useSelector((state) => state.videoSlice.isOpen);
-
     const sliceImageTopic = useSelector((state) => state.imageSlice.topic);
     const sliceImageIsOpen = useSelector((state) => state.imageSlice.isOpen);
-
     const handleOpenImageModal = (topic) => {
         dispatch(openImageModal({ topic: topic }));
     };
@@ -80,166 +74,6 @@ export default function Projects() {
             <h3 className="heading--tertiary project--heading">Projects</h3>
 
             <div className="row">
-                <div className="col-1-of-4 project--card">
-                    <img className="project--image__buyy" src={BUYY}></img>
-
-                    <div className="project--text">
-                        <div className="project--name">BUYY</div>
-                        <ul className="project--ul">
-                            <li className="project--basic-info">
-                                Online shoes platform
-                            </li>
-                            <li className="project--basic-info">React + AWS</li>
-                            <li className="project--basic-info"> -- / 2022</li>
-                            <li className="project--basic-info__link">
-                                <img src={Git} className="project--git" />
-                                <a
-                                    href="https://github.com/hyeonbinHur/onlineShoppingWebService"
-                                    className="link"
-                                >
-                                    BUYY Code
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <input
-                        type="checkbox"
-                        className="detail--checkbox__1"
-                        id="detail_toggle__1"
-                    />
-                    <label
-                        htmlFor="detail_toggle__1"
-                        className="detail--button__1"
-                    >
-                        <span className="detail--icon__1">&nbsp;</span>
-                    </label>
-                    <div className="detail--background__1">&nbsp;</div>
-                    <div className="detail--content__1">
-                        <header className="content__header">
-                            <img src={BUYY} alt="" className="content__logo" />
-                        </header>
-                        <main className="content--body">
-                            <div className="content--body__1">
-                                <h3 className="heading--tertiary">Features</h3>
-                                <ul className="content__ul">
-                                    <li className="content--features__li">
-                                        Authentication
-                                        <AiFillPlaySquare
-                                            onClick={() =>
-                                                handleOpenVideoModal(
-                                                    'BUYY_Auth'
-                                                )
-                                            }
-                                            className="detail__video"
-                                        />
-                                    </li>
-                                    <li className="content--features__li">
-                                        Filtering
-                                        <AiFillPlaySquare
-                                            onClick={() =>
-                                                handleOpenVideoModal(
-                                                    'BUYY_Pagination'
-                                                )
-                                            }
-                                            className="detail__video"
-                                        />
-                                    </li>
-                                    <li className="content--features__li">
-                                        Edit Item
-                                        <AiFillPlaySquare
-                                            onClick={() =>
-                                                handleOpenVideoModal(
-                                                    'BUYY_Edit'
-                                                )
-                                            }
-                                            className="detail__video"
-                                        />
-                                    </li>
-                                    <li className="content--features__li">
-                                        Detail page &rarr; purchase Item
-                                        <AiFillPlaySquare
-                                            onClick={() =>
-                                                handleOpenVideoModal(
-                                                    'BUYY_Purchase'
-                                                )
-                                            }
-                                            className="detail__video"
-                                        />
-                                    </li>
-                                    <li className="content--features__li">
-                                        Personal page
-                                        <AiFillPlaySquare
-                                            onClick={() =>
-                                                handleOpenVideoModal(
-                                                    'BUYY_PersonalPage'
-                                                )
-                                            }
-                                            className="detail__video"
-                                        />
-                                    </li>
-                                    <li className="content--features__li">
-                                        Detail page &rarr; Comment
-                                        <AiFillPlaySquare
-                                            onClick={() =>
-                                                handleOpenVideoModal(
-                                                    'BUYY_Comment'
-                                                )
-                                            }
-                                            className="detail__video"
-                                        />
-                                    </li>
-                                </ul>
-                            </div>
-                            <div className="content--body__2">
-                                <h3 className="heading--tertiary">Tools</h3>
-                                <ul className="content__ul">
-                                    <li className="content--tool__li">
-                                        <img
-                                            className="content--tool__logo"
-                                            src={React}
-                                        />
-                                        React
-                                    </li>
-                                    <li className="content--tool__li">
-                                        <img
-                                            className="content--tool__logo"
-                                            src={JS}
-                                        />
-                                        JavaScript
-                                    </li>
-                                    <li className="content--tool__li">
-                                        <img
-                                            className="content--tool__logo"
-                                            src={Mongo}
-                                        />
-                                        Mongo DB
-                                    </li>
-                                    <li className="content--tool__li">
-                                        <img
-                                            className="content--tool__logo"
-                                            src={S3}
-                                        />
-                                        AWS-S3
-                                    </li>
-                                    <li className="content--tool__li">
-                                        <img
-                                            className="content--tool__logo"
-                                            src={EC2}
-                                        />
-                                        AWS-EC2
-                                    </li>
-                                    <li className="content--tool__li">
-                                        <img
-                                            className="content--tool__logo"
-                                            src={Node}
-                                        />
-                                        Node.js
-                                    </li>
-                                </ul>
-                            </div>
-                        </main>
-                    </div>
-                </div>
                 <div className="col-1-of-4 project--card">
                     <img className="project--image__cpt" src={Cpt}></img>
                     <div className="project--text">

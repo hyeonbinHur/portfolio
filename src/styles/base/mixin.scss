@@ -36,7 +36,6 @@
         transform: scale(.2) translate(0, 1500%);
         opacity: 0;
     }
-
     100% {
         transform: scale(.7) translate(0, -300%);
         opacity: 1;
@@ -44,9 +43,7 @@
 }
 
 @mixin detailCheckbox($modifier) {
-
     display: none;
-
     &:checked+.detail--button__#{$modifier} {
         position: fixed;
         top: 2%;
@@ -136,11 +133,13 @@
         transform: translate(-50%, 0%);
         transition: all .2s;
     }
+
     &::before,
     &::after {
         content: '';
         position: absolute;
     }
+
     &::before {
         top: -.9rem;
     }
@@ -160,9 +159,11 @@
     cursor: pointer;
     display: inline-block;
     transition: all .8s;
+
     &:hover .detail--icon__#{$modifier}::before {
         top: -1.2rem;
     }
+
     &:hover .detail--icon__#{$modifier}::after {
         top: 1.2rem;
     }

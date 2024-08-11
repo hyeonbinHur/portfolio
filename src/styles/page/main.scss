@@ -75,14 +75,12 @@
         padding-top: 10vh;
         height: 110vh;
     }
-
     @include respond(tab-port) {
         margin-top: -10vh;
         padding-top: 10vh;
         height: 130vh;
     }
 }
-
 .projects {
     padding-top: 7vh;
     height: 100vh;
@@ -119,4 +117,27 @@
 .footer {
     background-color: $color-grey-dark-3;
 
+}
+.animation{
+    &--right{
+        position: absolute;
+        height: 100vh;
+        top: 0;
+        right: 0;
+        animation: right-to-left 1s ease-in;
+        z-index: 10;
+        background-color: $color-brown-dark;
+        opacity: 0;
+    }
+    &--bottom{
+        position: absolute;
+        width: 100vw;
+        bottom: 0;
+        left: 0;
+        animation: bottom-to-top 1s ease-in .5s;
+        z-index: 10;
+        opacity: 0;
+        background-color: $color-green-dark;
+    }
+   
 }
