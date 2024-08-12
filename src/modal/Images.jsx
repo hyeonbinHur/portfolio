@@ -4,8 +4,9 @@ import { forwardRef, useImperativeHandle } from 'react';
 import { createPortal } from 'react-dom';
 import { closeImageModal } from '../store/imageSlice';
 import { useSelector, useDispatch } from 'react-redux';
+import { useQuery } from '@tanstack/react-query';
+import { Img } from 'react-image';
 import { CPTUrls } from '../assets/urls';
-
 import auth2 from '../assets/CPT/auth/auth_2.png';
 import auth3 from '../assets/CPT/auth/auth_3.png';
 import detail1 from '../assets/CPT/detail/detail1.png';
@@ -40,6 +41,7 @@ import Pocket_Mobile1 from '../assets/Pocket/mobile/mobile1.png';
 import Pocket_Mobile2 from '../assets/Pocket/mobile/mobile2.png';
 import Pocket_Mobile3 from '../assets/Pocket/mobile/mobile3.png';
 import Pocket_Mobile4 from '../assets/Pocket/mobile/mobile4.png';
+import { LoadCPTImages } from '../assets/urls';
 
 const ImageModal = forwardRef(function ImageModal(props, ref) {
     const modal = useRef(null);
@@ -52,54 +54,48 @@ const ImageModal = forwardRef(function ImageModal(props, ref) {
 
     useEffect(() => {
         if (sliceImageTopic === 'CPT_Auth') {
-            setImages([CPTUrls.auth1, auth2, auth3]);
+            setImages([
+                CPTImages.auth1.src,
+                CPTImages.auth2.src,
+                CPTImages.auth3.src,
+            ]);
             setHeading('CPT management - Authentication');
         } else if (sliceImageTopic === 'CPT_Detail') {
             setImages([detail1, detail2, detail3, detail4, detail5]);
             setHeading('CPT management - Detail page');
         } else if (sliceImageTopic === 'CPT_Search') {
             setHeading('CPT management - Search User');
-
             setImages([search1, search2, search3, search4, search5]);
         } else if (sliceImageTopic === 'CPT_Student_group') {
             setHeading('CPT management - Student - Join & Create Group');
-
             setImages([group1, group2]);
         } else if (sliceImageTopic === 'CPT_student_capstone') {
             setHeading('CPT management - Student  Apply Capstone Project');
-
             setImages([capstone1, capstone2]);
         } else if (sliceImageTopic === 'CPT_company_create_capstone') {
             setHeading('CPT management - Company - Create capstone project');
-
             setImages([companyCapstone1, companyCapstone2, companyCapstone3]);
         } else if (sliceImageTopic === 'CPT_supervisor_capstone') {
             setHeading(
                 'CPT management - Supervisor - Edit & View capstone project'
             );
-
             setImages([supervisorCapstone1, supervisorCapstone2]);
         } else if (sliceImageTopic === 'CPT_admin_capstone') {
             setHeading(
                 'CPT management - Admin - Edit & Review capstone project'
             );
-
             setImages([adminCapstone1, adminCapstone2, adminCapstone3]);
         } else if (sliceImageTopic === 'CPT_basic_diagram') {
             setHeading('CPT management - Basic usecase diagram');
-
             setImages([basicDiagram]);
         } else if (sliceImageTopic === 'CPT_specific_diagram') {
             setHeading('CPT management - Specific usecase diagram');
-
             setImages([specialDiagram]);
         } else if (sliceImageTopic === 'Pocket_Desk') {
             setHeading('Pocket - Desktop Images');
-
             setImages([Pocket_Desk1, Pocket_Desk2, Pocket_Desk3, Pocket_Desk4]);
         } else if (sliceImageTopic === 'Pocket_Mobile') {
             setHeading('Pocket - Mobile Images');
-
             setImages([
                 Pocket_Mobile1,
                 Pocket_Mobile2,
@@ -113,12 +109,21 @@ const ImageModal = forwardRef(function ImageModal(props, ref) {
         return {
             open: () => {
                 modal.current.showModal();
+                console.log(images);
             },
             close: () => {
                 dispatch(closeImageModal());
+                setImages([]);
                 modal.current.close();
             },
         };
+    });
+
+    const { data: CPTImages } = useQuery({
+        queryKey: ['CPT Images'],
+        queryFn: () => LoadCPTImages(CPTUrls),
+        staleTime: 1000 * 60 * 15, // 5 minutes
+        cacheTime: 1000 * 60 * 60, // 15 minutes
     });
 
     return createPortal(
@@ -132,7 +137,7 @@ const ImageModal = forwardRef(function ImageModal(props, ref) {
                 <div className="images">
                     {images.map((image, index) => {
                         return (
-                            <img
+                            <Img
                                 src={image}
                                 key={index}
                                 className={`image--${images.length}__${index} image--${images.length}`}
