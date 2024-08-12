@@ -6,6 +6,7 @@
         top: 5vh;
         left: 5vh;
         font-size: 3rem;
+        cursor: pointer;
         &:hover{
             transform: scale(1.2);
         }
@@ -56,12 +57,10 @@
         @include detailContent(3);
     }
 
-
     &--checkbox__4 {
         @include detailCheckbox(4);
     }
 
-   
     &--button__4 {
         @include detailButton(4);
     }
@@ -78,7 +77,7 @@
         margin-left: 1rem;
         transition: all .2s;
         background-color: transparent;
-
+        cursor: pointer;
         &:hover {
             transform: translateY(-5px) scale(1.1);
         }
