@@ -4,8 +4,8 @@ import { forwardRef, useImperativeHandle } from 'react';
 import { createPortal } from 'react-dom';
 import { closeImageModal } from '../store/imageSlice';
 import { useSelector, useDispatch } from 'react-redux';
+import { CPTUrls } from '../assets/urls';
 
-import auth1 from '../assets/CPT/auth/auth_1.png';
 import auth2 from '../assets/CPT/auth/auth_2.png';
 import auth3 from '../assets/CPT/auth/auth_3.png';
 import detail1 from '../assets/CPT/detail/detail1.png';
@@ -32,12 +32,10 @@ import adminCapstone2 from '../assets/CPT/admin-capstone/capstone2.png';
 import adminCapstone3 from '../assets/CPT/admin-capstone/capstone3.png';
 import basicDiagram from '../assets/CPT/diagram/basic-diagram.png';
 import specialDiagram from '../assets/CPT/diagram/special-diagram.png';
-
 import Pocket_Desk1 from '../assets/Pocket/desk/desk1.png';
 import Pocket_Desk2 from '../assets/Pocket/desk/desk2.png';
 import Pocket_Desk3 from '../assets/Pocket/desk/desk3.png';
 import Pocket_Desk4 from '../assets/Pocket/desk/desk4.png';
-
 import Pocket_Mobile1 from '../assets/Pocket/mobile/mobile1.png';
 import Pocket_Mobile2 from '../assets/Pocket/mobile/mobile2.png';
 import Pocket_Mobile3 from '../assets/Pocket/mobile/mobile3.png';
@@ -54,7 +52,7 @@ const ImageModal = forwardRef(function ImageModal(props, ref) {
 
     useEffect(() => {
         if (sliceImageTopic === 'CPT_Auth') {
-            setImages([auth1, auth2, auth3]);
+            setImages([CPTUrls.auth1, auth2, auth3]);
             setHeading('CPT management - Authentication');
         } else if (sliceImageTopic === 'CPT_Detail') {
             setImages([detail1, detail2, detail3, detail4, detail5]);
@@ -133,7 +131,6 @@ const ImageModal = forwardRef(function ImageModal(props, ref) {
                 />
                 <div className="images">
                     {images.map((image, index) => {
-                        console.log(`image--${images.length}__${index}`);
                         return (
                             <img
                                 src={image}
