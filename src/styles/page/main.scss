@@ -12,10 +12,34 @@
     }
 }
 
-.about {
-    background-color: $color-grey-dark-1;
-    height: 120vh;
+.projects {
+    padding: 18vh 3vh;
     margin-top: -15vh;
+    height: 115vh;
+    // background-image: linear-gradient(to right,
+    //         rgba($color-green-dark, .95),
+    //         rgba($color-green-dark, .95)), url(../assets/images/coding.jpg);
+    // background-size: cover;
+    // background-position: center;
+
+    background-color: $color-grey-dark-1;
+
+
+    @include respond(tab-land) {
+        padding-top: 3vh;
+        height: 85vh;
+    }
+
+    @include respond(tab-port) {
+        padding-top: 3vh;
+        height: 100vh;
+    }
+}
+
+.about {
+
+    height: 100vh;
+    // margin-top: -15vh;
     padding-top: 10vh;
 
     @include respond(desk-md) {
@@ -81,25 +105,7 @@
         height: 130vh;
     }
 }
-.projects {
-    padding-top: 7vh;
-    height: 100vh;
-    background-image: linear-gradient(to right,
-            rgba($color-green-dark, .95),
-            rgba($color-green-dark, .95)), url(../assets/images/coding.jpg);
-    background-size: cover;
-    background-position: center;
 
-    @include respond(tab-land) {
-        padding-top: 3vh;
-        height: 85vh;
-    }
-
-    @include respond(tab-port) {
-        padding-top: 3vh;
-        height: 100vh;
-    }
-}
 
 .currently-learning {
     height: 100vh;

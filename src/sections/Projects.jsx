@@ -73,165 +73,143 @@ export default function Projects() {
         <>
             <h3 className="heading--tertiary project--heading">Projects</h3>
 
+            <div className="time_line">
+                <div className="time_line__circle"></div>
+                <div className="time_line__circle"></div>
+                <div className="time_line__circle"></div>
+            </div>
+
             <div className="row">
-                <div className="col-1-of-4 project--card">
-                    <img className="project--image__cpt" src={Cpt}></img>
+                <div className="project--card">
+                    <div className="project--team">Personal Project</div>
+                    <span className="project--period">
+                        May.2024 - July.2024 (2 Monthes)
+                    </span>
+                    <img className="project--image__ng" src={NG}></img>
+
                     <div className="project--text">
-                        <div className="project--name__cpt">CPT management</div>
+                        <div className="project--name__ng">Name Gacha</div>
                         <ul className="project--ul">
                             <li className="project--basic-info">
-                                Project Management
+                                Ai-powered chatting
                             </li>
-                            <li className="project--basic-info">Spring Boot</li>
-                            <li className="project--basic-info"> -- / 2023</li>
+                            <li className="project--basic-info">
+                                React + AWS + OpenAI
+                            </li>
+
                             <li className="project--basic-info__link">
-                                <img src={Git} className="project--git" />
-                                <a
-                                    href="https://github.com/hyeonbinHur/CapstoneProjectManagementSystem"
-                                    className="link"
-                                >
-                                    CPT Management Code
-                                </a>
+                                <p>
+                                    <img src={Git} className="project--git" />
+                                    <a
+                                        href="https://github.com/hyeonbinHur/Name_Gacha_aws_lambda"
+                                        className="link"
+                                    >
+                                        Back-End Code
+                                    </a>
+                                </p>
+                                <p>
+                                    <img src={Git} className="project--git" />
+                                    <a
+                                        href="https://github.com/hyeonbinHur/namegacha_frontend"
+                                        className="link"
+                                    >
+                                        Front-End Code
+                                    </a>
+                                </p>
+                                <p>
+                                    <BsEyeFill className="project--live" />
+                                    <a
+                                        href="https://hyeonbinhur.github.io/namegacha/"
+                                        className="link"
+                                    >
+                                        Live server
+                                    </a>
+                                </p>
+                            </li>
+
+                            <li className="project--basic-info">
+                                Detail &rarr;
                             </li>
                         </ul>
                     </div>
-                    <input
+                    {/* <input
                         type="checkbox"
-                        className="detail--checkbox__2"
-                        id="detail_toggle__2"
+                        className="detail--checkbox__4"
+                        id="detail_toggle__4"
                     />
                     <label
-                        htmlFor="detail_toggle__2"
-                        className="detail--button__2"
+                        htmlFor="detail_toggle__4"
+                        className="detail--button__4"
                     >
-                        <span className="detail--icon__2">&nbsp;</span>
-                    </label>
-                    <div className="detail--background__2">&nbsp;</div>
-                    <div className="detail--content__2">
+                        <span className="detail--icon__4">&nbsp;</span>
+                    </label> */}
+                    <div className="detail--background__4">&nbsp;</div>
+                    <div className="detail--content__4">
                         <header className="content__header">
-                            <img src={Cpt} alt="" className="content__logo" />
+                            <img
+                                src={NG}
+                                alt=""
+                                className="content__logo__ng"
+                            />
                         </header>
                         <main className="content--body">
                             <div className="content--body__1">
                                 <h3 className="heading--tertiary">Features</h3>
                                 <ul className="content__ul">
                                     <li className="content--features__li">
-                                        All features
+                                        Authentication & Authorization
                                         <AiFillPlaySquare
                                             className="detail__video"
                                             onClick={() =>
-                                                handleOpenVideoModal('CPT_All')
+                                                handleOpenVideoModal('NG_Auth')
                                             }
                                         />
                                     </li>
                                     <li className="content--features__li">
-                                        Basic - Authentication
-                                        <BiImageAlt
+                                        Sidebar Feature
+                                        <AiFillPlaySquare
                                             className="detail__video"
                                             onClick={() =>
-                                                handleOpenImageModal('CPT_Auth')
+                                                handleOpenVideoModal('NG_Side')
                                             }
                                         />
                                     </li>
                                     <li className="content--features__li">
-                                        Basic - Visit detail page
-                                        <BiImageAlt
+                                        AI chatting
+                                        <AiFillPlaySquare
                                             className="detail__video"
                                             onClick={() =>
-                                                handleOpenImageModal(
-                                                    'CPT_Detail'
+                                                handleOpenVideoModal('NG_AI')
+                                            }
+                                        />
+                                    </li>
+                                    <li className="content--features__li">
+                                        DetailPage
+                                        <AiFillPlaySquare
+                                            className="detail__video"
+                                            onClick={() =>
+                                                handleOpenVideoModal(
+                                                    'NG_Detail'
                                                 )
                                             }
                                         />
                                     </li>
                                     <li className="content--features__li">
-                                        Basic - Search users & groups & company
-                                        & projects
-                                        <BiImageAlt
+                                        Error Handling
+                                        <AiFillPlaySquare
                                             className="detail__video"
                                             onClick={() =>
-                                                handleOpenImageModal(
-                                                    'CPT_Search'
-                                                )
+                                                handleOpenVideoModal('NG_ERROR')
                                             }
                                         />
                                     </li>
                                     <li className="content--features__li">
-                                        Student - join & create group
-                                        <BiImageAlt
+                                        Responsible Design
+                                        <AiFillPlaySquare
                                             className="detail__video"
                                             onClick={() =>
-                                                handleOpenImageModal(
-                                                    'CPT_Student_group'
-                                                )
-                                            }
-                                        />
-                                    </li>
-                                    <li className="content--features__li">
-                                        Student - apply capstone project
-                                        <BiImageAlt
-                                            className="detail__video"
-                                            onClick={() =>
-                                                handleOpenImageModal(
-                                                    'CPT_student_capstone'
-                                                )
-                                            }
-                                        />
-                                    </li>
-                                    <li className="content--features__li">
-                                        Company - Create capstone project
-                                        <BiImageAlt
-                                            className="detail__video"
-                                            onClick={() =>
-                                                handleOpenImageModal(
-                                                    'CPT_company_create_capstone'
-                                                )
-                                            }
-                                        />
-                                    </li>
-
-                                    <li className="content--features__li">
-                                        Supervisor - Edit & View capstone
-                                        project
-                                        <BiImageAlt
-                                            className="detail__video"
-                                            onClick={() =>
-                                                handleOpenImageModal(
-                                                    'CPT_supervisor_capstone'
-                                                )
-                                            }
-                                        />
-                                    </li>
-                                    <li className="content--features__li">
-                                        Admin - Review & Edit capstone project
-                                        <BiImageAlt
-                                            className="detail__video"
-                                            onClick={() =>
-                                                handleOpenImageModal(
-                                                    'CPT_admin_capstone'
-                                                )
-                                            }
-                                        />
-                                    </li>
-
-                                    <li className="content--features__li">
-                                        Bsic - usecase diagram
-                                        <BiImageAlt
-                                            className="detail__video"
-                                            onClick={() =>
-                                                handleOpenImageModal(
-                                                    'CPT_basic_diagram'
-                                                )
-                                            }
-                                        />
-                                    </li>
-                                    <li className="content--features__li">
-                                        Specific - usecase diagram
-                                        <BiImageAlt
-                                            className="detail__video"
-                                            onClick={() =>
-                                                handleOpenImageModal(
-                                                    'CPT_specific_diagram'
+                                                handleOpenVideoModal(
+                                                    'NG_Response'
                                                 )
                                             }
                                         />
@@ -244,16 +222,30 @@ export default function Projects() {
                                     <li className="content--tool__li">
                                         <img
                                             className="content--tool__logo"
-                                            src={HTML}
+                                            src={React}
                                         />
-                                        HTML
+                                        React
                                     </li>
                                     <li className="content--tool__li">
                                         <img
                                             className="content--tool__logo"
-                                            src={CSS}
+                                            src={Redux}
                                         />
-                                        CSS
+                                        Redux
+                                    </li>
+                                    <li className="content--tool__li">
+                                        <img
+                                            className="content--tool__logo"
+                                            src={Query}
+                                        />
+                                        React Query
+                                    </li>
+                                    <li className="content--tool__li">
+                                        <img
+                                            className="content--tool__logo"
+                                            src={React}
+                                        />
+                                        Context API
                                     </li>
                                     <li className="content--tool__li">
                                         <img
@@ -265,23 +257,16 @@ export default function Projects() {
                                     <li className="content--tool__li">
                                         <img
                                             className="content--tool__logo"
-                                            src={JAVA}
+                                            src={SCSS}
                                         />
-                                        Java
+                                        SCSS
                                     </li>
                                     <li className="content--tool__li">
                                         <img
                                             className="content--tool__logo"
-                                            src={Spring}
+                                            src={AI}
                                         />
-                                        Springboot
-                                    </li>
-                                    <li className="content--tool__li">
-                                        <img
-                                            className="content--tool__logo"
-                                            src={PG}
-                                        />
-                                        PostgreSQL
+                                        Assistant API
                                     </li>
                                     <li className="content--tool__li">
                                         <img
@@ -290,12 +275,55 @@ export default function Projects() {
                                         />
                                         AWS-RDS
                                     </li>
+                                    <li className="content--tool__li">
+                                        <img
+                                            className="content--tool__logo"
+                                            src={NAT}
+                                        />
+                                        AWS-NAT gateway
+                                    </li>
+                                    <li className="content--tool__li">
+                                        <img
+                                            className="content--tool__logo"
+                                            src={API}
+                                        />
+                                        AWS-API gateway
+                                    </li>
+                                    <li className="content--tool__li">
+                                        <img
+                                            className="content--tool__logo"
+                                            src={Lambda}
+                                        />
+                                        AWS-API Lambda function
+                                    </li>
+                                    <li className="content--tool__li">
+                                        <img
+                                            className="content--tool__logo"
+                                            src={PG}
+                                        />
+                                        PostgreSQL
+                                    </li>
+
+                                    <li className="content--tool__li">
+                                        <img
+                                            className="content--tool__logo"
+                                            src={JWT}
+                                        />
+                                        JWT
+                                    </li>
+                                    <li className="content--tool__li">
+                                        <img
+                                            className="content--tool__logo"
+                                            src={Node}
+                                        />
+                                        Node.js
+                                    </li>
                                 </ul>
                             </div>
                         </main>
                     </div>
                 </div>
-                <div className="col-1-of-4 project--card">
+                <div className="project--card">
                     <img className="project--image__pocket" src={Pocket}></img>
                     <div className="project--text">
                         <div className="project--name">Pocket</div>
@@ -518,123 +546,164 @@ export default function Projects() {
                         </main>
                     </div>
                 </div>
-                <div className="col-1-of-4 project--card">
-                    <img className="project--image__ng" src={NG}></img>
-                    <div className="project--text__ng">
-                        <div className="project--name__ng">Name Gacha</div>
+                <div className="project--card">
+                    <img className="project--image__cpt" src={Cpt}></img>
+                    <div className="project--text">
+                        <div className="project--name__cpt">CPT management</div>
                         <ul className="project--ul">
                             <li className="project--basic-info">
-                                Ai-powered chatting
+                                Project Management
                             </li>
-                            <li className="project--basic-info">React + AWS</li>
-                            <li className="project--basic-info">July / 2024</li>
+                            <li className="project--basic-info">Spring Boot</li>
+                            <li className="project--basic-info"> -- / 2023</li>
                             <li className="project--basic-info__link">
                                 <img src={Git} className="project--git" />
                                 <a
-                                    href="https://github.com/hyeonbinHur/Name_Gacha_aws_lambda"
+                                    href="https://github.com/hyeonbinHur/CapstoneProjectManagementSystem"
                                     className="link"
                                 >
-                                    Backend Code
-                                </a>
-                            </li>
-                            <li className="project--basic-info__link">
-                                <img src={Git} className="project--git" />
-                                <a
-                                    href="https://github.com/hyeonbinHur/namegacha_frontend"
-                                    className="link"
-                                >
-                                    Frontend Code
-                                </a>
-                            </li>
-                            <li className="project--basic-info__link">
-                                <BsEyeFill className="project--live" />
-                                <a
-                                    href="https://hyeonbinhur.github.io/namegacha/"
-                                    className="link"
-                                >
-                                    Live server
+                                    CPT Management Code
                                 </a>
                             </li>
                         </ul>
                     </div>
                     <input
                         type="checkbox"
-                        className="detail--checkbox__4"
-                        id="detail_toggle__4"
+                        className="detail--checkbox__2"
+                        id="detail_toggle__2"
                     />
                     <label
-                        htmlFor="detail_toggle__4"
-                        className="detail--button__4"
+                        htmlFor="detail_toggle__2"
+                        className="detail--button__2"
                     >
-                        <span className="detail--icon__4">&nbsp;</span>
+                        <span className="detail--icon__2">&nbsp;</span>
                     </label>
-                    <div className="detail--background__4">&nbsp;</div>
-                    <div className="detail--content__4">
+                    <div className="detail--background__2">&nbsp;</div>
+                    <div className="detail--content__2">
                         <header className="content__header">
-                            <img
-                                src={NG}
-                                alt=""
-                                className="content__logo__ng"
-                            />
+                            <img src={Cpt} alt="" className="content__logo" />
                         </header>
                         <main className="content--body">
                             <div className="content--body__1">
                                 <h3 className="heading--tertiary">Features</h3>
                                 <ul className="content__ul">
                                     <li className="content--features__li">
-                                        Authentication & Authorization
+                                        All features
                                         <AiFillPlaySquare
                                             className="detail__video"
                                             onClick={() =>
-                                                handleOpenVideoModal('NG_Auth')
+                                                handleOpenVideoModal('CPT_All')
                                             }
                                         />
                                     </li>
                                     <li className="content--features__li">
-                                        Sidebar Feature
-                                        <AiFillPlaySquare
+                                        Basic - Authentication
+                                        <BiImageAlt
                                             className="detail__video"
                                             onClick={() =>
-                                                handleOpenVideoModal('NG_Side')
+                                                handleOpenImageModal('CPT_Auth')
                                             }
                                         />
                                     </li>
                                     <li className="content--features__li">
-                                        AI chatting
-                                        <AiFillPlaySquare
+                                        Basic - Visit detail page
+                                        <BiImageAlt
                                             className="detail__video"
                                             onClick={() =>
-                                                handleOpenVideoModal('NG_AI')
-                                            }
-                                        />
-                                    </li>
-                                    <li className="content--features__li">
-                                        DetailPage
-                                        <AiFillPlaySquare
-                                            className="detail__video"
-                                            onClick={() =>
-                                                handleOpenVideoModal(
-                                                    'NG_Detail'
+                                                handleOpenImageModal(
+                                                    'CPT_Detail'
                                                 )
                                             }
                                         />
                                     </li>
                                     <li className="content--features__li">
-                                        Error Handling
-                                        <AiFillPlaySquare
+                                        Basic - Search users & groups & company
+                                        & projects
+                                        <BiImageAlt
                                             className="detail__video"
                                             onClick={() =>
-                                                handleOpenVideoModal('NG_ERROR')
+                                                handleOpenImageModal(
+                                                    'CPT_Search'
+                                                )
                                             }
                                         />
                                     </li>
                                     <li className="content--features__li">
-                                        Responsible Design
-                                        <AiFillPlaySquare
+                                        Student - join & create group
+                                        <BiImageAlt
                                             className="detail__video"
                                             onClick={() =>
-                                                handleOpenVideoModal(
-                                                    'NG_Response'
+                                                handleOpenImageModal(
+                                                    'CPT_Student_group'
+                                                )
+                                            }
+                                        />
+                                    </li>
+                                    <li className="content--features__li">
+                                        Student - apply capstone project
+                                        <BiImageAlt
+                                            className="detail__video"
+                                            onClick={() =>
+                                                handleOpenImageModal(
+                                                    'CPT_student_capstone'
+                                                )
+                                            }
+                                        />
+                                    </li>
+                                    <li className="content--features__li">
+                                        Company - Create capstone project
+                                        <BiImageAlt
+                                            className="detail__video"
+                                            onClick={() =>
+                                                handleOpenImageModal(
+                                                    'CPT_company_create_capstone'
+                                                )
+                                            }
+                                        />
+                                    </li>
+
+                                    <li className="content--features__li">
+                                        Supervisor - Edit & View capstone
+                                        project
+                                        <BiImageAlt
+                                            className="detail__video"
+                                            onClick={() =>
+                                                handleOpenImageModal(
+                                                    'CPT_supervisor_capstone'
+                                                )
+                                            }
+                                        />
+                                    </li>
+                                    <li className="content--features__li">
+                                        Admin - Review & Edit capstone project
+                                        <BiImageAlt
+                                            className="detail__video"
+                                            onClick={() =>
+                                                handleOpenImageModal(
+                                                    'CPT_admin_capstone'
+                                                )
+                                            }
+                                        />
+                                    </li>
+
+                                    <li className="content--features__li">
+                                        Bsic - usecase diagram
+                                        <BiImageAlt
+                                            className="detail__video"
+                                            onClick={() =>
+                                                handleOpenImageModal(
+                                                    'CPT_basic_diagram'
+                                                )
+                                            }
+                                        />
+                                    </li>
+                                    <li className="content--features__li">
+                                        Specific - usecase diagram
+                                        <BiImageAlt
+                                            className="detail__video"
+                                            onClick={() =>
+                                                handleOpenImageModal(
+                                                    'CPT_specific_diagram'
                                                 )
                                             }
                                         />
@@ -647,30 +716,16 @@ export default function Projects() {
                                     <li className="content--tool__li">
                                         <img
                                             className="content--tool__logo"
-                                            src={React}
+                                            src={HTML}
                                         />
-                                        React
+                                        HTML
                                     </li>
                                     <li className="content--tool__li">
                                         <img
                                             className="content--tool__logo"
-                                            src={Redux}
+                                            src={CSS}
                                         />
-                                        Redux
-                                    </li>
-                                    <li className="content--tool__li">
-                                        <img
-                                            className="content--tool__logo"
-                                            src={Query}
-                                        />
-                                        React Query
-                                    </li>
-                                    <li className="content--tool__li">
-                                        <img
-                                            className="content--tool__logo"
-                                            src={React}
-                                        />
-                                        Context API
+                                        CSS
                                     </li>
                                     <li className="content--tool__li">
                                         <img
@@ -682,44 +737,16 @@ export default function Projects() {
                                     <li className="content--tool__li">
                                         <img
                                             className="content--tool__logo"
-                                            src={SCSS}
+                                            src={JAVA}
                                         />
-                                        SCSS
+                                        Java
                                     </li>
                                     <li className="content--tool__li">
                                         <img
                                             className="content--tool__logo"
-                                            src={AI}
+                                            src={Spring}
                                         />
-                                        Assistant API
-                                    </li>
-                                    <li className="content--tool__li">
-                                        <img
-                                            className="content--tool__logo"
-                                            src={RDS}
-                                        />
-                                        AWS-RDS
-                                    </li>
-                                    <li className="content--tool__li">
-                                        <img
-                                            className="content--tool__logo"
-                                            src={NAT}
-                                        />
-                                        AWS-NAT gateway
-                                    </li>
-                                    <li className="content--tool__li">
-                                        <img
-                                            className="content--tool__logo"
-                                            src={API}
-                                        />
-                                        AWS-API gateway
-                                    </li>
-                                    <li className="content--tool__li">
-                                        <img
-                                            className="content--tool__logo"
-                                            src={Lambda}
-                                        />
-                                        AWS-API Lambda function
+                                        Springboot
                                     </li>
                                     <li className="content--tool__li">
                                         <img
@@ -728,20 +755,12 @@ export default function Projects() {
                                         />
                                         PostgreSQL
                                     </li>
-
                                     <li className="content--tool__li">
                                         <img
                                             className="content--tool__logo"
-                                            src={JWT}
+                                            src={RDS}
                                         />
-                                        JWT
-                                    </li>
-                                    <li className="content--tool__li">
-                                        <img
-                                            className="content--tool__logo"
-                                            src={Node}
-                                        />
-                                        Node.js
+                                        AWS-RDS
                                     </li>
                                 </ul>
                             </div>
@@ -749,6 +768,7 @@ export default function Projects() {
                     </div>
                 </div>
             </div>
+
             <Video ref={videoModal} />
             <ImageModal ref={imageModal} />
         </>
