@@ -77,7 +77,7 @@
     }
 
     &:checked+.detail--button__#{$modifier} .detail--icon__#{$modifier} {
-        
+
         background-color: transparent;
         transition: all .3s;
 
@@ -120,9 +120,7 @@
         transition: transform 1s;
     }
 }
-
 @mixin detailIcon($modifier) {
-    
 }
 
 @mixin detailButton($modifier) {
@@ -135,11 +133,9 @@
     cursor: pointer;
     display: inline-block;
     transition: all .8s;
-
     &:hover .detail--icon__#{$modifier}::before {
         top: -1.2rem;
     }
-
     &:hover .detail--icon__#{$modifier}::after {
         top: 1.2rem;
     }
@@ -150,19 +146,8 @@
     opacity: 0;
     visibility: hidden;
     z-index: -1;
-    transition: opacity 2s;
     background-color: $color-grey-light-2 !important;
 }
 
-// @mixin detailBackground($modifier) {
-//     position: absolute;
-//     top: 0%;
-//     left: 0%;
-//     width: 10rem;
-//     height: 10rem;
-//     z-index: -1;
-//     opacity: 0;
-//     transition: all .8s;
-//     border-radius: 2px;
-// }
+
 

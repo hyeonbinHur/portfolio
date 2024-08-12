@@ -1,27 +1,42 @@
 .detail {
-    &--checkbox__1 {
-        // @include detailCheckbox(1);
+    &--close{
+        display: inline-block;
+        transition: transform .2s;
+        position: absolute;
+        top: 5vh;
+        left: 5vh;
+        font-size: 3rem;
+        &:hover{
+            transform: scale(1.2);
+        }
     }
-    &--icon__1 {
-        @include detailIcon(1);
+  
+    &--btn{
+        display: flex;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+        width: 10rem;
+        transition: all .2s;
+        cursor: pointer;
+        & span{
+            margin-left: 1rem;
+            transition: margin-left .2s;
+        }
 
+        &:hover{
+           width: 12rem;
+           border-bottom: 1px solid $color-green-primary;
+            color: $color-green-primary;
+            font-weight: 500;
+            & span{
+                margin-left: 2rem;
+            }
+        }
     }
-    &--button__1 {
-        @include detailButton(1);
 
-    }
-    &--content__1 {
-        @include detailContent(1);
-
-    }
-    // &--background__1 {
-    //     @include detailBackground(1);
-    // }
     &--checkbox__2 {
         @include detailCheckbox(2);
-    }
-    &--icon__2 {
-        @include detailIcon(2);
     }
     &--button__2 {
         @include detailButton(2);
@@ -30,16 +45,10 @@
         @include detailContent(2);
     }
 
-    // &--background__2 {
-    //     @include detailBackground(2);
-    // }
-
     &--checkbox__3 {
         @include detailCheckbox(3);
     }
-    &--icon__3 {
-        // @include detailIcon(3);
-    }
+  
     &--button__3 {
         @include detailButton(3);
     }
@@ -47,17 +56,12 @@
         @include detailContent(3);
     }
 
-    // &--background__3 {
-    //     @include detailBackground(3);
-    // }
 
     &--checkbox__4 {
         @include detailCheckbox(4);
     }
-    
-    &--icon__4 {
-        @include detailIcon(4);
-    }
+
+   
     &--button__4 {
         @include detailButton(4);
     }
@@ -66,10 +70,7 @@
     }
 
 
-    // &--background__4 {
-    //     @include detailBackground(4);
-    // }
-
+   
     &__video {
         font-size: 3rem;
         position: absolute;
