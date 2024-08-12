@@ -1,6 +1,6 @@
 .detail {
     &--checkbox__1 {
-        @include detailCheckbox(1);
+        // @include detailCheckbox(1);
     }
     &--icon__1 {
         @include detailIcon(1);
@@ -11,13 +11,12 @@
 
     }
     &--content__1 {
-        @include detainContent(1);
+        @include detailContent(1);
 
     }
-    &--background__1 {
-        @include detailBackground(1);
-
-    }
+    // &--background__1 {
+    //     @include detailBackground(1);
+    // }
     &--checkbox__2 {
         @include detailCheckbox(2);
     }
@@ -28,31 +27,34 @@
         @include detailButton(2);
     }
     &--content__2 {
-        @include detainContent(2);
+        @include detailContent(2);
     }
-    &--background__2 {
-        @include detailBackground(2);
-    }
+
+    // &--background__2 {
+    //     @include detailBackground(2);
+    // }
 
     &--checkbox__3 {
         @include detailCheckbox(3);
     }
     &--icon__3 {
-        @include detailIcon(3);
+        // @include detailIcon(3);
     }
     &--button__3 {
         @include detailButton(3);
     }
     &--content__3 {
-        @include detainContent(3);
+        @include detailContent(3);
     }
-    &--background__3 {
-        @include detailBackground(3);
-    }
+
+    // &--background__3 {
+    //     @include detailBackground(3);
+    // }
 
     &--checkbox__4 {
         @include detailCheckbox(4);
     }
+    
     &--icon__4 {
         @include detailIcon(4);
     }
@@ -60,11 +62,13 @@
         @include detailButton(4);
     }
     &--content__4 {
-        @include detainContent(4);
+        @include detailContent(4);
     }
-    &--background__4 {
-        @include detailBackground(4);
-    }
+
+
+    // &--background__4 {
+    //     @include detailBackground(4);
+    // }
 
     &__video {
         font-size: 3rem;

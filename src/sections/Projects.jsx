@@ -1,6 +1,8 @@
 import { BsEyeFill } from 'react-icons/bs';
 import { BiImageAlt } from 'react-icons/bi';
 import { AiFillPlaySquare } from 'react-icons/ai';
+import { AiOutlineClose } from 'react-icons/ai';
+
 import Cpt from '../assets/projects/cpt.svg';
 import Pocket from '../assets/projects/pocket.png';
 import NG from '../assets/projects/ng.png';
@@ -45,6 +47,7 @@ export default function Projects() {
     const sliceVideoIsOpen = useSelector((state) => state.videoSlice.isOpen);
     const sliceImageTopic = useSelector((state) => state.imageSlice.topic);
     const sliceImageIsOpen = useSelector((state) => state.imageSlice.isOpen);
+
     const handleOpenImageModal = (topic) => {
         dispatch(openImageModal({ topic: topic }));
     };
@@ -85,10 +88,13 @@ export default function Projects() {
                     <span className="project--period">
                         May.2024 - July.2024 (2 Monthes)
                     </span>
-                    <img className="project--image__ng" src={NG}></img>
+
+                    <div className="project--image">
+                        <img className="project--image__ng" src={NG}></img>
+                    </div>
 
                     <div className="project--text">
-                        <div className="project--name__ng">Name Gacha</div>
+                        <div className="project--name">Name Gacha</div>
                         <ul className="project--ul">
                             <li className="project--basic-info">
                                 Ai-powered chatting
@@ -128,23 +134,29 @@ export default function Projects() {
                             </li>
 
                             <li className="project--basic-info">
-                                Detail &rarr;
+                                <label htmlFor="detail_toggle__4">
+                                    <span>Detail &rarr;</span>
+                                </label>
                             </li>
                         </ul>
                     </div>
-                    {/* <input
+
+                    <input
                         type="checkbox"
                         className="detail--checkbox__4"
                         id="detail_toggle__4"
                     />
-                    <label
-                        htmlFor="detail_toggle__4"
-                        className="detail--button__4"
-                    >
-                        <span className="detail--icon__4">&nbsp;</span>
-                    </label> */}
-                    <div className="detail--background__4">&nbsp;</div>
+
                     <div className="detail--content__4">
+                        <label
+                            htmlFor="detail_toggle__4"
+                            className="detail--close__4"
+                        >
+                            <span className="detail--close_icon__4 ">
+                                <AiOutlineClose />
+                            </span>
+                        </label>
+
                         <header className="content__header">
                             <img
                                 src={NG}
@@ -152,6 +164,7 @@ export default function Projects() {
                                 className="content__logo__ng"
                             />
                         </header>
+
                         <main className="content--body">
                             <div className="content--body__1">
                                 <h3 className="heading--tertiary">Features</h3>
@@ -323,8 +336,18 @@ export default function Projects() {
                         </main>
                     </div>
                 </div>
+
                 <div className="project--card">
-                    <img className="project--image__pocket" src={Pocket}></img>
+                    <div className="project--team">Personal Project</div>
+                    <span className="project--period">
+                        May.2024 - July.2024 (2 Monthes)
+                    </span>
+                    <div className="project--image">
+                        <img
+                            className="project--image__pocket"
+                            src={Pocket}
+                        ></img>
+                    </div>
                     <div className="project--text">
                         <div className="project--name">Pocket</div>
                         <ul className="project--ul">
@@ -334,15 +357,23 @@ export default function Projects() {
                             <li className="project--basic-info">
                                 React + Firebase
                             </li>
-                            <li className="project--basic-info">May / 2024</li>
                             <li className="project--basic-info__link">
-                                <img src={Git} className="project--git" />
-                                <a
-                                    href="https://github.com/hyeonbinHur/DDock-DDock"
-                                    className="link"
-                                >
-                                    Pocket Code
-                                </a>
+                                <p className="project--basic-info">
+                                    <img src={Git} className="project--git" />
+                                    <a
+                                        href="https://github.com/hyeonbinHur/DDock-DDock"
+                                        className="link"
+                                    >
+                                        Pocket Code
+                                    </a>
+                                </p>
+                            </li>
+                            <li className="project--basic-info">
+                                <label htmlFor="detail_toggle__3">
+                                    <span className="detail--icon__3">
+                                        <span>Detail &rarr;</span>
+                                    </span>
+                                </label>
                             </li>
                         </ul>
                     </div>
@@ -351,14 +382,13 @@ export default function Projects() {
                         className="detail--checkbox__3"
                         id="detail_toggle__3"
                     />
-                    <label
-                        htmlFor="detail_toggle__3"
-                        className="detail--button__3"
-                    >
-                        <span className="detail--icon__3">&nbsp;</span>
-                    </label>
-                    <div className="detail--background__3">&nbsp;</div>
+
                     <div className="detail--content__3">
+                        <label htmlFor="detail_toggle__3">
+                            <span className="detail--icon__3">
+                                <AiOutlineClose />
+                            </span>
+                        </label>
                         <header className="content__header">
                             <img
                                 src={Pocket}
@@ -547,23 +577,37 @@ export default function Projects() {
                     </div>
                 </div>
                 <div className="project--card">
-                    <img className="project--image__cpt" src={Cpt}></img>
+                    <div className="project--team">Group of 4</div>
+                    <span className="project--period">
+                        May.2024 - July.2024 (2 Monthes)
+                    </span>
+                    <div className="project--image">
+                        <img className="project--image__cpt" src={Cpt}></img>
+                    </div>
                     <div className="project--text">
-                        <div className="project--name__cpt">CPT management</div>
+                        <div className="project--name">CPT management</div>
                         <ul className="project--ul">
                             <li className="project--basic-info">
                                 Project Management
                             </li>
                             <li className="project--basic-info">Spring Boot</li>
-                            <li className="project--basic-info"> -- / 2023</li>
                             <li className="project--basic-info__link">
-                                <img src={Git} className="project--git" />
-                                <a
-                                    href="https://github.com/hyeonbinHur/CapstoneProjectManagementSystem"
-                                    className="link"
-                                >
-                                    CPT Management Code
-                                </a>
+                                <p className="project--basic-info">
+                                    <img src={Git} className="project--git" />
+                                    <a
+                                        href="https://github.com/hyeonbinHur/CapstoneProjectManagementSystem"
+                                        className="link"
+                                    >
+                                        CPT Management Code
+                                    </a>
+                                </p>
+                            </li>
+                            <li className="project--basic-info">
+                                <label htmlFor="detail_toggle__2">
+                                    <span className="detail--icon__2">
+                                        Detail &rarr;
+                                    </span>
+                                </label>
                             </li>
                         </ul>
                     </div>
@@ -572,14 +616,13 @@ export default function Projects() {
                         className="detail--checkbox__2"
                         id="detail_toggle__2"
                     />
-                    <label
-                        htmlFor="detail_toggle__2"
-                        className="detail--button__2"
-                    >
-                        <span className="detail--icon__2">&nbsp;</span>
-                    </label>
-                    <div className="detail--background__2">&nbsp;</div>
+
                     <div className="detail--content__2">
+                        <label htmlFor="detail_toggle__2">
+                            <span className="detail--icon__2">
+                                <AiOutlineClose />
+                            </span>
+                        </label>
                         <header className="content__header">
                             <img src={Cpt} alt="" className="content__logo" />
                         </header>
