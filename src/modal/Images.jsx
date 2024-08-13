@@ -5,10 +5,9 @@ import { createPortal } from 'react-dom';
 import { closeImageModal } from '../store/imageSlice';
 import { useSelector, useDispatch } from 'react-redux';
 import { useQuery } from '@tanstack/react-query';
-import { Img } from 'react-image';
 import { CPTUrls } from '../assets/urls';
-import auth2 from '../assets/CPT/auth/auth_2.png';
-import auth3 from '../assets/CPT/auth/auth_3.png';
+// import auth2 from '../assets/CPT/auth/auth_2.png';
+// import auth3 from '../assets/CPT/auth/auth_3.png';
 import detail1 from '../assets/CPT/detail/detail1.png';
 import detail2 from '../assets/CPT/detail/detail2.png';
 import detail3 from '../assets/CPT/detail/detail3.png';
@@ -54,11 +53,7 @@ const ImageModal = forwardRef(function ImageModal(props, ref) {
 
     useEffect(() => {
         if (sliceImageTopic === 'CPT_Auth') {
-            setImages([
-                CPTImages.auth1.src,
-                CPTImages.auth2.src,
-                CPTImages.auth3.src,
-            ]);
+            setImages([CPTImages.auth1, CPTImages.auth2, CPTImages.auth3]);
             setHeading('CPT management - Authentication');
         } else if (sliceImageTopic === 'CPT_Detail') {
             setImages([detail1, detail2, detail3, detail4, detail5]);
@@ -120,8 +115,9 @@ const ImageModal = forwardRef(function ImageModal(props, ref) {
     });
 
     const { data: CPTImages } = useQuery({
+        // store blobs using reactt query to cache the blobs
         queryKey: ['CPT Images'],
-        queryFn: () => LoadCPTImages(CPTUrls),
+        queryFn: () => LoadCPTImages(CPTUrls), // LoadCPTImages returns key:blob pair object
         staleTime: 1000 * 60 * 15, // 5 minutes
         cacheTime: 1000 * 60 * 60, // 15 minutes
     });
@@ -137,8 +133,8 @@ const ImageModal = forwardRef(function ImageModal(props, ref) {
                 <div className="images">
                     {images.map((image, index) => {
                         return (
-                            <Img
-                                src={image}
+                            <img
+                                src={URL.createObjectURL(image)} // create url using blob
                                 key={index}
                                 className={`image--${images.length}__${index} image--${images.length}`}
                             />
