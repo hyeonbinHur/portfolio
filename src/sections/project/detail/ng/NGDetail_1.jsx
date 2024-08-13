@@ -1,5 +1,6 @@
+/* eslint-disable react/no-unescaped-entities */
 import NG from '../../../../assets/projects/ng.png';
-
+import Background from '../../../../assets/Ng/ng-background.png';
 export default function NGDetail_1() {
     return (
         <div className="ng-detail">
@@ -13,55 +14,57 @@ export default function NGDetail_1() {
             </header>
 
             <header className="ng-detail--header__sub">
-                이름 짓기를 어려워하는 개발자를 위한 ai가 이름을 지어주는 웹
-                서비스
+                This is a web service where AI suggests names for identifiers to
+                developers who struggle with naming.
             </header>
+            <h3 style={{ marginBottom: '2rem', fontSize: '2rem' }}>
+                Development Environment
+            </h3>
 
-            <section className="ng-detail--section__main">
-                <ul>
-                    <li>
-                        <span>개발 기간</span> <span>언제 ~ 언제 (2달)</span>
-                    </li>
-                    <li>
-                        <span>개발 인원</span>
-                        <span>1명 (Personal project)</span>
-                    </li>
-                </ul>
-            </section>
-
-            <section className="ng-detail--section__sub">
-                <header>개발 환경</header>
-                <ul>
-                    <li>React, JS, SCSS, AWS, OpenAI</li>
-                    <li>
-                        <span>Database</span> <span>PostgreSQL</span>
-                    </li>
-                    <li>
-                        <span>Cloud Service</span> <span>AWS</span>
-                        AWS-RDS, AWS-API Gateway, AWS-Lambda (Node.js)
-                    </li>
-                    <li>
-                        <span>Authentication</span>
-                        <span>JWT</span>
-                    </li>
-                    <li>
-                        <span>State management</span>
-                        <span>Redux, ContextAPI</span>
-                    </li>
-                    <li>
-                        <span>Data Fetching tool</span>{' '}
-                        <span>React Query, Axios</span>
-                    </li>
-                    <li>
-                        <span>Additional library</span>
-                        <span>tostify, error boundary</span>
-                    </li>
-                    <li>
-                        <span>IDE</span> <span> GitHub</span>
-                    </li>
-                </ul>
-            </section>
-            {/* <section>some Images</section> */}
+            <table className="detail--table">
+                <tr>
+                    <th>Development Period</th>
+                    <td>May.2024 ~ July.2024 (2 Months)</td>
+                </tr>
+                <tr>
+                    <th>Main technologies</th>
+                    <td>React, JS, SCSS, AWS, OpenAI</td>
+                </tr>
+                <tr>
+                    <th>Database</th>
+                    <td>PostgreSQL</td>
+                </tr>
+                <tr>
+                    <th>Cloud Service</th>
+                    <td>AWS</td>
+                    <td> AWS-RDS, AWS-API Gateway, AWS-Lambda (Node.js)</td>
+                </tr>
+                <tr>
+                    <th>Authentication</th>
+                    <td>JWT</td>
+                </tr>
+                <tr>
+                    <th>State management</th>
+                    <td>Redux, ContextAPI</td>
+                </tr>
+                <tr>
+                    <th>Data Fetching tool</th>
+                    <td>React Query, Axios</td>
+                </tr>
+                <tr>
+                    <th>Additional library</th>
+                    <td>tostify, error boundary</td>
+                </tr>
+                <tr>
+                    <th>IDE</th>
+                    <td>Visual Studion, Postman</td>
+                </tr>
+            </table>
+            <img
+                src={Background}
+                alt="Namge Gacha Detail page background image"
+                className="detail--background"
+            />
         </div>
     );
 }

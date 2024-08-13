@@ -16,7 +16,7 @@
     }
     &--next{
         position: absolute;
-        right: 3%;
+        right: 2%;
         bottom: 50%;
         transform: translate(-5%, 50%);
         border: none;
@@ -31,17 +31,18 @@
     &--prev{
         position: absolute;
         position: absolute;
-        left: 3%;
+        left: 2%;
         bottom: 50%;
         transform: translate(5%, 50%);
         border: none;
         font-size: 5rem;
         transition: transform .2s ease;
+        background-color: transparent;
+
         &:hover{
             transform: scale(1.1) translate(-2%, 48%);
             color: $color-white;
         }
-        background-color: transparent;
      }
 
     &__logo {
@@ -73,6 +74,7 @@
         width: 85vw;
         border-radius: 5px;
         background-color: $color-white;
+        box-shadow: .5rem 1rem 1rem rgba($color-black, .1);
         &__1 {
             flex: 1;
             text-align: left;
