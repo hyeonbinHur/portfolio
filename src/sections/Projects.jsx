@@ -1,5 +1,5 @@
 import { BsEyeFill } from 'react-icons/bs';
-import Cpt from '../assets/projects/cpt.svg';
+import Cpt from '../assets/projects/cpt-logo.png';
 import Pocket from '../assets/projects/pocket.png';
 import NG from '../assets/projects/ng.png';
 

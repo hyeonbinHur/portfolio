@@ -1,46 +1,75 @@
-import { BiImageAlt } from 'react-icons/bi';
-import { AiFillPlaySquare } from 'react-icons/ai';
+// import { BiImageAlt } from 'react-icons/bi';
+// import { AiFillPlaySquare } from 'react-icons/ai';
 import { AiOutlineClose } from 'react-icons/ai';
+import { GrPrevious } from 'react-icons/gr';
+import { GrNext } from 'react-icons/gr';
+// import Cpt from '../../assets/projects/cpt.svg';
+// import CSS from '../../assets/logos/css.png';
+// import HTML from '../../assets/logos/html.png';
+// import JS from '../../assets/logos/js.png';
+// import Spring from '../../assets/logos/spring.png';
+// import PG from '../../assets/logos/pg.png';
+// import RDS from '../../assets/logos/rds.png';
+// import JAVA from '../../assets/logos/java.png';
+import { useState } from 'react';
 
-import Cpt from '../../assets/projects/cpt.svg';
-import CSS from '../../assets/logos/css.png';
-import HTML from '../../assets/logos/html.png';
-import JS from '../../assets/logos/js.png';
-import Spring from '../../assets/logos/spring.png';
-import PG from '../../assets/logos/pg.png';
-import RDS from '../../assets/logos/rds.png';
-import JAVA from '../../assets/logos/java.png';
-
-import { useDispatch } from 'react-redux';
-import { openVideoModal } from '../../store/videoSlice';
-import { openImageModal } from '../../store/imageSlice';
+// import { useDispatch } from 'react-redux';
+// import { openVideoModal } from '../../store/videoSlice';
+// import { openImageModal } from '../../store/imageSlice';
 // import GH from '../assets/logos/github.png';
 
 // import GH from '../assets/logos/github.png';
+
+import CPTDetail_1 from './detail/cpt/CPTDetail_1';
+import CPTDetail_2 from './detail/cpt/CPTDetail_2';
 
 export default function CPTDetail() {
-    const dispatch = useDispatch();
+    const [current, setCurrent] = useState(1);
+    const max = 2;
+    // const dispatch = useDispatch();
 
-    const handleOpenImageModal = (topic) => {
-        dispatch(openImageModal({ topic: topic }));
-    };
+    // const handleOpenImageModal = (topic) => {
+    //     dispatch(openImageModal({ topic: topic }));
+    // };
 
-    const handleOpenVideoModal = (topic) => {
-        dispatch(openVideoModal({ topic: topic }));
-    };
+    // const handleOpenVideoModal = (topic) => {
+    //     dispatch(openVideoModal({ topic: topic }));
+    // };
 
     return (
         <div className="detail--content__2">
-            <label htmlFor="detail_toggle__2">
-                <span className="detail--close">
-                    <AiOutlineClose />
-                </span>
-            </label>
             <header className="content__header">
-                <img src={Cpt} alt="" className="content__logo" />
+                <label htmlFor="detail_toggle__2">
+                    <span className="detail--close">
+                        <AiOutlineClose />
+                    </span>
+                </label>
+                {/* <img src={Cpt} alt="" className="content__logo" /> */}
+                <span className="content--title">
+                    Capstone Project Management
+                </span>
             </header>
+            {current > 1 && (
+                <button
+                    onClick={() => setCurrent((prev) => prev - 1)}
+                    className="content--prev"
+                >
+                    <GrPrevious />
+                </button>
+            )}
+            {current < max && (
+                <button
+                    onClick={() => setCurrent((prev) => prev + 1)}
+                    className="content--next"
+                >
+                    <GrNext />
+                </button>
+            )}
+
             <main className="content--body">
-                <div className="content--body__1">
+                {current === 1 && <CPTDetail_1 />}
+                {current === 2 && <CPTDetail_2 />}
+                {/* <div className="content--body__1">
                     <h3 className="heading--tertiary">Features</h3>
                     <ul className="content__ul">
                         <li className="content--features__li">
@@ -178,7 +207,7 @@ export default function CPTDetail() {
                             AWS-RDS
                         </li>
                     </ul>
-                </div>
+                </div> */}
             </main>
         </div>
     );
