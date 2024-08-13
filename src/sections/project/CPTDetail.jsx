@@ -22,10 +22,11 @@ import { useState } from 'react';
 
 import CPTDetail_1 from './detail/cpt/CPTDetail_1';
 import CPTDetail_2 from './detail/cpt/CPTDetail_2';
+import CPTDetail_3 from './detail/cpt/CPTDetail_3';
 
 export default function CPTDetail() {
     const [current, setCurrent] = useState(1);
-    const max = 2;
+    const max = 3;
     // const dispatch = useDispatch();
 
     // const handleOpenImageModal = (topic) => {
@@ -45,9 +46,7 @@ export default function CPTDetail() {
                     </span>
                 </label>
                 {/* <img src={Cpt} alt="" className="content__logo" /> */}
-                <span className="content--title">
-                    Capstone Project Management
-                </span>
+                <span className="content--title">CPT Management</span>
             </header>
             {current > 1 && (
                 <button
@@ -69,6 +68,7 @@ export default function CPTDetail() {
             <main className="content--body">
                 {current === 1 && <CPTDetail_1 />}
                 {current === 2 && <CPTDetail_2 />}
+                {current === 3 && <CPTDetail_3 />}
                 {/* <div className="content--body__1">
                     <h3 className="heading--tertiary">Features</h3>
                     <ul className="content__ul">
