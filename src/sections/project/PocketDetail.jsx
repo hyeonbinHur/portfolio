@@ -1,63 +1,68 @@
-import { BiImageAlt } from 'react-icons/bi';
-import { AiFillPlaySquare } from 'react-icons/ai';
+// import { BiImageAlt } from 'react-icons/bi';
+// import { AiFillPlaySquare } from 'react-icons/ai';
 import { AiOutlineClose } from 'react-icons/ai';
-
-import Pocket from '../../assets/projects/pocket.png';
-import React from '../../assets/logos/react.png';
-import JS from '../../assets/logos/js.png';
-import Tailwind from '../../assets/logos/tailwind.png';
-import GoogleMap from '../../assets/logos/googlemap.png';
-import Redux from '../../assets/logos/redux.png';
-import Storage from '../../assets/logos/storage.png';
-import Real from '../../assets/logos/realtime.png';
+import { GrPrevious } from 'react-icons/gr';
+import { GrNext } from 'react-icons/gr';
+// import Pocket from '../../assets/projects/pocket.png';
+// import React from '../../assets/logos/react.png';
+// import JS from '../../assets/logos/js.png';
+// import Tailwind from '../../assets/logos/tailwind.png';
+// import GoogleMap from '../../assets/logos/googlemap.png';
+// import Redux from '../../assets/logos/redux.png';
+// import Storage from '../../assets/logos/storage.png';
+// import Real from '../../assets/logos/realtime.png';
 
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { openVideoModal } from '../../store/videoSlice';
-import { openImageModal } from '../../store/imageSlice';
+// import { useDispatch } from 'react-redux';
+// import { openVideoModal } from '../../store/videoSlice';
+// import { openImageModal } from '../../store/imageSlice';
+
+import PocketDetail_1 from './detail/pocket/PocketDetail_1';
+import PocketDetail_2 from './detail/pocket/PocketDetail_2';
 
 export default function PocketDetail() {
     const [current, setCurrent] = useState(1);
+    const max = 2;
 
-    const dispatch = useDispatch();
-
-    const handleOpenImageModal = (topic) => {
-        dispatch(openImageModal({ topic: topic }));
-    };
-
-    const handleOpenVideoModal = (topic) => {
-        dispatch(openVideoModal({ topic: topic }));
-    };
+    // const dispatch = useDispatch();
+    // const handleOpenImageModal = (topic) => {
+    //     dispatch(openImageModal({ topic: topic }));
+    // };
+    // const handleOpenVideoModal = (topic) => {
+    //     dispatch(openVideoModal({ topic: topic }));
+    // };
 
     return (
         <div className="detail--content__3">
-            <label htmlFor="detail_toggle__3" className="detail--close">
-                <span>
-                    <AiOutlineClose />
-                </span>
-            </label>
             <header className="content__header">
-                <img src={Pocket} alt="" className="content__logo__pocket" />
+                <label htmlFor="detail_toggle__3" className="detail--close">
+                    <span>
+                        <AiOutlineClose />
+                    </span>
+                </label>
+                <span className="content--title">Pocket</span>
             </header>
-            {current === 2 && (
+            {current > 1 && (
                 <button
                     onClick={() => setCurrent((prev) => prev - 1)}
-                    className="prev"
+                    className="content--prev"
                 >
-                    prev
+                    <GrPrevious />
                 </button>
             )}
-            {current === 1 && (
+            {current < max && (
                 <button
                     onClick={() => setCurrent((prev) => prev + 1)}
-                    className="next"
+                    className="content--next"
                 >
-                    next
+                    <GrNext />
                 </button>
             )}
 
             <main className="content--body">
-                <div className="content--body__1">
+                {current === 1 && <PocketDetail_1 />}
+                {current === 2 && <PocketDetail_2 />}
+                {/* <div className="content--body__1">
                     <h3 className="heading--tertiary">Features</h3>
                     <ul className="content__ul">
                         <li className="content--features__li">
@@ -197,7 +202,7 @@ export default function PocketDetail() {
                             Firebase Storage
                         </li>
                     </ul>
-                </div>
+                </div> */}
             </main>
 
             {/* <Video ref={videoModal} />

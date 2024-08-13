@@ -11,7 +11,7 @@
         text-transform: uppercase;
         display: inline-block;
         color: $color-white;
-        font-size: 3rem;
+        font-size: 4rem;
         font-weight: 600;
     }
     &--next{
@@ -45,25 +45,21 @@
         }
      }
 
-    &__logo {
-        width: 15rem;
-        height: 10rem;
-        border-radius: 5px;
-        &__pocket {
-            width: 15rem;
-            height: 7rem;
-            border-radius: 5px;
-            position: absolute;
-            top: 4%;
-            left: 95%;
-            transform: translate(-95%, -4%);
-        }
-        &__ng {
-            width: 10rem;
-            height: 10rem;
-            border-radius: 5px;
-        }
-    }
+    // &--logo {
+    //     width: 15rem;
+    //     height: 10rem;
+    //     border-radius: 5px;
+    //     &__pocket {
+    //         width: 15rem;
+    //         height: 7rem;
+    //         border-radius: 5px;
+    //     }
+    //     &__ng {
+    //         width: 10rem;
+    //         height: 10rem;
+    //         border-radius: 5px;
+    //     }
+    // }
 
     &--features__li {
         position: relative;
