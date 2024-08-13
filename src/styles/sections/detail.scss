@@ -1,17 +1,14 @@
 .detail {
     &--close{
-        display: inline-block;
         transition: transform .2s;
-        position: absolute;
-        top: 5vh;
-        left: 5vh;
         font-size: 3rem;
+        display: inline-block;
         cursor: pointer;
         &:hover{
             transform: scale(1.2);
         }
+        color: $color-white;
     }
-  
     &--btn{
         display: flex;
         margin: 0 auto;
@@ -24,7 +21,6 @@
             margin-left: 1rem;
             transition: margin-left .2s;
         }
-
         &:hover{
            width: 12rem;
            border-bottom: 1px solid $color-green-primary;
@@ -35,7 +31,6 @@
             }
         }
     }
-
     &--checkbox__2 {
         @include detailCheckbox(2);
     }
@@ -45,31 +40,25 @@
     &--content__2 {
         @include detailContent(2);
     }
-
     &--checkbox__3 {
         @include detailCheckbox(3);
     }
-  
     &--button__3 {
         @include detailButton(3);
     }
     &--content__3 {
         @include detailContent(3);
     }
-
     &--checkbox__4 {
         @include detailCheckbox(4);
     }
-
     &--button__4 {
         @include detailButton(4);
     }
     &--content__4 {
         @include detailContent(4);
+        background-color: #51CAF4 !important;
     }
-
-
-   
     &__video {
         font-size: 3rem;
         position: absolute;

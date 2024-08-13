@@ -11,11 +11,14 @@ import Redux from '../../assets/logos/redux.png';
 import Storage from '../../assets/logos/storage.png';
 import Real from '../../assets/logos/realtime.png';
 
+import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { openVideoModal } from '../../store/videoSlice';
 import { openImageModal } from '../../store/imageSlice';
 
 export default function PocketDetail() {
+    const [current, setCurrent] = useState(1);
+
     const dispatch = useDispatch();
 
     const handleOpenImageModal = (topic) => {
@@ -36,6 +39,23 @@ export default function PocketDetail() {
             <header className="content__header">
                 <img src={Pocket} alt="" className="content__logo__pocket" />
             </header>
+            {current === 2 && (
+                <button
+                    onClick={() => setCurrent((prev) => prev - 1)}
+                    className="prev"
+                >
+                    prev
+                </button>
+            )}
+            {current === 1 && (
+                <button
+                    onClick={() => setCurrent((prev) => prev + 1)}
+                    className="next"
+                >
+                    next
+                </button>
+            )}
+
             <main className="content--body">
                 <div className="content--body__1">
                     <h3 className="heading--tertiary">Features</h3>

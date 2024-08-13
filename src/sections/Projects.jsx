@@ -70,7 +70,6 @@ export default function Projects() {
                             <li className="project--basic-info">
                                 React + AWS + OpenAI
                             </li>
-
                             <li className="project--basic-info__link">
                                 <p>
                                     <img src={Git} className="project--git" />
