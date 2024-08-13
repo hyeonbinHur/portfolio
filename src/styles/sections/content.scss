@@ -6,13 +6,21 @@
         align-items: center;
         justify-content: space-between;
         padding: 1rem 5rem;
+        color: $color-white;
+        position: relative;
+
     }
     &--title{
         text-transform: uppercase;
         display: inline-block;
-        color: $color-white;
         font-size: 4rem;
         font-weight: 600;
+        &__current{
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+            font-size: 3rem;
+        }
     }
     &--next{
         position: absolute;

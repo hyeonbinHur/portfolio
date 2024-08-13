@@ -16,7 +16,7 @@ import { AiOutlineClose } from 'react-icons/ai';
 // import JWT from '../../assets/logos/jwt.png';
 // import AI from '../../assets/logos/openai.png';
 // import SCSS from '../../assets/logos/sass.png';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 // import { openImageModal } from '../../store/imageSlice';
 import NGDetail_1 from './detail/ng/NGDetail_1';
 import NGDetail_2 from './detail/ng/NGDetail_2';
@@ -25,10 +25,24 @@ import NGDetail_4 from './detail/ng/NGDetail_4';
 import NGDetail_5 from './detail/ng/NGDetail_5';
 export default function NGDetail() {
     const [current, setCurrent] = useState(1);
+    const [currentTitle, setCurrentTitle] = useState('Information');
     const max = 5;
     // const handleOpenImageModal = (topic) => {
     //     dispatch(openImageModal({ topic: topic }));
     // };
+    useEffect(() => {
+        if (current === 1) {
+            setCurrentTitle('Information');
+        } else if (current === 2) {
+            setCurrentTitle('Page Architecture');
+        } else if (current === 3) {
+            setCurrentTitle('ERD');
+        } else if (current === 4) {
+            setCurrentTitle('Features');
+        } else if (current === 5) {
+            setCurrentTitle('Links');
+        }
+    }, [current]);
     return (
         <div className="detail--content__4">
             <header className="content__header">
@@ -37,7 +51,7 @@ export default function NGDetail() {
                         <AiOutlineClose />
                     </span>
                 </label>
-                {/* <img src={NG} alt="" className="content__logo__ng" /> */}
+                <span className="content--title__current">{currentTitle}</span>
                 <span className="content--title">Name Gacha</span>
             </header>
 
