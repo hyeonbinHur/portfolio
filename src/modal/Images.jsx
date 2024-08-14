@@ -4,42 +4,24 @@ import { forwardRef, useImperativeHandle } from 'react';
 import { createPortal } from 'react-dom';
 import { closeImageModal } from '../store/imageSlice';
 import { useSelector, useDispatch } from 'react-redux';
+import { useQuery } from '@tanstack/react-query';
 import { CPTUrls } from '../assets/urls';
 
-import auth2 from '../assets/CPT/auth/auth_2.png';
-import auth3 from '../assets/CPT/auth/auth_3.png';
-import detail1 from '../assets/CPT/detail/detail1.png';
-import detail2 from '../assets/CPT/detail/detail2.png';
-import detail3 from '../assets/CPT/detail/detail3.png';
-import detail4 from '../assets/CPT/detail/detail4.png';
-import detail5 from '../assets/CPT/detail/detail5.png';
-import search1 from '../assets/CPT/search/search1.png';
-import search2 from '../assets/CPT/search/search2.png';
-import search3 from '../assets/CPT/search/search3.png';
-import search4 from '../assets/CPT/search/search4.png';
-import search5 from '../assets/CPT/search/search5.png';
-import group1 from '../assets/CPT/student-group/group1.png';
-import group2 from '../assets/CPT/student-group/group2.png';
-import capstone1 from '../assets/CPT/student-capstone/capstone1.png';
-import capstone2 from '../assets/CPT/student-capstone/capstone2.png';
-import companyCapstone1 from '../assets/CPT/company-capstone/capstone1.png';
-import companyCapstone2 from '../assets/CPT/company-capstone/capstone2.png';
-import companyCapstone3 from '../assets/CPT/company-capstone/capstone3.png';
-import supervisorCapstone1 from '../assets/CPT/supervisor-capstone/capstone1.png';
-import supervisorCapstone2 from '../assets/CPT/supervisor-capstone/capstone2.png';
-import adminCapstone1 from '../assets/CPT/admin-capstone/capstone1.png';
-import adminCapstone2 from '../assets/CPT/admin-capstone/capstone2.png';
-import adminCapstone3 from '../assets/CPT/admin-capstone/capstone3.png';
 import basicDiagram from '../assets/CPT/diagram/basic-diagram.png';
-import specialDiagram from '../assets/CPT/diagram/special-diagram.png';
-import Pocket_Desk1 from '../assets/Pocket/desk/desk1.png';
-import Pocket_Desk2 from '../assets/Pocket/desk/desk2.png';
-import Pocket_Desk3 from '../assets/Pocket/desk/desk3.png';
-import Pocket_Desk4 from '../assets/Pocket/desk/desk4.png';
-import Pocket_Mobile1 from '../assets/Pocket/mobile/mobile1.png';
-import Pocket_Mobile2 from '../assets/Pocket/mobile/mobile2.png';
-import Pocket_Mobile3 from '../assets/Pocket/mobile/mobile3.png';
-import Pocket_Mobile4 from '../assets/Pocket/mobile/mobile4.png';
+// import specialDiagram from '../assets/CPT/diagram/special-diagram.png';
+
+// import Pocket_Desk1 from '../assets/Pocket/desk/desk1.png';
+// import Pocket_Desk2 from '../assets/Pocket/desk/desk2.png';
+// import Pocket_Desk3 from '../assets/Pocket/desk/desk3.png';
+// import Pocket_Desk4 from '../assets/Pocket/desk/desk4.png';
+// import Pocket_Mobile1 from '../assets/Pocket/mobile/mobile1.png';
+// import Pocket_Mobile2 from '../assets/Pocket/mobile/mobile2.png';
+// import Pocket_Mobile3 from '../assets/Pocket/mobile/mobile3.png';
+// import Pocket_Mobile4 from '../assets/Pocket/mobile/mobile4.png';
+
+import { LoadCPTImages } from '../assets/urls';
+import { NGUrls } from '../assets/urls';
+import { PKUrls } from '../assets/urls';
 
 const ImageModal = forwardRef(function ImageModal(props, ref) {
     const modal = useRef(null);
@@ -51,74 +33,214 @@ const ImageModal = forwardRef(function ImageModal(props, ref) {
     const [heading, setHeading] = useState('');
 
     useEffect(() => {
-        if (sliceImageTopic === 'CPT_Auth') {
-            setImages([CPTUrls.auth1, auth2, auth3]);
+        if (sliceImageTopic === 'CPT_auth') {
+            setImages([CPTImages.auth1, CPTImages.auth2, CPTImages.auth3]);
             setHeading('CPT management - Authentication');
-        } else if (sliceImageTopic === 'CPT_Detail') {
-            setImages([detail1, detail2, detail3, detail4, detail5]);
-            setHeading('CPT management - Detail page');
-        } else if (sliceImageTopic === 'CPT_Search') {
-            setHeading('CPT management - Search User');
-
-            setImages([search1, search2, search3, search4, search5]);
-        } else if (sliceImageTopic === 'CPT_Student_group') {
-            setHeading('CPT management - Student - Join & Create Group');
-
-            setImages([group1, group2]);
-        } else if (sliceImageTopic === 'CPT_student_capstone') {
-            setHeading('CPT management - Student  Apply Capstone Project');
-
-            setImages([capstone1, capstone2]);
-        } else if (sliceImageTopic === 'CPT_company_create_capstone') {
-            setHeading('CPT management - Company - Create capstone project');
-
-            setImages([companyCapstone1, companyCapstone2, companyCapstone3]);
-        } else if (sliceImageTopic === 'CPT_supervisor_capstone') {
-            setHeading(
-                'CPT management - Supervisor - Edit & View capstone project'
-            );
-
-            setImages([supervisorCapstone1, supervisorCapstone2]);
-        } else if (sliceImageTopic === 'CPT_admin_capstone') {
-            setHeading(
-                'CPT management - Admin - Edit & Review capstone project'
-            );
-
-            setImages([adminCapstone1, adminCapstone2, adminCapstone3]);
-        } else if (sliceImageTopic === 'CPT_basic_diagram') {
+        } else if (sliceImageTopic === 'CPT_create_project') {
             setHeading('CPT management - Basic usecase diagram');
-
-            setImages([basicDiagram]);
-        } else if (sliceImageTopic === 'CPT_specific_diagram') {
-            setHeading('CPT management - Specific usecase diagram');
-
-            setImages([specialDiagram]);
-        } else if (sliceImageTopic === 'Pocket_Desk') {
-            setHeading('Pocket - Desktop Images');
-
-            setImages([Pocket_Desk1, Pocket_Desk2, Pocket_Desk3, Pocket_Desk4]);
-        } else if (sliceImageTopic === 'Pocket_Mobile') {
-            setHeading('Pocket - Mobile Images');
-
             setImages([
-                Pocket_Mobile1,
-                Pocket_Mobile2,
-                Pocket_Mobile3,
-                Pocket_Mobile4,
+                CPTImages.create_project_1,
+                CPTImages.create_project_2,
+                CPTImages.create_project_3,
+                CPTImages.create_project_4,
+                CPTImages.create_project_5,
+            ]);
+        } else if (sliceImageTopic === 'CPT_delete_project') {
+            setHeading('CPT management - Basic usecase diagram');
+            setImages([
+                CPTImages.delete_project_1,
+                CPTImages.delete_project_2,
+                CPTImages.delete_project_3,
+            ]);
+        } else if (sliceImageTopic === 'CPT_review_project') {
+            setHeading('CPT management - Basic usecase diagram');
+            setImages([
+                CPTImages.review_project_1,
+                CPTImages.review_project_2,
+                CPTImages.review_project_3,
+                CPTImages.review_project_4,
+            ]);
+        } else if (sliceImageTopic === 'CPT_apply_project') {
+            setHeading('CPT management - Basic usecase diagram');
+            setImages([
+                CPTImages.apply_project_1,
+                CPTImages.apply_project_2,
+                CPTImages.apply_project_3,
+                CPTImages.apply_project_4,
+            ]);
+        } else if (sliceImageTopic === 'CPT_create_join_group') {
+            setHeading('CPT management - Basic usecase diagram');
+            setImages([
+                CPTImages.create_group_1,
+                CPTImages.create_group_2,
+                CPTImages.create_group_3,
+            ]);
+        } else if (sliceImageTopic === 'CPT_update_project') {
+            setHeading('CPT management - Basic usecase diagram');
+            setImages([
+                CPTImages.edit_project_1,
+                CPTImages.edit_project_2,
+                CPTImages.edit_project_3,
+                CPTImages.edit_project_4,
+            ]);
+        } else if (sliceImageTopic === 'CPT_diagrams') {
+            setHeading('CPT management - Basic usecase diagram');
+            setImages([basicDiagram]);
+        } else if (sliceImageTopic === 'Pocket_auth') {
+            setImages([
+                PKImages.authentication_1,
+                PKImages.authentication_2,
+                PKImages.authentication_3,
+                PKImages.authentication_4,
+            ]);
+        } else if (sliceImageTopic === 'Pocket_main') {
+            setImages([
+                PKImages.main_category_1,
+                PKImages.main_category_2,
+                PKImages.main_category_3,
+                PKImages.main_category_4,
+                PKImages.main_category_5,
+            ]);
+        } else if (sliceImageTopic === 'Pocket_location') {
+            setImages([
+                PKImages.location_setting_1,
+                PKImages.location_setting_2,
+                PKImages.location_setting_3,
+                PKImages.location_setting_4,
+                PKImages.location_setting_5,
+            ]);
+        } else if (sliceImageTopic === 'Pocket_personal') {
+            setImages([
+                PKImages.personal_page_1,
+                PKImages.personal_page_2,
+                PKImages.personal_page_3,
+                PKImages.personal_page_4,
+                PKImages.personal_page_5,
+                PKImages.personal_page_6,
+                PKImages.personal_page_7,
+            ]);
+        } else if (sliceImageTopic === 'Pocket_chatting') {
+            setImages([
+                PKImages.private_chatting_1,
+                PKImages.private_chatting_2,
+                PKImages.private_chatting_3,
+                PKImages.private_chatting_4,
+                PKImages.private_chatting_5,
+                PKImages.private_chatting_6,
+                PKImages.private_chatting_7,
+                PKImages.private_chatting_8,
+                PKImages.private_chatting_9,
+                PKImages.private_chatting_10,
+            ]);
+        } else if (sliceImageTopic === 'Pocket_comment') {
+            setImages([
+                PKImages.comment_reply_1,
+                PKImages.comment_reply_2,
+                PKImages.comment_reply_3,
+                PKImages.comment_reply_4,
+                PKImages.comment_reply_5,
+                PKImages.comment_reply_6,
+                PKImages.comment_reply_7,
+            ]);
+        } else if (sliceImageTopic === 'Pocket_create_post') {
+            setImages([
+                PKImages.add_item_1,
+                PKImages.add_item_2,
+                PKImages.add_item_3,
+                PKImages.add_item_4,
+                PKImages.add_item_5,
+                PKImages.add_item_6,
+                PKImages.add_item_7,
+            ]);
+        } else if (sliceImageTopic === 'Pocket_update_post') {
+            setImages([
+                PKImages.udate_delete_item_1,
+                PKImages.udate_delete_item_2,
+                PKImages.udate_delete_item_3,
+                PKImages.udate_delete_item_4,
+                PKImages.udate_delete_item_5,
+                PKImages.udate_delete_item_6,
+                PKImages.udate_delete_item_7,
+                PKImages.udate_delete_item_8,
+                PKImages.udate_delete_item_9,
+            ]);
+        } else if (sliceImageTopic === 'NG_auth') {
+            setImages([
+                NGImages.auth_1,
+                NGImages.auth_2,
+                NGImages.auth_3,
+                NGImages.auth_4,
+            ]);
+        } else if (sliceImageTopic === 'NG_chatting') {
+            setImages([
+                NGImages.chat_1,
+                NGImages.chat_2,
+                NGImages.chat_3,
+                NGImages.chat_4,
+            ]);
+        } else if (sliceImageTopic === 'NG_sidebar') {
+            setImages([
+                NGImages.sidebar_1,
+                NGImages.sidebar_2,
+                NGImages.sidebar_3,
+                NGImages.sidebar_4,
+            ]);
+        } else if (sliceImageTopic === 'NG_detail') {
+            setImages([
+                NGImages.detail_1,
+                NGImages.detail_2,
+                NGImages.detail_3,
+                NGImages.detail_4,
+                NGImages.detail_5,
+            ]);
+        } else if (sliceImageTopic === 'NG_response') {
+            setImages([
+                NGImages.response_1,
+                NGImages.response_2,
+                NGImages.response_3,
+                NGImages.response_4,
             ]);
         }
+        //  else if (sliceImageTopic === 'NG_auth') {
+        // }
     }, [sliceImageTopic]);
 
     useImperativeHandle(ref, () => {
         return {
             open: () => {
                 modal.current.showModal();
+                console.log(images);
             },
             close: () => {
                 dispatch(closeImageModal());
+                setImages([]);
                 modal.current.close();
             },
         };
+    });
+
+    const { data: CPTImages } = useQuery({
+        // store blobs using reactt query to cache the blobs
+        queryKey: ['CPT Images'],
+        queryFn: () => LoadCPTImages(CPTUrls), // LoadCPTImages returns key:blob pair object
+        staleTime: 1000 * 60 * 15, // 5 minutes
+        cacheTime: 1000 * 60 * 60, // 15 minutes
+    });
+
+    const { data: NGImages } = useQuery({
+        // store blobs using reactt query to cache the blobs
+        queryKey: ['NG Images'],
+        queryFn: () => LoadCPTImages(NGUrls), // LoadCPTImages returns key:blob pair object
+        staleTime: 1000 * 60 * 15, // 5 minutes
+        cacheTime: 1000 * 60 * 60, // 15 minutes
+    });
+
+    const { data: PKImages } = useQuery({
+        // store blobs using reactt query to cache the blobs
+        queryKey: ['PK Images'],
+        queryFn: () => LoadCPTImages(PKUrls), // LoadCPTImages returns key:blob pair object
+        staleTime: 1000 * 60 * 15, // 5 minutes
+        cacheTime: 1000 * 60 * 60, // 15 minutes
     });
 
     return createPortal(
@@ -133,7 +255,7 @@ const ImageModal = forwardRef(function ImageModal(props, ref) {
                     {images.map((image, index) => {
                         return (
                             <img
-                                src={image}
+                                src={URL.createObjectURL(image)} // create url using blob
                                 key={index}
                                 className={`image--${images.length}__${index} image--${images.length}`}
                             />
@@ -145,5 +267,5 @@ const ImageModal = forwardRef(function ImageModal(props, ref) {
         document.getElementById('modal')
     );
 });
-
+//branch test
 export default ImageModal;

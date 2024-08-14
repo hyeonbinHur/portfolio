@@ -1,48 +1,84 @@
 .content {
     &__header {
-        padding-bottom: 1rem;
-        padding-top: 5rem;
-    }
+        height:10%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 5rem;
+        color: $color-white;
+        position: relative;
 
-    &__logo {
-        width: 15rem;
-        height: 10rem;
-        border-radius: 5px;
+    }
+    &--title{
+        text-transform: uppercase;
+        display: inline-block;
+        font-size: 4rem;
+        font-weight: 600;
+        &__current{
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+            font-size: 3rem;
+        }
+    }
+    &--next{
         position: absolute;
-        top: 2%;
-        left: 95%;
-        transform: translate(-95%, -2%);
-
-        &__pocket {
-            width: 15rem;
-            height: 7rem;
-            border-radius: 5px;
-            position: absolute;
-            top: 4%;
-            left: 95%;
-            transform: translate(-95%, -4%);
-        }
-
-        &__ng {
-            width: 10rem;
-            height: 10rem;
-            border-radius: 5px;
-            position: absolute;
-            top: 4%;
-            left: 95%;
-            transform: translate(-95%, -4%);
+        right: 2%;
+        bottom: 50%;
+        transform: translate(-5%, 50%);
+        border: none;
+        font-size: 5rem;
+        transition: transform .2s ease;
+        background-color: transparent;
+        &:hover{
+            transform: scale(1.1) translate(2%, 48%);
+            color: $color-white;
         }
     }
+    &--prev{
+        position: absolute;
+        position: absolute;
+        left: 2%;
+        bottom: 50%;
+        transform: translate(5%, 50%);
+        border: none;
+        font-size: 5rem;
+        transition: transform .2s ease;
+        background-color: transparent;
+
+        &:hover{
+            transform: scale(1.1) translate(-2%, 48%);
+            color: $color-white;
+        }
+     }
+
+    // &--logo {
+    //     width: 15rem;
+    //     height: 10rem;
+    //     border-radius: 5px;
+    //     &__pocket {
+    //         width: 15rem;
+    //         height: 7rem;
+    //         border-radius: 5px;
+    //     }
+    //     &__ng {
+    //         width: 10rem;
+    //         height: 10rem;
+    //         border-radius: 5px;
+    //     }
+    // }
 
     &--features__li {
         position: relative;
     }
 
     &--body {
-        display: flex;
-        width: 100vw;
-        padding-top: 5rem;
-
+        flex: 0 0 85%;
+        width: 85vw;
+        border-radius: 5px;
+        background-color: $color-white;
+        box-shadow: .5rem 1rem 1rem rgba($color-black, .1);
         &__1 {
             flex: 1;
             text-align: left;
@@ -53,9 +89,7 @@
             @include respond (tab-port) {
                 padding-top:5rem ;
             }
-
         }
-
         &__2 {
             flex: 1;
             text-align: left;
@@ -66,9 +100,7 @@
             @include respond (tab-port) {
                 padding-top:5rem ;
             }
-
         }
-
     }
 
     &__ul {

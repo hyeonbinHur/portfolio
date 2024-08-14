@@ -57,11 +57,15 @@
         border-radius: 10px;
         border: 3px solid $color-grey-dark-2;
         background-color: white;
-        box-shadow: .5rem 1.2rem 1.2rem rgba($color-black, .2);
+        box-shadow: .5rem 1rem 1rem rgba($color-black, .2);
         display: flex;
         align-items: center;
         justify-content: center;
         margin: 1rem auto;
+        transition: transform .2s ease;
+        &:hover{
+            transform: scale(1.1);
+        }
 
         &__buyy,
         &__cpt,
@@ -75,7 +79,6 @@
 
         &__cpt {
             width: 12rem;
-            height: 9rem;
 
             @include respond (desk-sm) {
                 width: 16rem;

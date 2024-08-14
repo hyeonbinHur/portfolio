@@ -1,137 +1,59 @@
-import { BiImageAlt } from 'react-icons/bi';
-import { AiFillPlaySquare } from 'react-icons/ai';
 import { AiOutlineClose } from 'react-icons/ai';
+import { GrPrevious } from 'react-icons/gr';
+import { GrNext } from 'react-icons/gr';
+// import Pocket from '../../assets/projects/pocket.png';
+// import React from '../../assets/logos/react.png';
+// import JS from '../../assets/logos/js.png';
+// import Tailwind from '../../assets/logos/tailwind.png';
+// import GoogleMap from '../../assets/logos/googlemap.png';
+// import Redux from '../../assets/logos/redux.png';
+// import Storage from '../../assets/logos/storage.png';
+// import Real from '../../assets/logos/realtime.png';
 
-import Pocket from '../../assets/projects/pocket.png';
-import React from '../../assets/logos/react.png';
-import JS from '../../assets/logos/js.png';
-import Tailwind from '../../assets/logos/tailwind.png';
-import GoogleMap from '../../assets/logos/googlemap.png';
-import Redux from '../../assets/logos/redux.png';
-import Storage from '../../assets/logos/storage.png';
-import Real from '../../assets/logos/realtime.png';
+import { useState } from 'react';
 
-import { useDispatch } from 'react-redux';
-import { openVideoModal } from '../../store/videoSlice';
-import { openImageModal } from '../../store/imageSlice';
+import PocketDetail_1 from './detail/pocket/PocketDetail_1';
+import PocketDetail_2 from './detail/pocket/PocketDetail_2';
+import PocketDetail_3 from './detail/pocket/PocketDetail_3';
+import PocketDetail_4 from './detail/pocket/PocketDetail_4';
 
 export default function PocketDetail() {
-    const dispatch = useDispatch();
-
-    const handleOpenImageModal = (topic) => {
-        dispatch(openImageModal({ topic: topic }));
-    };
-
-    const handleOpenVideoModal = (topic) => {
-        dispatch(openVideoModal({ topic: topic }));
-    };
+    const [current, setCurrent] = useState(1);
+    const max = 4;
 
     return (
         <div className="detail--content__3">
-            <label htmlFor="detail_toggle__3" className="detail--close">
-                <span>
-                    <AiOutlineClose />
-                </span>
-            </label>
             <header className="content__header">
-                <img src={Pocket} alt="" className="content__logo__pocket" />
+                <label htmlFor="detail_toggle__3" className="detail--close">
+                    <span>
+                        <AiOutlineClose />
+                    </span>
+                </label>
+                <span className="content--title">Pocket</span>
             </header>
+            {current > 1 && (
+                <button
+                    onClick={() => setCurrent((prev) => prev - 1)}
+                    className="content--prev"
+                >
+                    <GrPrevious />
+                </button>
+            )}
+            {current < max && (
+                <button
+                    onClick={() => setCurrent((prev) => prev + 1)}
+                    className="content--next"
+                >
+                    <GrNext />
+                </button>
+            )}
+
             <main className="content--body">
-                <div className="content--body__1">
-                    <h3 className="heading--tertiary">Features</h3>
-                    <ul className="content__ul">
-                        <li className="content--features__li">
-                            Authentication
-                            <AiFillPlaySquare
-                                onClick={() =>
-                                    handleOpenVideoModal('Pocket_Auth')
-                                }
-                                className="detail__video"
-                            />
-                        </li>
-                        <li className="content--features__li">
-                            Realtime chatting
-                            <AiFillPlaySquare
-                                onClick={() =>
-                                    handleOpenVideoModal('Pocket_Chat')
-                                }
-                                className="detail__video"
-                            />
-                        </li>
-                        <li className="content--features__li">
-                            Comment & reply
-                            <AiFillPlaySquare
-                                onClick={() =>
-                                    handleOpenVideoModal('Pocket_Comment')
-                                }
-                                className="detail__video"
-                            />
-                        </li>
-                        <li className="content--features__li">
-                            Crate & Read & Delete Item
-                            <AiFillPlaySquare
-                                onClick={() =>
-                                    handleOpenVideoModal('Pocket_CRDItem')
-                                }
-                                className="detail__video"
-                            />
-                        </li>
-                        <li className="content--features__li">
-                            Update Item
-                            <AiFillPlaySquare
-                                onClick={() =>
-                                    handleOpenVideoModal('Pocket_UpdateItem')
-                                }
-                                className="detail__video"
-                            />
-                        </li>
-                        <li className="content--features__li">
-                            Update User Info
-                            <AiFillPlaySquare
-                                onClick={() =>
-                                    handleOpenVideoModal('Pocket_Update_User')
-                                }
-                                className="detail__video"
-                            />
-                        </li>
-                        <li className="content--features__li">
-                            Set Location
-                            <AiFillPlaySquare
-                                onClick={() =>
-                                    handleOpenVideoModal('Pocket_Place')
-                                }
-                                className="detail__video"
-                            />
-                        </li>
-                        <li className="content--features__li">
-                            Search & Filtering Items
-                            <AiFillPlaySquare
-                                onClick={() =>
-                                    handleOpenVideoModal('Pocket_Search')
-                                }
-                                className="detail__video"
-                            />
-                        </li>
-                        <li className="content--features__li">
-                            Page Images
-                            <BiImageAlt
-                                className="detail__video"
-                                onClick={() =>
-                                    handleOpenImageModal('Pocket_Desk')
-                                }
-                            />
-                        </li>
-                        <li className="content--features__li">
-                            Additional Responsive design
-                            <BiImageAlt
-                                className="detail__video"
-                                onClick={() =>
-                                    handleOpenImageModal('Pocket_Mobile')
-                                }
-                            />
-                        </li>
-                    </ul>
-                </div>
+                {current === 1 && <PocketDetail_1 />}
+                {current === 2 && <PocketDetail_2 />}
+                {current === 3 && <PocketDetail_3 />}
+                {current === 4 && <PocketDetail_4 />}
+                {/* 
                 <div className="content--body__2">
                     <h3 className="heading--tertiary">Tools</h3>
                     <ul className="content__ul">
@@ -177,7 +99,7 @@ export default function PocketDetail() {
                             Firebase Storage
                         </li>
                     </ul>
-                </div>
+                </div> */}
             </main>
 
             {/* <Video ref={videoModal} />

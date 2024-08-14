@@ -1,5 +1,5 @@
 import { BsEyeFill } from 'react-icons/bs';
-import Cpt from '../assets/projects/cpt.svg';
+import Cpt from '../assets/projects/cpt-logo.png';
 import Pocket from '../assets/projects/pocket.png';
 import NG from '../assets/projects/ng.png';
 
@@ -70,7 +70,6 @@ export default function Projects() {
                             <li className="project--basic-info">
                                 React + AWS + OpenAI
                             </li>
-
                             <li className="project--basic-info__link">
                                 <p>
                                     <img src={Git} className="project--git" />
