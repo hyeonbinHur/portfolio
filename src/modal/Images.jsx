@@ -6,40 +6,19 @@ import { closeImageModal } from '../store/imageSlice';
 import { useSelector, useDispatch } from 'react-redux';
 import { useQuery } from '@tanstack/react-query';
 import { CPTUrls } from '../assets/urls';
-// import auth2 from '../assets/CPT/auth/auth_2.png';
-// import auth3 from '../assets/CPT/auth/auth_3.png';
-import detail1 from '../assets/CPT/detail/detail1.png';
-import detail2 from '../assets/CPT/detail/detail2.png';
-import detail3 from '../assets/CPT/detail/detail3.png';
-import detail4 from '../assets/CPT/detail/detail4.png';
-import detail5 from '../assets/CPT/detail/detail5.png';
-import search1 from '../assets/CPT/search/search1.png';
-import search2 from '../assets/CPT/search/search2.png';
-import search3 from '../assets/CPT/search/search3.png';
-import search4 from '../assets/CPT/search/search4.png';
-import search5 from '../assets/CPT/search/search5.png';
-import group1 from '../assets/CPT/student-group/group1.png';
-import group2 from '../assets/CPT/student-group/group2.png';
-import capstone1 from '../assets/CPT/student-capstone/capstone1.png';
-import capstone2 from '../assets/CPT/student-capstone/capstone2.png';
-import companyCapstone1 from '../assets/CPT/company-capstone/capstone1.png';
-import companyCapstone2 from '../assets/CPT/company-capstone/capstone2.png';
-import companyCapstone3 from '../assets/CPT/company-capstone/capstone3.png';
-import supervisorCapstone1 from '../assets/CPT/supervisor-capstone/capstone1.png';
-import supervisorCapstone2 from '../assets/CPT/supervisor-capstone/capstone2.png';
-import adminCapstone1 from '../assets/CPT/admin-capstone/capstone1.png';
-import adminCapstone2 from '../assets/CPT/admin-capstone/capstone2.png';
-import adminCapstone3 from '../assets/CPT/admin-capstone/capstone3.png';
-import basicDiagram from '../assets/CPT/diagram/basic-diagram.png';
-import specialDiagram from '../assets/CPT/diagram/special-diagram.png';
-import Pocket_Desk1 from '../assets/Pocket/desk/desk1.png';
-import Pocket_Desk2 from '../assets/Pocket/desk/desk2.png';
-import Pocket_Desk3 from '../assets/Pocket/desk/desk3.png';
-import Pocket_Desk4 from '../assets/Pocket/desk/desk4.png';
-import Pocket_Mobile1 from '../assets/Pocket/mobile/mobile1.png';
-import Pocket_Mobile2 from '../assets/Pocket/mobile/mobile2.png';
-import Pocket_Mobile3 from '../assets/Pocket/mobile/mobile3.png';
-import Pocket_Mobile4 from '../assets/Pocket/mobile/mobile4.png';
+
+// import basicDiagram from '../assets/CPT/diagram/basic-diagram.png';
+// import specialDiagram from '../assets/CPT/diagram/special-diagram.png';
+
+// import Pocket_Desk1 from '../assets/Pocket/desk/desk1.png';
+// import Pocket_Desk2 from '../assets/Pocket/desk/desk2.png';
+// import Pocket_Desk3 from '../assets/Pocket/desk/desk3.png';
+// import Pocket_Desk4 from '../assets/Pocket/desk/desk4.png';
+// import Pocket_Mobile1 from '../assets/Pocket/mobile/mobile1.png';
+// import Pocket_Mobile2 from '../assets/Pocket/mobile/mobile2.png';
+// import Pocket_Mobile3 from '../assets/Pocket/mobile/mobile3.png';
+// import Pocket_Mobile4 from '../assets/Pocket/mobile/mobile4.png';
+
 import { LoadCPTImages } from '../assets/urls';
 
 const ImageModal = forwardRef(function ImageModal(props, ref) {
