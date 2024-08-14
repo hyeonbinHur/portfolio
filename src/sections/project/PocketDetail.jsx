@@ -1,5 +1,3 @@
-// import { BiImageAlt } from 'react-icons/bi';
-// import { AiFillPlaySquare } from 'react-icons/ai';
 import { AiOutlineClose } from 'react-icons/ai';
 import { GrPrevious } from 'react-icons/gr';
 import { GrNext } from 'react-icons/gr';
@@ -13,24 +11,15 @@ import { GrNext } from 'react-icons/gr';
 // import Real from '../../assets/logos/realtime.png';
 
 import { useState } from 'react';
-// import { useDispatch } from 'react-redux';
-// import { openVideoModal } from '../../store/videoSlice';
-// import { openImageModal } from '../../store/imageSlice';
 
 import PocketDetail_1 from './detail/pocket/PocketDetail_1';
 import PocketDetail_2 from './detail/pocket/PocketDetail_2';
+import PocketDetail_3 from './detail/pocket/PocketDetail_3';
+import PocketDetail_4 from './detail/pocket/PocketDetail_4';
 
 export default function PocketDetail() {
     const [current, setCurrent] = useState(1);
-    const max = 2;
-
-    // const dispatch = useDispatch();
-    // const handleOpenImageModal = (topic) => {
-    //     dispatch(openImageModal({ topic: topic }));
-    // };
-    // const handleOpenVideoModal = (topic) => {
-    //     dispatch(openVideoModal({ topic: topic }));
-    // };
+    const max = 4;
 
     return (
         <div className="detail--content__3">
@@ -62,101 +51,9 @@ export default function PocketDetail() {
             <main className="content--body">
                 {current === 1 && <PocketDetail_1 />}
                 {current === 2 && <PocketDetail_2 />}
-                {/* <div className="content--body__1">
-                    <h3 className="heading--tertiary">Features</h3>
-                    <ul className="content__ul">
-                        <li className="content--features__li">
-                            Authentication
-                            <AiFillPlaySquare
-                                onClick={() =>
-                                    handleOpenVideoModal('Pocket_Auth')
-                                }
-                                className="detail__video"
-                            />
-                        </li>
-                        <li className="content--features__li">
-                            Realtime chatting
-                            <AiFillPlaySquare
-                                onClick={() =>
-                                    handleOpenVideoModal('Pocket_Chat')
-                                }
-                                className="detail__video"
-                            />
-                        </li>
-                        <li className="content--features__li">
-                            Comment & reply
-                            <AiFillPlaySquare
-                                onClick={() =>
-                                    handleOpenVideoModal('Pocket_Comment')
-                                }
-                                className="detail__video"
-                            />
-                        </li>
-                        <li className="content--features__li">
-                            Crate & Read & Delete Item
-                            <AiFillPlaySquare
-                                onClick={() =>
-                                    handleOpenVideoModal('Pocket_CRDItem')
-                                }
-                                className="detail__video"
-                            />
-                        </li>
-                        <li className="content--features__li">
-                            Update Item
-                            <AiFillPlaySquare
-                                onClick={() =>
-                                    handleOpenVideoModal('Pocket_UpdateItem')
-                                }
-                                className="detail__video"
-                            />
-                        </li>
-                        <li className="content--features__li">
-                            Update User Info
-                            <AiFillPlaySquare
-                                onClick={() =>
-                                    handleOpenVideoModal('Pocket_Update_User')
-                                }
-                                className="detail__video"
-                            />
-                        </li>
-                        <li className="content--features__li">
-                            Set Location
-                            <AiFillPlaySquare
-                                onClick={() =>
-                                    handleOpenVideoModal('Pocket_Place')
-                                }
-                                className="detail__video"
-                            />
-                        </li>
-                        <li className="content--features__li">
-                            Search & Filtering Items
-                            <AiFillPlaySquare
-                                onClick={() =>
-                                    handleOpenVideoModal('Pocket_Search')
-                                }
-                                className="detail__video"
-                            />
-                        </li>
-                        <li className="content--features__li">
-                            Page Images
-                            <BiImageAlt
-                                className="detail__video"
-                                onClick={() =>
-                                    handleOpenImageModal('Pocket_Desk')
-                                }
-                            />
-                        </li>
-                        <li className="content--features__li">
-                            Additional Responsive design
-                            <BiImageAlt
-                                className="detail__video"
-                                onClick={() =>
-                                    handleOpenImageModal('Pocket_Mobile')
-                                }
-                            />
-                        </li>
-                    </ul>
-                </div>
+                {current === 3 && <PocketDetail_3 />}
+                {current === 4 && <PocketDetail_4 />}
+                {/* 
                 <div className="content--body__2">
                     <h3 className="heading--tertiary">Tools</h3>
                     <ul className="content__ul">

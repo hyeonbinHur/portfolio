@@ -23,10 +23,11 @@ import { useState } from 'react';
 import CPTDetail_1 from './detail/cpt/CPTDetail_1';
 import CPTDetail_2 from './detail/cpt/CPTDetail_2';
 import CPTDetail_3 from './detail/cpt/CPTDetail_3';
+import CPTDetail_4 from './detail/cpt/CPTDetail_4';
 
 export default function CPTDetail() {
     const [current, setCurrent] = useState(1);
-    const max = 3;
+    const max = 4;
     // const dispatch = useDispatch();
 
     // const handleOpenImageModal = (topic) => {
@@ -69,6 +70,7 @@ export default function CPTDetail() {
                 {current === 1 && <CPTDetail_1 />}
                 {current === 2 && <CPTDetail_2 />}
                 {current === 3 && <CPTDetail_3 />}
+                {current === 4 && <CPTDetail_4 />}
                 {/* <div className="content--body__1">
                     <h3 className="heading--tertiary">Features</h3>
                     <ul className="content__ul">
