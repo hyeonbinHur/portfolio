@@ -1,5 +1,3 @@
-// import { BiImageAlt } from 'react-icons/bi';
-// import { AiFillPlaySquare } from 'react-icons/ai';
 import { AiOutlineClose } from 'react-icons/ai';
 import { GrPrevious } from 'react-icons/gr';
 import { GrNext } from 'react-icons/gr';
@@ -10,14 +8,10 @@ import { GrNext } from 'react-icons/gr';
 // import Spring from '../../assets/logos/spring.png';
 // import PG from '../../assets/logos/pg.png';
 // import RDS from '../../assets/logos/rds.png';
-// import JAVA from '../../assets/logos/java.png';
+// import JAVA from '../../assets/logos/java.png;
 import { useState } from 'react';
 
-// import { useDispatch } from 'react-redux';
-// import { openVideoModal } from '../../store/videoSlice';
-// import { openImageModal } from '../../store/imageSlice';
 // import GH from '../assets/logos/github.png';
-
 // import GH from '../assets/logos/github.png';
 
 import CPTDetail_1 from './detail/cpt/CPTDetail_1';
@@ -28,15 +22,6 @@ import CPTDetail_4 from './detail/cpt/CPTDetail_4';
 export default function CPTDetail() {
     const [current, setCurrent] = useState(1);
     const max = 4;
-    // const dispatch = useDispatch();
-
-    // const handleOpenImageModal = (topic) => {
-    //     dispatch(openImageModal({ topic: topic }));
-    // };
-
-    // const handleOpenVideoModal = (topic) => {
-    //     dispatch(openVideoModal({ topic: topic }));
-    // };
 
     return (
         <div className="detail--content__2">
@@ -71,112 +56,7 @@ export default function CPTDetail() {
                 {current === 2 && <CPTDetail_2 />}
                 {current === 3 && <CPTDetail_3 />}
                 {current === 4 && <CPTDetail_4 />}
-                {/* <div className="content--body__1">
-                    <h3 className="heading--tertiary">Features</h3>
-                    <ul className="content__ul">
-                        <li className="content--features__li">
-                            All features
-                            <AiFillPlaySquare
-                                className="detail__video"
-                                onClick={() => handleOpenVideoModal('CPT_All')}
-                            />
-                        </li>
-                        <li className="content--features__li">
-                            Basic - Authentication
-                            <BiImageAlt
-                                className="detail__video"
-                                onClick={() => handleOpenImageModal('CPT_Auth')}
-                            />
-                        </li>
-                        <li className="content--features__li">
-                            Basic - Visit detail page
-                            <BiImageAlt
-                                className="detail__video"
-                                onClick={() =>
-                                    handleOpenImageModal('CPT_Detail')
-                                }
-                            />
-                        </li>
-                        <li className="content--features__li">
-                            Basic - Search users & groups & company & projects
-                            <BiImageAlt
-                                className="detail__video"
-                                onClick={() =>
-                                    handleOpenImageModal('CPT_Search')
-                                }
-                            />
-                        </li>
-                        <li className="content--features__li">
-                            Student - join & create group
-                            <BiImageAlt
-                                className="detail__video"
-                                onClick={() =>
-                                    handleOpenImageModal('CPT_Student_group')
-                                }
-                            />
-                        </li>
-                        <li className="content--features__li">
-                            Student - apply capstone project
-                            <BiImageAlt
-                                className="detail__video"
-                                onClick={() =>
-                                    handleOpenImageModal('CPT_student_capstone')
-                                }
-                            />
-                        </li>
-                        <li className="content--features__li">
-                            Company - Create capstone project
-                            <BiImageAlt
-                                className="detail__video"
-                                onClick={() =>
-                                    handleOpenImageModal(
-                                        'CPT_company_create_capstone'
-                                    )
-                                }
-                            />
-                        </li>
-
-                        <li className="content--features__li">
-                            Supervisor - Edit & View capstone project
-                            <BiImageAlt
-                                className="detail__video"
-                                onClick={() =>
-                                    handleOpenImageModal(
-                                        'CPT_supervisor_capstone'
-                                    )
-                                }
-                            />
-                        </li>
-                        <li className="content--features__li">
-                            Admin - Review & Edit capstone project
-                            <BiImageAlt
-                                className="detail__video"
-                                onClick={() =>
-                                    handleOpenImageModal('CPT_admin_capstone')
-                                }
-                            />
-                        </li>
-
-                        <li className="content--features__li">
-                            Bsic - usecase diagram
-                            <BiImageAlt
-                                className="detail__video"
-                                onClick={() =>
-                                    handleOpenImageModal('CPT_basic_diagram')
-                                }
-                            />
-                        </li>
-                        <li className="content--features__li">
-                            Specific - usecase diagram
-                            <BiImageAlt
-                                className="detail__video"
-                                onClick={() =>
-                                    handleOpenImageModal('CPT_specific_diagram')
-                                }
-                            />
-                        </li>
-                    </ul>
-                </div>
+                {/* 
                 <div className="content--body__2">
                     <h3 className="heading--tertiary">Tools</h3>
                     <ul className="content__ul">
