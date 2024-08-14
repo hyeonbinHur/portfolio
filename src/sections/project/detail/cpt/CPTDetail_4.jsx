@@ -20,62 +20,75 @@ export default function CPTDetail_4() {
             <h3 className="heading--tertiary">Features</h3>
             <ul className="content__ul">
                 <li className="content--features__li">
-                    All features
+                    Autehntication
                     <AiFillPlaySquare
                         className="detail__video"
-                        onClick={() => handleOpenVideoModal('CPT_All')}
+                        onClick={() => handleOpenVideoModal('CPT_auth')}
                     />
                 </li>
                 <li className="content--features__li">
-                    Basic - Authentication
-                    <BiImageAlt
-                        className="detail__video"
-                        onClick={() => handleOpenImageModal('CPT_Auth')}
-                    />
-                </li>
-                <li className="content--features__li">
-                    Basic - Visit detail page
-                    <BiImageAlt
-                        className="detail__video"
-                        onClick={() => handleOpenImageModal('CPT_Detail')}
-                    />
-                </li>
-                <li className="content--features__li">
-                    Basic - Search users & groups & company & projects
-                    <BiImageAlt
-                        className="detail__video"
-                        onClick={() => handleOpenImageModal('CPT_Search')}
-                    />
-                </li>
-                <li className="content--features__li">
-                    Student - join & create group
+                    Company - Create project
                     <BiImageAlt
                         className="detail__video"
                         onClick={() =>
-                            handleOpenImageModal('CPT_Student_group')
+                            handleOpenImageModal('CPT_create_project')
                         }
                     />
                 </li>
                 <li className="content--features__li">
-                    Student - apply capstone project
+                    Company - Delete project
                     <BiImageAlt
                         className="detail__video"
                         onClick={() =>
-                            handleOpenImageModal('CPT_student_capstone')
+                            handleOpenImageModal('CPT_delete_project')
                         }
                     />
                 </li>
                 <li className="content--features__li">
-                    Company - Create capstone project
+                    Admin - Review created project
                     <BiImageAlt
                         className="detail__video"
                         onClick={() =>
-                            handleOpenImageModal('CPT_company_create_capstone')
+                            handleOpenImageModal('CPT_review_project')
                         }
+                    />
+                </li>
+                <li className="content--features__li">
+                    Student - Apply project
+                    <BiImageAlt
+                        className="detail__video"
+                        onClick={() =>
+                            handleOpenImageModal('CPT_apply_project')
+                        }
+                    />
+                </li>
+                <li className="content--features__li">
+                    Student - Create & Join group
+                    <BiImageAlt
+                        className="detail__video"
+                        onClick={() =>
+                            handleOpenImageModal('CPT_create_join_group')
+                        }
+                    />
+                </li>
+                <li className="content--features__li">
+                    Supervisor - Update project
+                    <BiImageAlt
+                        className="detail__video"
+                        onClick={() =>
+                            handleOpenImageModal('CPT_update_project')
+                        }
+                    />
+                </li>
+                <li className="content--features__li">
+                    Diagrams
+                    <BiImageAlt
+                        className="detail__video"
+                        onClick={() => handleOpenImageModal('CPT_diagrams')}
                     />
                 </li>
 
-                <li className="content--features__li">
+                {/* <li className="content--features__li">
                     Supervisor - Edit & View capstone project
                     <BiImageAlt
                         className="detail__video"
@@ -111,7 +124,7 @@ export default function CPTDetail_4() {
                             handleOpenImageModal('CPT_specific_diagram')
                         }
                     />
-                </li>
+                </li> */}
             </ul>
         </div>
     );

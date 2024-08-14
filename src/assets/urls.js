@@ -90,7 +90,6 @@ export const NGUrls = {
     sidebar_4:
         'https://firebasestorage.googleapis.com/v0/b/portfolio-f00fa.appspot.com/o/NG%2Fimage%2Fsidebar%2Fsidebar_4.png?alt=media&token=2b271cda-7f96-4dfa-aefc-79738fd25e69',
 };
-
 export const PKUrls = {
     add_item_1:
         'https://firebasestorage.googleapis.com/v0/b/portfolio-f00fa.appspot.com/o/Pocket%2Fimage%2FaddItem%2FaddItem_1.png?alt=media&token=5ea77a89-7a6d-49b8-aba2-2c4cd6a51963',

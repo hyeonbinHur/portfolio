@@ -19,64 +19,101 @@ export default function PocketDetail_3() {
                 <li className="content--features__li">
                     Authentication
                     <AiFillPlaySquare
-                        onClick={() => handleOpenVideoModal('Pocket_Auth')}
+                        onClick={() => handleOpenVideoModal('Pocket_auth')}
                         className="detail__video"
+                    />
+                    <BiImageAlt
+                        className="detail__video"
+                        onClick={() => handleOpenImageModal('Pocket_auth')}
                     />
                 </li>
                 <li className="content--features__li">
-                    Realtime chatting
+                    Main pages
                     <AiFillPlaySquare
-                        onClick={() => handleOpenVideoModal('Pocket_Chat')}
+                        onClick={() => handleOpenVideoModal('Pocket_main')}
                         className="detail__video"
+                    />
+                    <BiImageAlt
+                        className="detail__video"
+                        onClick={() => handleOpenImageModal('Pocket_main')}
                     />
                 </li>
                 <li className="content--features__li">
-                    Comment & reply
+                    Location setting
                     <AiFillPlaySquare
-                        onClick={() => handleOpenVideoModal('Pocket_Comment')}
+                        onClick={() => handleOpenVideoModal('Pocket_location')}
                         className="detail__video"
+                    />
+                    <BiImageAlt
+                        className="detail__video"
+                        onClick={() => handleOpenImageModal('Pocket_location')}
                     />
                 </li>
                 <li className="content--features__li">
-                    Crate & Read & Delete Item
+                    Personal Page
                     <AiFillPlaySquare
-                        onClick={() => handleOpenVideoModal('Pocket_CRDItem')}
+                        onClick={() => handleOpenVideoModal('Pocket_personal')}
                         className="detail__video"
+                    />
+                    <BiImageAlt
+                        className="detail__video"
+                        onClick={() => handleOpenImageModal('Pocket_personal')}
                     />
                 </li>
                 <li className="content--features__li">
-                    Update Item
+                    Real time chatting
+                    <AiFillPlaySquare
+                        onClick={() => handleOpenVideoModal('Pocket_chatting')}
+                        className="detail__video"
+                    />
+                    <BiImageAlt
+                        className="detail__video"
+                        onClick={() => handleOpenImageModal('Pocket_chatting')}
+                    />
+                </li>
+                <li className="content--features__li">
+                    Comment & Reply
+                    <AiFillPlaySquare
+                        onClick={() => handleOpenVideoModal('Pocket_comment')}
+                        className="detail__video"
+                    />
+                    <BiImageAlt
+                        className="detail__video"
+                        onClick={() => handleOpenImageModal('Pocket_comment')}
+                    />
+                </li>
+                <li className="content--features__li">
+                    Create post
                     <AiFillPlaySquare
                         onClick={() =>
-                            handleOpenVideoModal('Pocket_UpdateItem')
+                            handleOpenVideoModal('Pocket_create_post')
                         }
                         className="detail__video"
                     />
+                    <BiImageAlt
+                        className="detail__video"
+                        onClick={() =>
+                            handleOpenImageModal('Pocket_create_post')
+                        }
+                    />
                 </li>
                 <li className="content--features__li">
-                    Update User Info
+                    Update & Delete post
                     <AiFillPlaySquare
                         onClick={() =>
-                            handleOpenVideoModal('Pocket_Update_User')
+                            handleOpenVideoModal('Pocket_update_post')
                         }
                         className="detail__video"
                     />
-                </li>
-                <li className="content--features__li">
-                    Set Location
-                    <AiFillPlaySquare
-                        onClick={() => handleOpenVideoModal('Pocket_Place')}
+                    <BiImageAlt
                         className="detail__video"
+                        onClick={() =>
+                            handleOpenImageModal('Pocket_update_post')
+                        }
                     />
                 </li>
-                <li className="content--features__li">
-                    Search & Filtering Items
-                    <AiFillPlaySquare
-                        onClick={() => handleOpenVideoModal('Pocket_Search')}
-                        className="detail__video"
-                    />
-                </li>
-                <li className="content--features__li">
+
+                {/* <li className="content--features__li">
                     Page Images
                     <BiImageAlt
                         className="detail__video"
@@ -89,7 +126,7 @@ export default function PocketDetail_3() {
                         className="detail__video"
                         onClick={() => handleOpenImageModal('Pocket_Mobile')}
                     />
-                </li>
+                </li> */}
             </ul>
         </div>
     );

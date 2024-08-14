@@ -1,4 +1,6 @@
 import { AiFillPlaySquare } from 'react-icons/ai';
+import { BiImageAlt } from 'react-icons/bi';
+
 import { useDispatch } from 'react-redux';
 import { openVideoModal } from '../../../../store/videoSlice';
 import { openImageModal } from '../../../../store/imageSlice';
@@ -21,42 +23,66 @@ export default function NGDetail_4() {
                     Authentication & Authorization
                     <AiFillPlaySquare
                         className="detail__video"
-                        onClick={() => handleOpenVideoModal('NG_Auth')}
+                        onClick={() => handleOpenVideoModal('NG_auth')}
                     />
-                </li>
-                <li className="content--features__li">
-                    Sidebar Feature
-                    <AiFillPlaySquare
+                    <BiImageAlt
                         className="detail__video"
-                        onClick={() => handleOpenVideoModal('NG_Side')}
+                        onClick={() => handleOpenImageModal('NG_auth')}
                     />
                 </li>
                 <li className="content--features__li">
                     AI chatting
                     <AiFillPlaySquare
                         className="detail__video"
-                        onClick={() => handleOpenVideoModal('NG_AI')}
+                        onClick={() => handleOpenVideoModal('NG_chatting')}
+                    />
+                    <BiImageAlt
+                        className="detail__video"
+                        onClick={() => handleOpenImageModal('NG_chatting')}
+                    />
+                </li>
+                <li className="content--features__li">
+                    Sidebar Feature
+                    <AiFillPlaySquare
+                        className="detail__video"
+                        onClick={() => handleOpenVideoModal('NG_sidebar')}
+                    />
+                    <BiImageAlt
+                        className="detail__video"
+                        onClick={() => handleOpenImageModal('NG_sidebar')}
                     />
                 </li>
                 <li className="content--features__li">
                     DetailPage
                     <AiFillPlaySquare
                         className="detail__video"
-                        onClick={() => handleOpenVideoModal('NG_Detail')}
+                        onClick={() => handleOpenVideoModal('NG_detail')}
+                    />
+                    <BiImageAlt
+                        className="detail__video"
+                        onClick={() => handleOpenImageModal('NG_detail')}
                     />
                 </li>
-                <li className="content--features__li">
+                {/* <li className="content--features__li">
                     Error Handling
                     <AiFillPlaySquare
                         className="detail__video"
-                        onClick={() => handleOpenVideoModal('NG_ERROR')}
+                        onClick={() => handleOpenVideoModal('NG_error')}
                     />
-                </li>
+                    <BiImageAlt
+                        className="detail__video"
+                        onClick={() => handleOpenImageModal('NG_error')}
+                    />
+                </li> */}
                 <li className="content--features__li">
                     Responsible Design
                     <AiFillPlaySquare
                         className="detail__video"
-                        onClick={() => handleOpenVideoModal('NG_Response')}
+                        onClick={() => handleOpenVideoModal('NG_response')}
+                    />
+                    <BiImageAlt
+                        className="detail__video"
+                        onClick={() => handleOpenImageModal('NG_response')}
                     />
                 </li>
             </ul>
