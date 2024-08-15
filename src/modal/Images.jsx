@@ -31,8 +31,9 @@ const ImageModal = forwardRef(function ImageModal(props, ref) {
     const sliceImageTopic = useSelector((state) => state.imageSlice.topic);
     // const [numOfImage, setNumOfImage] = useState(0);
     const [images, setImages] = useState([]);
+    const [currentIdx, setCurrentIdx] = useState(0);
     const [heading, setHeading] = useState('');
-
+    const [isResponsive, setIsResponsive] = useState(false);
     useEffect(() => {
         if (sliceImageTopic === 'CPT_auth') {
             setImages([CPTImages.auth_1, CPTImages.auth_2, CPTImages.auth_3]);
@@ -201,9 +202,11 @@ const ImageModal = forwardRef(function ImageModal(props, ref) {
                 NGImages.response_3,
                 NGImages.response_4,
             ]);
+            setIsResponsive(true);
         }
         //  else if (sliceImageTopic === 'NG_auth') {
         // }
+        setCurrentIdx(0);
     }, [sliceImageTopic]);
 
     useImperativeHandle(ref, () => {
@@ -215,6 +218,7 @@ const ImageModal = forwardRef(function ImageModal(props, ref) {
             close: () => {
                 dispatch(closeImageModal());
                 setImages([]);
+                setIsResponsive(false);
                 modal.current.close();
             },
         };
@@ -247,20 +251,43 @@ const ImageModal = forwardRef(function ImageModal(props, ref) {
     return createPortal(
         <div>
             <dialog ref={modal} className="modal--images">
-                <h3 className="image--heading"></h3>
+                <h3 className="image--heading">{currentIdx}</h3>
+                <button
+                    className="prev"
+                    onClick={() => setCurrentIdx((prev) => prev - 1)}
+                >
+                    prev
+                </button>
+                <button
+                    className="next"
+                    onClick={() => setCurrentIdx((prev) => prev + 1)}
+                >
+                    next
+                </button>
+
                 <AiOutlineClose
                     onClick={() => ref.current.close()}
                     className="modal--close__image"
                 />
                 <div
-                    className={`image--container image--container__${images.length}`}
+                    className={`image--container image--container__${
+                        images.length
+                    } ${isResponsive ? 'image--container__responsive' : ''}`}
                 >
                     {images.map((image, index) => {
                         return (
                             <img
                                 src={URL.createObjectURL(image)} // create url using blob
                                 key={index}
-                                className={`image--content image--${images.length}__${index} image--${images.length}`}
+                                className={`${
+                                    isResponsive
+                                        ? 'image--content__responsive'
+                                        : 'image--content'
+                                }   image--${images.length} ${
+                                    index === currentIdx
+                                        ? 'image__selected'
+                                        : ''
+                                }`}
                             />
                         );
                     })}

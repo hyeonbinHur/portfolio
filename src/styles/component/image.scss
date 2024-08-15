@@ -1,42 +1,63 @@
+
+
 .image {
     &--heading {
         font-size: 2rem;
     }
-    &--content{
-        // width: 50rem;
-        // height: 55rem;
-        width: 80rem;
-        height: 40rem;
+    &--content {
+        width: 20rem;
+        height: 10rem;
         border: 1px solid $color-grey;
-        border-radius: 3px ;
+        border-radius: 3px;
+        transition: all .7s;
+        &__responsive {
+            width: 50rem;
+            height: 55rem;
+            border: 1px solid $color-grey;
+            border-radius: 3px;
+            margin-bottom: 10rem;
+        }
     }
-    &--container{
-        height:80%;
+    &__selected{
+        transition: all .5s ease .3s;
+        width: 100rem;
+        height: 50rem;
+        animation: changeZIndex .7s forwards .3s;
+        margin-top: -65rem;
+        grid-column: 1/1;
+        z-index: -1;
+    }
+    &--container {
+        height: 80%;
         width: 100rem;
         display: grid;
-        grid-template-rows:100rem;
+        grid-template-rows: 100rem;
         align-items: center;
-        align-content: center;
-        margin: 12.5% auto;
-        &__3{
+        margin: 10% auto;
+        grid-auto-flow: column;
+        &__3 {
             grid-template-columns: repeat(2, 10rem) 80rem;
         }
-        &__4{
+        &__4 {
             grid-template-columns: repeat(3, 6.6rem) 80rem;
         }
-        &__5{
+        &__5 {
             grid-template-columns: repeat(4, 5rem) 80rem;
         }
-        &__7{
+        &__7 {
             grid-template-columns: repeat(6, 3.2rem) 80rem;
         }
-        &__9{
+        &__9 {
             grid-template-columns: repeat(8, 2.5rem) 80rem;
         }
-        &__10{
+        &__10 {
             grid-template-columns: repeat(9, 2.2rem) 80rem;
         }
+        &__responsive{
+            grid-template-columns: repeat(3, 17rem) 50rem;
+        }
     }
+
     // &--1 {
     //     &__0 {
     //         position: absolute;
@@ -333,16 +354,13 @@
     &:hover .image--2:not(:hover) {
         scale: (.95);
     }
-
     &:hover .image--3:not(:hover) {
         scale: (.95);
         opacity: .8;
     }
-
     &:hover .image--4:not(:hover) {
         scale: (.95);
     }
-
     &:hover .image--5:not(:hover) {
         scale: (.95);
     }
