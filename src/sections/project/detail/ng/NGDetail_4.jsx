@@ -18,6 +18,7 @@ export default function NGDetail_4() {
     return (
         <div className="content--body__1">
             <h3 className="heading--tertiary">Features</h3>
+
             <ul className="content__ul">
                 <li className="content--features__li">
                     Authentication & Authorization
@@ -26,7 +27,7 @@ export default function NGDetail_4() {
                         onClick={() => handleOpenVideoModal('NG_auth')}
                     />
                     <BiImageAlt
-                        className="detail__video"
+                        className="detail__gallery"
                         onClick={() => handleOpenImageModal('NG_auth')}
                     />
                 </li>
@@ -37,7 +38,7 @@ export default function NGDetail_4() {
                         onClick={() => handleOpenVideoModal('NG_chatting')}
                     />
                     <BiImageAlt
-                        className="detail__video"
+                        className="detail__gallery"
                         onClick={() => handleOpenImageModal('NG_chatting')}
                     />
                 </li>
@@ -48,7 +49,7 @@ export default function NGDetail_4() {
                         onClick={() => handleOpenVideoModal('NG_sidebar')}
                     />
                     <BiImageAlt
-                        className="detail__video"
+                        className="detail__gallery"
                         onClick={() => handleOpenImageModal('NG_sidebar')}
                     />
                 </li>
@@ -59,7 +60,7 @@ export default function NGDetail_4() {
                         onClick={() => handleOpenVideoModal('NG_detail')}
                     />
                     <BiImageAlt
-                        className="detail__video"
+                        className="detail__gallery"
                         onClick={() => handleOpenImageModal('NG_detail')}
                     />
                 </li>
@@ -81,7 +82,7 @@ export default function NGDetail_4() {
                         onClick={() => handleOpenVideoModal('NG_response')}
                     />
                     <BiImageAlt
-                        className="detail__video"
+                        className="detail__gallery"
                         onClick={() => handleOpenImageModal('NG_response')}
                     />
                 </li>

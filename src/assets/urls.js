@@ -1,8 +1,8 @@
 export const CPTUrls = {
     // store the urls in obj
-    auth1: 'https://firebasestorage.googleapis.com/v0/b/portfolio-f00fa.appspot.com/o/CPT%2Fimage%2Fbasic%2Fauth%2Fauth_1.png?alt=media&token=5c415823-a00a-4baf-8b05-eb2ebf1d01cf',
-    auth2: 'https://firebasestorage.googleapis.com/v0/b/portfolio-f00fa.appspot.com/o/CPT%2Fimage%2Fbasic%2Fauth%2Fauth_2.png?alt=media&token=97ce8029-4fc1-426b-b8a4-6dad379e352a',
-    auth3: 'https://firebasestorage.googleapis.com/v0/b/portfolio-f00fa.appspot.com/o/CPT%2Fimage%2Fbasic%2Fauth%2Fauth_3.png?alt=media&token=5d6028b3-a008-4453-b93d-75879fca5c01',
+    auth_1: 'https://firebasestorage.googleapis.com/v0/b/portfolio-f00fa.appspot.com/o/CPT%2Fimage%2Fbasic%2Fauth%2Fauth_1.png?alt=media&token=99a4faa0-54eb-439e-a66d-006e447b7d3a',
+    auth_2: 'https://firebasestorage.googleapis.com/v0/b/portfolio-f00fa.appspot.com/o/CPT%2Fimage%2Fbasic%2Fauth%2Fauth_2.png?alt=media&token=2c2cc31d-ab7f-406f-8ac9-1f284ebaa392',
+    auth_3: 'https://firebasestorage.googleapis.com/v0/b/portfolio-f00fa.appspot.com/o/CPT%2Fimage%2Fbasic%2Fauth%2Fauth_3.png?alt=media&token=1b244fb9-8f5e-4f94-b816-aaabf10b84cf',
     review_project_1:
         'https://firebasestorage.googleapis.com/v0/b/portfolio-f00fa.appspot.com/o/CPT%2Fimage%2Fadmin%2Freview_project_1.png?alt=media&token=cf1cb8f6-97d9-491d-af45-8973feede651',
     review_project_2:

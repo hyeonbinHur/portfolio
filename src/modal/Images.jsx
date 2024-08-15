@@ -34,7 +34,7 @@ const ImageModal = forwardRef(function ImageModal(props, ref) {
 
     useEffect(() => {
         if (sliceImageTopic === 'CPT_auth') {
-            setImages([CPTImages.auth1, CPTImages.auth2, CPTImages.auth3]);
+            setImages([CPTImages.auth_1, CPTImages.auth_2, CPTImages.auth_3]);
             setHeading('CPT management - Authentication');
         } else if (sliceImageTopic === 'CPT_create_project') {
             setHeading('CPT management - Basic usecase diagram');
@@ -251,13 +251,13 @@ const ImageModal = forwardRef(function ImageModal(props, ref) {
                     onClick={() => ref.current.close()}
                     className="modal--close__image"
                 />
-                <div className="images">
+                <div className="image--container">
                     {images.map((image, index) => {
                         return (
                             <img
                                 src={URL.createObjectURL(image)} // create url using blob
                                 key={index}
-                                className={`image--${images.length}__${index} image--${images.length}`}
+                                className={`image--content image--${images.length}__${index} image--${images.length}`}
                             />
                         );
                     })}
