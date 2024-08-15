@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { AiOutlineClose } from 'react-icons/ai';
 import { useEffect, useRef, useState } from 'react';
 import { forwardRef, useImperativeHandle } from 'react';
@@ -246,12 +247,14 @@ const ImageModal = forwardRef(function ImageModal(props, ref) {
     return createPortal(
         <div>
             <dialog ref={modal} className="modal--images">
-                <h3 className="image--heading">{heading}</h3>
+                <h3 className="image--heading"></h3>
                 <AiOutlineClose
                     onClick={() => ref.current.close()}
                     className="modal--close__image"
                 />
-                <div className="image--container">
+                <div
+                    className={`image--container image--container__${images.length}`}
+                >
                     {images.map((image, index) => {
                         return (
                             <img

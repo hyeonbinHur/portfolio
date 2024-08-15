@@ -3,15 +3,39 @@
         font-size: 2rem;
     }
     &--content{
-        width: 70%;
+        // width: 50rem;
+        // height: 55rem;
+        width: 80rem;
+        height: 40rem;
+        border: 1px solid $color-grey;
+        border-radius: 3px ;
     }
     &--container{
-        height:100%;
-        width: 85%;
-        display: flex;
-        border: 1px solid red;
+        height:80%;
+        width: 100rem;
+        display: grid;
+        grid-template-rows:100rem;
         align-items: center;
-        margin: auto;
+        align-content: center;
+        margin: 12.5% auto;
+        &__3{
+            grid-template-columns: repeat(2, 10rem) 80rem;
+        }
+        &__4{
+            grid-template-columns: repeat(3, 6.6rem) 80rem;
+        }
+        &__5{
+            grid-template-columns: repeat(4, 5rem) 80rem;
+        }
+        &__7{
+            grid-template-columns: repeat(6, 3.2rem) 80rem;
+        }
+        &__9{
+            grid-template-columns: repeat(8, 2.5rem) 80rem;
+        }
+        &__10{
+            grid-template-columns: repeat(9, 2.2rem) 80rem;
+        }
     }
     // &--1 {
     //     &__0 {
