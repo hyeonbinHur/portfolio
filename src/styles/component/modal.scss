@@ -19,6 +19,7 @@
         transform: translate(-5%, -5%);
         &,
         &__image {
+            cursor: pointer;
             transition: all .2s;
             z-index: 1;
             color: $color-grey;
@@ -43,7 +44,6 @@
         border: none;
         overflow: hidden;
         border-radius: 5px;
-
         box-shadow: 1rem 1rem 2rem rgba($color-black, .2);
         &:focus{
             outline: none;

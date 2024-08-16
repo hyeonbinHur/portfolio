@@ -54,7 +54,7 @@ export default function NGDetail_4() {
                     />
                 </li>
                 <li className="content--features__li">
-                    DetailPage
+                    Detail Page
                     <AiFillPlaySquare
                         className="detail__video"
                         onClick={() => handleOpenVideoModal('NG_detail')}

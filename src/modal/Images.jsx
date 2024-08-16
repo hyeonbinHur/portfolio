@@ -23,6 +23,8 @@ import basicDiagram from '../assets/CPT/diagram/basic-diagram.png';
 import { LoadCPTImages } from '../assets/urls';
 import { NGUrls } from '../assets/urls';
 import { PKUrls } from '../assets/urls';
+import { GrPrevious } from 'react-icons/gr';
+import { GrNext } from 'react-icons/gr';
 
 const ImageModal = forwardRef(function ImageModal(props, ref) {
     const modal = useRef(null);
@@ -37,9 +39,9 @@ const ImageModal = forwardRef(function ImageModal(props, ref) {
     useEffect(() => {
         if (sliceImageTopic === 'CPT_auth') {
             setImages([CPTImages.auth_1, CPTImages.auth_2, CPTImages.auth_3]);
-            setHeading('CPT management - Authentication');
+            setHeading('Authentication');
         } else if (sliceImageTopic === 'CPT_create_project') {
-            setHeading('CPT management - Basic usecase diagram');
+            setHeading('Create project');
             setImages([
                 CPTImages.create_project_1,
                 CPTImages.create_project_2,
@@ -48,14 +50,14 @@ const ImageModal = forwardRef(function ImageModal(props, ref) {
                 CPTImages.create_project_5,
             ]);
         } else if (sliceImageTopic === 'CPT_delete_project') {
-            setHeading('CPT management - Basic usecase diagram');
+            setHeading('Delete project');
             setImages([
                 CPTImages.delete_project_1,
                 CPTImages.delete_project_2,
                 CPTImages.delete_project_3,
             ]);
         } else if (sliceImageTopic === 'CPT_review_project') {
-            setHeading('CPT management - Basic usecase diagram');
+            setHeading('Review project');
             setImages([
                 CPTImages.review_project_1,
                 CPTImages.review_project_2,
@@ -63,7 +65,7 @@ const ImageModal = forwardRef(function ImageModal(props, ref) {
                 CPTImages.review_project_4,
             ]);
         } else if (sliceImageTopic === 'CPT_apply_project') {
-            setHeading('CPT management - Basic usecase diagram');
+            setHeading('Apply project');
             setImages([
                 CPTImages.apply_project_1,
                 CPTImages.apply_project_2,
@@ -71,14 +73,14 @@ const ImageModal = forwardRef(function ImageModal(props, ref) {
                 CPTImages.apply_project_4,
             ]);
         } else if (sliceImageTopic === 'CPT_create_join_group') {
-            setHeading('CPT management - Basic usecase diagram');
+            setHeading('Create & Join group');
             setImages([
                 CPTImages.create_group_1,
                 CPTImages.create_group_2,
                 CPTImages.create_group_3,
             ]);
         } else if (sliceImageTopic === 'CPT_update_project') {
-            setHeading('CPT management - Basic usecase diagram');
+            setHeading('Update project');
             setImages([
                 CPTImages.edit_project_1,
                 CPTImages.edit_project_2,
@@ -86,9 +88,11 @@ const ImageModal = forwardRef(function ImageModal(props, ref) {
                 CPTImages.edit_project_4,
             ]);
         } else if (sliceImageTopic === 'CPT_diagrams') {
-            setHeading('CPT management - Basic usecase diagram');
+            setHeading('Usecase diagram');
             setImages([basicDiagram]);
         } else if (sliceImageTopic === 'Pocket_auth') {
+            setHeading('Authentication');
+
             setImages([
                 PKImages.authentication_1,
                 PKImages.authentication_2,
@@ -96,6 +100,8 @@ const ImageModal = forwardRef(function ImageModal(props, ref) {
                 PKImages.authentication_4,
             ]);
         } else if (sliceImageTopic === 'Pocket_main') {
+            setHeading('Main pages');
+
             setImages([
                 PKImages.main_category_1,
                 PKImages.main_category_2,
@@ -104,6 +110,8 @@ const ImageModal = forwardRef(function ImageModal(props, ref) {
                 PKImages.main_category_5,
             ]);
         } else if (sliceImageTopic === 'Pocket_location') {
+            setHeading('Location setting');
+
             setImages([
                 PKImages.location_setting_1,
                 PKImages.location_setting_2,
@@ -112,6 +120,8 @@ const ImageModal = forwardRef(function ImageModal(props, ref) {
                 PKImages.location_setting_5,
             ]);
         } else if (sliceImageTopic === 'Pocket_personal') {
+            setHeading('Personal page');
+
             setImages([
                 PKImages.personal_page_1,
                 PKImages.personal_page_2,
@@ -122,6 +132,8 @@ const ImageModal = forwardRef(function ImageModal(props, ref) {
                 PKImages.personal_page_7,
             ]);
         } else if (sliceImageTopic === 'Pocket_chatting') {
+            setHeading('Realtime chatting');
+
             setImages([
                 PKImages.private_chatting_1,
                 PKImages.private_chatting_2,
@@ -135,6 +147,8 @@ const ImageModal = forwardRef(function ImageModal(props, ref) {
                 PKImages.private_chatting_10,
             ]);
         } else if (sliceImageTopic === 'Pocket_comment') {
+            setHeading('Comment & Reply');
+
             setImages([
                 PKImages.comment_reply_1,
                 PKImages.comment_reply_2,
@@ -145,6 +159,8 @@ const ImageModal = forwardRef(function ImageModal(props, ref) {
                 PKImages.comment_reply_7,
             ]);
         } else if (sliceImageTopic === 'Pocket_create_post') {
+            setHeading('Create post');
+
             setImages([
                 PKImages.add_item_1,
                 PKImages.add_item_2,
@@ -155,6 +171,7 @@ const ImageModal = forwardRef(function ImageModal(props, ref) {
                 PKImages.add_item_7,
             ]);
         } else if (sliceImageTopic === 'Pocket_update_post') {
+            setHeading('Update post');
             setImages([
                 PKImages.udate_delete_item_1,
                 PKImages.udate_delete_item_2,
@@ -167,6 +184,7 @@ const ImageModal = forwardRef(function ImageModal(props, ref) {
                 PKImages.udate_delete_item_9,
             ]);
         } else if (sliceImageTopic === 'NG_auth') {
+            setHeading('Authentication');
             setImages([
                 NGImages.auth_1,
                 NGImages.auth_2,
@@ -174,6 +192,7 @@ const ImageModal = forwardRef(function ImageModal(props, ref) {
                 NGImages.auth_4,
             ]);
         } else if (sliceImageTopic === 'NG_chatting') {
+            setHeading('Ai chatting');
             setImages([
                 NGImages.chat_1,
                 NGImages.chat_2,
@@ -181,6 +200,7 @@ const ImageModal = forwardRef(function ImageModal(props, ref) {
                 NGImages.chat_4,
             ]);
         } else if (sliceImageTopic === 'NG_sidebar') {
+            setHeading('Sidebar');
             setImages([
                 NGImages.sidebar_1,
                 NGImages.sidebar_2,
@@ -188,6 +208,8 @@ const ImageModal = forwardRef(function ImageModal(props, ref) {
                 NGImages.sidebar_4,
             ]);
         } else if (sliceImageTopic === 'NG_detail') {
+            setHeading('Detail page');
+
             setImages([
                 NGImages.detail_1,
                 NGImages.detail_2,
@@ -196,6 +218,8 @@ const ImageModal = forwardRef(function ImageModal(props, ref) {
                 NGImages.detail_5,
             ]);
         } else if (sliceImageTopic === 'NG_response') {
+            setHeading('Responsive Design');
+
             setImages([
                 NGImages.response_1,
                 NGImages.response_2,
@@ -207,6 +231,7 @@ const ImageModal = forwardRef(function ImageModal(props, ref) {
         //  else if (sliceImageTopic === 'NG_auth') {
         // }
         setCurrentIdx(0);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [sliceImageTopic]);
 
     useImperativeHandle(ref, () => {
@@ -251,19 +276,26 @@ const ImageModal = forwardRef(function ImageModal(props, ref) {
     return createPortal(
         <div>
             <dialog ref={modal} className="modal--images">
-                <h3 className="image--heading">{currentIdx}</h3>
-                <button
-                    className="prev"
-                    onClick={() => setCurrentIdx((prev) => prev - 1)}
-                >
-                    prev
-                </button>
-                <button
-                    className="next"
-                    onClick={() => setCurrentIdx((prev) => prev + 1)}
-                >
-                    next
-                </button>
+                <h3 className="image--heading">
+                    {heading} : {currentIdx + 1} / {images.length}
+                </h3>
+                {currentIdx > 0 && (
+                    <button
+                        className="image--prev"
+                        onClick={() => setCurrentIdx((prev) => prev - 1)}
+                    >
+                        <GrPrevious className="image--prev" />
+                    </button>
+                )}
+
+                {currentIdx < images.length - 1 && (
+                    <button
+                        className="image--next"
+                        onClick={() => setCurrentIdx((prev) => prev + 1)}
+                    >
+                        <GrNext className="image--next" />
+                    </button>
+                )}
 
                 <AiOutlineClose
                     onClick={() => ref.current.close()}
@@ -283,7 +315,7 @@ const ImageModal = forwardRef(function ImageModal(props, ref) {
                                     isResponsive
                                         ? 'image--content__responsive'
                                         : 'image--content'
-                                }   image--${images.length} ${
+                                }   image--${index} ${
                                     index === currentIdx
                                         ? 'image__selected'
                                         : ''
