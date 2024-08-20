@@ -10,7 +10,8 @@
         color: $color-grey-dark-3;
     }
 
-    &--prev, &--next {
+    &--prev,
+    &--next {
         position: fixed;
         top: 40%;
         outline: none;
@@ -62,13 +63,13 @@
             display: flex;
             margin: auto;
             align-items: end;
-    
             .image__selected {
                 transition: all 0.5s ease 0.3s;
                 margin-bottom: 15rem;
                 width: 100rem;
                 height: 50rem;
                 margin-left: #{math.div(-(100 - (($i + 1) * 10)), 2)}rem; // math.div() 사용
+                box-shadow: .1rem 1rem 1cap rgba($color-black, .2);
             }
         }
     }
@@ -82,6 +83,7 @@
 }
 
 .gallery {
+
     &:hover .image--2:not(:hover),
     &:hover .image--3:not(:hover),
     &:hover .image--4:not(:hover),
