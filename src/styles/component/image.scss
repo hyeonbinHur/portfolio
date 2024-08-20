@@ -34,7 +34,7 @@
     &--next {
         right: 3%;
     }
-    @for $i from 3 through 10 {
+    @for $i from 2 through 10 {
         &--container__#{$i} {
             height: 80%;
             width: #{($i + 1) * 10}rem; // 변수 없이 직접 계산하여 사용

@@ -8,9 +8,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useQuery } from '@tanstack/react-query';
 import { CPTUrls } from '../assets/urls';
 
-import basicDiagram from '../assets/CPT/diagram/basic-diagram.png';
 // import specialDiagram from '../assets/CPT/diagram/special-diagram.png';
-
 // import Pocket_Desk1 from '../assets/Pocket/desk/desk1.png';
 // import Pocket_Desk2 from '../assets/Pocket/desk/desk2.png';
 // import Pocket_Desk3 from '../assets/Pocket/desk/desk3.png';
@@ -89,7 +87,7 @@ const ImageModal = forwardRef(function ImageModal(props, ref) {
             ]);
         } else if (sliceImageTopic === 'CPT_diagrams') {
             setHeading('Usecase diagram');
-            setImages([basicDiagram]);
+            setImages([CPTImages.diagram_1, CPTImages.diagram_2]);
         } else if (sliceImageTopic === 'Pocket_auth') {
             setHeading('Authentication');
 

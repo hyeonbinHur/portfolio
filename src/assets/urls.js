@@ -49,6 +49,10 @@ export const CPTUrls = {
         'https://firebasestorage.googleapis.com/v0/b/portfolio-f00fa.appspot.com/o/CPT%2Fimage%2Fsupervisor%2Fedit_project_3.png?alt=media&token=236caac5-da4d-4f52-bfed-598cb5d6b688',
     edit_project_4:
         'https://firebasestorage.googleapis.com/v0/b/portfolio-f00fa.appspot.com/o/CPT%2Fimage%2Fsupervisor%2Fedit_project_4.png?alt=media&token=d19c582b-437b-4b82-b49e-da7be087545f',
+    diagram_1:
+        'https://firebasestorage.googleapis.com/v0/b/portfolio-f00fa.appspot.com/o/CPT%2Fimage%2Fbasic-diagram.png?alt=media&token=1bc44677-99bf-41ed-a54a-0bb48ac9ccca',
+    diagram_2:
+        'https://firebasestorage.googleapis.com/v0/b/portfolio-f00fa.appspot.com/o/CPT%2Fimage%2Fspecial-diagram.png?alt=media&token=0a62b399-2a67-4ba4-8bbc-2aff4185b911',
 };
 export const NGUrls = {
     auth_1: 'https://firebasestorage.googleapis.com/v0/b/portfolio-f00fa.appspot.com/o/NG%2Fimage%2Fauthentication%2Fmain.png?alt=media&token=0393d093-1919-4cba-9485-3a8897bcacff',
@@ -228,6 +232,22 @@ export const PKVideos = {
         'https://firebasestorage.googleapis.com/v0/b/portfolio-f00fa.appspot.com/o/Pocket%2Fvideo%2FaddItem-final.mp4?alt=media&token=5198af39-6d3b-431e-b13e-77d5590f62f0',
     PK_delete:
         'https://firebasestorage.googleapis.com/v0/b/portfolio-f00fa.appspot.com/o/Pocket%2Fvideo%2Fedit-delete-final.mp4?alt=media&token=af058962-fc92-4300-9e3c-c222572860f8',
+};
+export const CPTVideos = {
+    CPT_auth:
+        'https://firebasestorage.googleapis.com/v0/b/portfolio-f00fa.appspot.com/o/CPT%2Fvideo%2Fauth.mp4?alt=media&token=bd08df2d-2c68-480f-9a16-558c3e7a2e2c',
+    CPT_apply_project:
+        'https://firebasestorage.googleapis.com/v0/b/portfolio-f00fa.appspot.com/o/CPT%2Fvideo%2Fapply-project.mp4?alt=media&token=a05aea27-2a58-4ac0-9468-e3659717555d',
+    CPT_create_project:
+        'https://firebasestorage.googleapis.com/v0/b/portfolio-f00fa.appspot.com/o/CPT%2Fvideo%2Fcreate-project.mp4?alt=media&token=17ac4f9d-2d0d-415a-83de-1c01e13cd181',
+    CPT_create_group:
+        'https://firebasestorage.googleapis.com/v0/b/portfolio-f00fa.appspot.com/o/CPT%2Fvideo%2Fcreate-group.mp4?alt=media&token=c618b310-ab1b-4251-b054-7dc68b28a2e2',
+    CPT_delete_project:
+        'https://firebasestorage.googleapis.com/v0/b/portfolio-f00fa.appspot.com/o/CPT%2Fvideo%2Fdelete-project.mp4?alt=media&token=6abafe89-405b-411b-9220-b01c1f031288',
+    CPT_edit_project:
+        'https://firebasestorage.googleapis.com/v0/b/portfolio-f00fa.appspot.com/o/CPT%2Fvideo%2Fedit-project.mp4?alt=media&token=d8016fad-6090-4d29-94eb-1c90a5189070',
+    CPT_review_project:
+        'https://firebasestorage.googleapis.com/v0/b/portfolio-f00fa.appspot.com/o/CPT%2Fvideo%2Freview-project.mp4?alt=media&token=61328252-f814-401a-8440-68b8b93c75aa',
 };
 
 export const LoadCPTImages = async (urls) => {

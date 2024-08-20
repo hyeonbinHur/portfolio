@@ -2,20 +2,10 @@ import { AiOutlineClose } from 'react-icons/ai';
 import { useEffect, useRef, useState } from 'react';
 import { forwardRef, useImperativeHandle } from 'react';
 import { createPortal } from 'react-dom';
-
 import ReactPlayer from 'react-player';
-// import Pocket_Auth from '../assets/Pocket/auth.mp4';
-// import Pocket_Real from '../assets/Pocket/chatting.mp4';
-// import Pocket_Comment from '../assets/Pocket/comment.mp4';
-// import Pocket_CRD from '../assets/Pocket/crdItem.mp4';
-// import Pocket_U from '../assets/Pocket/uItem.mp4';
-// import Pocket_UU from '../assets/Pocket/uuser.mp4';
-// import Pocket_Search from '../assets/Pocket/search.mp4';
-// import Pocket_Place from '../assets/Pocket/placeSetting.mp4';
-import CPT_All from '../assets/CPT/all.mp4';
-
 import { PKVideos } from '../assets/urls';
 import { NGVideos } from '../assets/urls';
+import { CPTVideos } from '../assets/urls';
 import { closeVideoModal } from '../store/videoSlice';
 import { useSelector, useDispatch } from 'react-redux';
 const VideoModal = forwardRef(function VideoModal(props, ref) {
@@ -50,8 +40,20 @@ const VideoModal = forwardRef(function VideoModal(props, ref) {
             setVideoUrl(NGVideos.NG_Detail);
         } else if (sliceVideoTopic === 'NG_response') {
             setVideoUrl(NGVideos.NG_Response);
-        } else if (sliceVideoTopic === 'CPT_All') {
-            setVideoUrl(CPT_All);
+        } else if (sliceVideoTopic === 'CPT_auth') {
+            setVideoUrl(CPTVideos.CPT_auth);
+        } else if (sliceVideoTopic === 'CPT_create_project') {
+            setVideoUrl(CPTVideos.CPT_create_project);
+        } else if (sliceVideoTopic === 'CPT_delete_project') {
+            setVideoUrl(CPTVideos.CPT_delete_project);
+        } else if (sliceVideoTopic === 'CPT_review_project') {
+            setVideoUrl(CPTVideos.CPT_review_project);
+        } else if (sliceVideoTopic === 'CPT_apply_project') {
+            setVideoUrl(CPTVideos.CPT_apply_project);
+        } else if (sliceVideoTopic === 'CPT_create_join_group') {
+            setVideoUrl(CPTVideos.CPT_create_group);
+        } else if (sliceVideoTopic === 'CPT_update_project') {
+            setVideoUrl(CPTVideos.CPT_edit_project);
         }
     }, [sliceVideoTopic]);
     useImperativeHandle(ref, () => {
