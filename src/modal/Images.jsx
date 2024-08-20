@@ -313,11 +313,13 @@ const ImageModal = forwardRef(function ImageModal(props, ref) {
                                 key={index}
                                 className={`${
                                     isResponsive
-                                        ? 'image--content__responsive'
-                                        : 'image--content'
-                                }   image--${index} ${
+                                        ? `image--responsive__${index}`
+                                        : `image--${index}`
+                                }   ${
                                     index === currentIdx
-                                        ? 'image__selected'
+                                        ? isResponsive
+                                            ? 'image__selected__responsive'
+                                            : 'image__selected'
                                         : ''
                                 }`}
                             />
