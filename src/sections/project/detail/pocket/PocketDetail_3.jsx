@@ -23,7 +23,7 @@ export default function PocketDetail_3() {
                         className="detail__video"
                     />
                     <BiImageAlt
-                        className="detail__video"
+                        className="detail__gallery"
                         onClick={() => handleOpenImageModal('Pocket_auth')}
                     />
                 </li>
@@ -34,7 +34,7 @@ export default function PocketDetail_3() {
                         className="detail__video"
                     />
                     <BiImageAlt
-                        className="detail__video"
+                        className="detail__gallery"
                         onClick={() => handleOpenImageModal('Pocket_main')}
                     />
                 </li>
@@ -45,7 +45,7 @@ export default function PocketDetail_3() {
                         className="detail__video"
                     />
                     <BiImageAlt
-                        className="detail__video"
+                        className="detail__gallery"
                         onClick={() => handleOpenImageModal('Pocket_location')}
                     />
                 </li>
@@ -56,7 +56,7 @@ export default function PocketDetail_3() {
                         className="detail__video"
                     />
                     <BiImageAlt
-                        className="detail__video"
+                        className="detail__gallery"
                         onClick={() => handleOpenImageModal('Pocket_personal')}
                     />
                 </li>
@@ -67,7 +67,7 @@ export default function PocketDetail_3() {
                         className="detail__video"
                     />
                     <BiImageAlt
-                        className="detail__video"
+                        className="detail__gallery"
                         onClick={() => handleOpenImageModal('Pocket_chatting')}
                     />
                 </li>
@@ -78,7 +78,7 @@ export default function PocketDetail_3() {
                         className="detail__video"
                     />
                     <BiImageAlt
-                        className="detail__video"
+                        className="detail__gallery"
                         onClick={() => handleOpenImageModal('Pocket_comment')}
                     />
                 </li>
@@ -91,7 +91,7 @@ export default function PocketDetail_3() {
                         className="detail__video"
                     />
                     <BiImageAlt
-                        className="detail__video"
+                        className="detail__gallery"
                         onClick={() =>
                             handleOpenImageModal('Pocket_create_post')
                         }
@@ -106,7 +106,7 @@ export default function PocketDetail_3() {
                         className="detail__video"
                     />
                     <BiImageAlt
-                        className="detail__video"
+                        className="detail__gallery"
                         onClick={() =>
                             handleOpenImageModal('Pocket_update_post')
                         }

@@ -1,8 +1,8 @@
 export const CPTUrls = {
     // store the urls in obj
-    auth1: 'https://firebasestorage.googleapis.com/v0/b/portfolio-f00fa.appspot.com/o/CPT%2Fimage%2Fbasic%2Fauth%2Fauth_1.png?alt=media&token=5c415823-a00a-4baf-8b05-eb2ebf1d01cf',
-    auth2: 'https://firebasestorage.googleapis.com/v0/b/portfolio-f00fa.appspot.com/o/CPT%2Fimage%2Fbasic%2Fauth%2Fauth_2.png?alt=media&token=97ce8029-4fc1-426b-b8a4-6dad379e352a',
-    auth3: 'https://firebasestorage.googleapis.com/v0/b/portfolio-f00fa.appspot.com/o/CPT%2Fimage%2Fbasic%2Fauth%2Fauth_3.png?alt=media&token=5d6028b3-a008-4453-b93d-75879fca5c01',
+    auth_1: 'https://firebasestorage.googleapis.com/v0/b/portfolio-f00fa.appspot.com/o/CPT%2Fimage%2Fbasic%2Fauth%2Fauth_1.png?alt=media&token=99a4faa0-54eb-439e-a66d-006e447b7d3a',
+    auth_2: 'https://firebasestorage.googleapis.com/v0/b/portfolio-f00fa.appspot.com/o/CPT%2Fimage%2Fbasic%2Fauth%2Fauth_2.png?alt=media&token=2c2cc31d-ab7f-406f-8ac9-1f284ebaa392',
+    auth_3: 'https://firebasestorage.googleapis.com/v0/b/portfolio-f00fa.appspot.com/o/CPT%2Fimage%2Fbasic%2Fauth%2Fauth_3.png?alt=media&token=1b244fb9-8f5e-4f94-b816-aaabf10b84cf',
     review_project_1:
         'https://firebasestorage.googleapis.com/v0/b/portfolio-f00fa.appspot.com/o/CPT%2Fimage%2Fadmin%2Freview_project_1.png?alt=media&token=cf1cb8f6-97d9-491d-af45-8973feede651',
     review_project_2:
@@ -126,7 +126,7 @@ export const PKUrls = {
     private_chatting_6:
         'https://firebasestorage.googleapis.com/v0/b/portfolio-f00fa.appspot.com/o/Pocket%2Fimage%2Fchatting%2Fchatting_6.png?alt=media&token=d454b7d1-236e-4c9e-b385-78fa7ea0705d',
     private_chatting_7:
-        'https://firebasestorage.googleapis.com/v0/b/portfolio-f00fa.appspot.com/o/Pocket%2Fimage%2Fchatting%2Fchatting_7.png?alt=media&token=897007cf-4e19-4e04-a4b0-67e2449eb3df',
+        'https://firebasestorage.googleapis.com/v0/b/portfolio-f00fa.appspot.com/o/Pocket%2Fimage%2Fchatting%2Fchatting_7.png?alt=media&token=d566a87f-532b-47bb-9f5c-289b8f426764',
     private_chatting_8:
         'https://firebasestorage.googleapis.com/v0/b/portfolio-f00fa.appspot.com/o/Pocket%2Fimage%2Fchatting%2Fchatting_8.png?alt=media&token=ab2662f8-f5f8-4e7d-85da-33f2c6f91fe0',
     private_chatting_9:
@@ -174,7 +174,7 @@ export const PKUrls = {
     personal_page_3:
         'https://firebasestorage.googleapis.com/v0/b/portfolio-f00fa.appspot.com/o/Pocket%2Fimage%2Fpersonal%2Fpersonal_3.png?alt=media&token=e6a5fb46-7836-4718-84c9-43ee014f98be',
     personal_page_4:
-        'https://firebasestorage.googleapis.com/v0/b/portfolio-f00fa.appspot.com/o/Pocket%2Fimage%2Fpersonal%2Fpersonal_4.png?alt=media&token=c82abe5a-fc81-4d0f-b399-20d99dd9991b',
+        'https://firebasestorage.googleapis.com/v0/b/portfolio-f00fa.appspot.com/o/Pocket%2Fimage%2Fpersonal%2Fpersonal_4.png?alt=media&token=844ecfd8-8996-4376-a325-471fa631ff57',
     personal_page_5:
         'https://firebasestorage.googleapis.com/v0/b/portfolio-f00fa.appspot.com/o/Pocket%2Fimage%2Fpersonal%2Fpersonal_5_!.png?alt=media&token=b93a8ce8-0eb0-48f8-b182-239e073fa914',
     personal_page_6:
@@ -200,6 +200,7 @@ export const PKUrls = {
     udate_delete_item_9:
         'https://firebasestorage.googleapis.com/v0/b/portfolio-f00fa.appspot.com/o/Pocket%2Fimage%2FudItem%2Fdelete_3.png?alt=media&token=305b0728-05a0-4231-9905-4a480e35391f',
 };
+
 export const LoadCPTImages = async (urls) => {
     const obj = {};
 

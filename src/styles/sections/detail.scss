@@ -64,12 +64,19 @@
     }
     &__video {
         font-size: 3rem;
-        position: absolute;
-        margin-top: 1rem;
         margin-left: 1rem;
         transition: all .2s;
         background-color: transparent;
         cursor: pointer;
+        &:hover {
+            transform: translateY(-5px) scale(1.1);
+        }
+    }
+    &__gallery{
+        margin-left: .5rem;
+        font-size: 3.4rem;
+        cursor: pointer;
+        transition: all .2s;
         &:hover {
             transform: translateY(-5px) scale(1.1);
         }

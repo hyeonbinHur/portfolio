@@ -1,7 +1,7 @@
 import { BiImageAlt } from 'react-icons/bi';
-import { AiFillPlaySquare } from 'react-icons/ai';
+// import { AiFillPlaySquare } from 'react-icons/ai';
 import { useDispatch } from 'react-redux';
-import { openVideoModal } from '../../../../store/videoSlice';
+// import { openVideoModal } from '../../../../store/videoSlice';
 import { openImageModal } from '../../../../store/imageSlice';
 
 export default function CPTDetail_4() {
@@ -11,9 +11,9 @@ export default function CPTDetail_4() {
         dispatch(openImageModal({ topic: topic }));
     };
 
-    const handleOpenVideoModal = (topic) => {
-        dispatch(openVideoModal({ topic: topic }));
-    };
+    // const handleOpenVideoModal = (topic) => {
+    //     dispatch(openVideoModal({ topic: topic }));
+    // };
 
     return (
         <div className="content--body__1">
@@ -21,15 +21,15 @@ export default function CPTDetail_4() {
             <ul className="content__ul">
                 <li className="content--features__li">
                     Autehntication
-                    <AiFillPlaySquare
-                        className="detail__video"
-                        onClick={() => handleOpenVideoModal('CPT_auth')}
+                    <BiImageAlt
+                        className="detail__gallery"
+                        onClick={() => handleOpenImageModal('CPT_auth')}
                     />
                 </li>
                 <li className="content--features__li">
                     Company - Create project
                     <BiImageAlt
-                        className="detail__video"
+                        className="detail__gallery"
                         onClick={() =>
                             handleOpenImageModal('CPT_create_project')
                         }
@@ -38,7 +38,7 @@ export default function CPTDetail_4() {
                 <li className="content--features__li">
                     Company - Delete project
                     <BiImageAlt
-                        className="detail__video"
+                        className="detail__gallery"
                         onClick={() =>
                             handleOpenImageModal('CPT_delete_project')
                         }
@@ -47,7 +47,7 @@ export default function CPTDetail_4() {
                 <li className="content--features__li">
                     Admin - Review created project
                     <BiImageAlt
-                        className="detail__video"
+                        className="detail__gallery"
                         onClick={() =>
                             handleOpenImageModal('CPT_review_project')
                         }
@@ -56,7 +56,7 @@ export default function CPTDetail_4() {
                 <li className="content--features__li">
                     Student - Apply project
                     <BiImageAlt
-                        className="detail__video"
+                        className="detail__gallery"
                         onClick={() =>
                             handleOpenImageModal('CPT_apply_project')
                         }
@@ -65,7 +65,7 @@ export default function CPTDetail_4() {
                 <li className="content--features__li">
                     Student - Create & Join group
                     <BiImageAlt
-                        className="detail__video"
+                        className="detail__gallery"
                         onClick={() =>
                             handleOpenImageModal('CPT_create_join_group')
                         }
@@ -74,7 +74,7 @@ export default function CPTDetail_4() {
                 <li className="content--features__li">
                     Supervisor - Update project
                     <BiImageAlt
-                        className="detail__video"
+                        className="detail__gallery"
                         onClick={() =>
                             handleOpenImageModal('CPT_update_project')
                         }
@@ -83,7 +83,7 @@ export default function CPTDetail_4() {
                 <li className="content--features__li">
                     Diagrams
                     <BiImageAlt
-                        className="detail__video"
+                        className="detail__gallery"
                         onClick={() => handleOpenImageModal('CPT_diagrams')}
                     />
                 </li>
