@@ -193,3 +193,29 @@
     }
 
 }
+
+.link{
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &--ul{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        line-height: 7rem;
+    }
+
+    &--logo{
+        width: 4rem;
+        margin-right: 2rem;
+    }
+    &--eye{
+        font-size: 4rem;
+        margin-right: 2rem;
+        color: black;
+    }
+
+}

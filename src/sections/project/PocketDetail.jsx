@@ -15,11 +15,10 @@ import { useState } from 'react';
 import PocketDetail_1 from './detail/pocket/PocketDetail_1';
 import PocketDetail_2 from './detail/pocket/PocketDetail_2';
 import PocketDetail_3 from './detail/pocket/PocketDetail_3';
-import PocketDetail_4 from './detail/pocket/PocketDetail_4';
 
 export default function PocketDetail() {
     const [current, setCurrent] = useState(1);
-    const max = 4;
+    const max = 3;
 
     return (
         <div className="detail--content__3">
@@ -52,7 +51,6 @@ export default function PocketDetail() {
                 {current === 1 && <PocketDetail_1 />}
                 {current === 2 && <PocketDetail_2 />}
                 {current === 3 && <PocketDetail_3 />}
-                {current === 4 && <PocketDetail_4 />}
                 {/* 
                 <div className="content--body__2">
                     <h3 className="heading--tertiary">Tools</h3>

@@ -4,17 +4,14 @@ import { BiImageAlt } from 'react-icons/bi';
 import { useDispatch } from 'react-redux';
 import { openVideoModal } from '../../../../store/videoSlice';
 import { openImageModal } from '../../../../store/imageSlice';
-
 export default function NGDetail_4() {
     const dispatch = useDispatch();
     const handleOpenVideoModal = (topic) => {
         dispatch(openVideoModal({ topic: topic }));
     };
-
     const handleOpenImageModal = (topic) => {
         dispatch(openImageModal({ topic: topic }));
     };
-
     return (
         <div className="content--body__1">
             <h3 className="heading--tertiary">Features</h3>

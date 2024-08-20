@@ -200,6 +200,35 @@ export const PKUrls = {
     udate_delete_item_9:
         'https://firebasestorage.googleapis.com/v0/b/portfolio-f00fa.appspot.com/o/Pocket%2Fimage%2FudItem%2Fdelete_3.png?alt=media&token=305b0728-05a0-4231-9905-4a480e35391f',
 };
+export const NGVideos = {
+    NG_Auth:
+        'https://firebasestorage.googleapis.com/v0/b/portfolio-f00fa.appspot.com/o/NG%2Fvideo%2Fauth.mp4?alt=media&token=97409149-3eb4-4b6d-bb49-2d0916715135',
+    NG_Ai: 'https://firebasestorage.googleapis.com/v0/b/portfolio-f00fa.appspot.com/o/NG%2Fvideo%2FaiChat.mp4?alt=media&token=a4aca0cb-543b-4bfb-a84c-a6b6bfa4cefd',
+    NG_Detail:
+        'https://firebasestorage.googleapis.com/v0/b/portfolio-f00fa.appspot.com/o/NG%2Fvideo%2FdetailPage.mp4?alt=media&token=c0bdb9f4-feb6-4a53-b3b2-7805bbb6d692',
+    NG_Sidebar:
+        'https://firebasestorage.googleapis.com/v0/b/portfolio-f00fa.appspot.com/o/NG%2Fvideo%2Fsidebar.mp4?alt=media&token=b43c079c-1afd-46ba-94bc-028c980493a8',
+    NG_Response:
+        'https://firebasestorage.googleapis.com/v0/b/portfolio-f00fa.appspot.com/o/NG%2Fvideo%2Fresponse.mp4?alt=media&token=153f3644-a9a0-492f-bdb5-8b2e1cf3a21e',
+};
+export const PKVideos = {
+    PK_auth:
+        'https://firebasestorage.googleapis.com/v0/b/portfolio-f00fa.appspot.com/o/Pocket%2Fvideo%2Fauth.mp4?alt=media&token=10e0d4cb-d167-4408-bf16-e4a820f5af12',
+    PK_main:
+        'https://firebasestorage.googleapis.com/v0/b/portfolio-f00fa.appspot.com/o/Pocket%2Fvideo%2FMain-final.mp4?alt=media&token=f45e3c27-dd8a-4d5c-9d7f-aba126a1d1cd',
+    PK_location:
+        'https://firebasestorage.googleapis.com/v0/b/portfolio-f00fa.appspot.com/o/Pocket%2Fvideo%2Flocation-final.mp4?alt=media&token=4a544078-715f-4913-b785-d4d723c5d214',
+    PK_personal:
+        'https://firebasestorage.googleapis.com/v0/b/portfolio-f00fa.appspot.com/o/Pocket%2Fvideo%2Fuuser.mp4?alt=media&token=836651aa-b8eb-4fef-b032-f7935e46af70',
+    PK_chatting:
+        'https://firebasestorage.googleapis.com/v0/b/portfolio-f00fa.appspot.com/o/Pocket%2Fvideo%2Fpk-chatting-final.mp4?alt=media&token=babda328-332c-4771-a7d2-01011c2df706',
+    PK_comment:
+        'https://firebasestorage.googleapis.com/v0/b/portfolio-f00fa.appspot.com/o/Pocket%2Fvideo%2Fcomment.mp4?alt=media&token=c2441121-75bb-4a4b-9c8e-431f3d7ec864',
+    PK_create:
+        'https://firebasestorage.googleapis.com/v0/b/portfolio-f00fa.appspot.com/o/Pocket%2Fvideo%2FaddItem-final.mp4?alt=media&token=5198af39-6d3b-431e-b13e-77d5590f62f0',
+    PK_delete:
+        'https://firebasestorage.googleapis.com/v0/b/portfolio-f00fa.appspot.com/o/Pocket%2Fvideo%2Fedit-delete-final.mp4?alt=media&token=af058962-fc92-4300-9e3c-c222572860f8',
+};
 
 export const LoadCPTImages = async (urls) => {
     const obj = {};
