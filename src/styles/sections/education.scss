@@ -1,5 +1,6 @@
 .education {
     &--container {
+        height: 100%;
         display: flex;
         @include respond(tab-land){
             position: relative;

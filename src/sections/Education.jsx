@@ -11,41 +11,17 @@ import Spring from '../assets/logos/spring.png';
 export default function Education() {
     return (
         <>
-            <h3 className="heading--tertiary">Eduation & Motivation</h3>
+            <h3 className="heading--tertiary experience--header">Experience</h3>
             <div className="education--container">
                 <div className="education--text">
                     <p className="education--text__content">
-                        Hello, I'm currently a fourth-year Software Engineering
-                        student at RMIT Vietnam, having studied at RMIT
-                        Melbourne until February this year. Studying at two
-                        campuses has given me a broad range of technical and
-                        cultural experiences. Over the past four years, I've
-                        gained experience in developing iOS and Android mobile
-                        applications, data science, cloud systems, embedded
-                        systems, full-stack Java Springboot, and quality
-                        assurance testing. These experiences have helped me find
-                        my areas of interest, broaden my perspective, and
-                        enhance my creative thinking and problem-solving skills.
-                        Among all these experiences, I found front-end
-                        development to be the most fascinating. I enjoy
-                        improving user experiences and seeing the tangible
-                        upgrades in systems. Although there are many front-end
-                        frameworks, I am particularly focused on mastering
-                        React. I only have two courses left to graduate, one of
-                        which is an internship. This internship can be waived if
-                        I have equivalent industry experience. One of the main
-                        reasons I am seeking job opportunities in Australia is
-                        because my time studying there left me with cherished
-                        memories. Collaborating with diverse people helped me
-                        learn advanced developer mindsets and cultures and
-                        broadened my technical knowledge. I am eager to continue
-                        gaining experience and knowledge, aiming to grow as a
-                        more advanced developer. This desire to keep improving
-                        is what drives my aspiration to work as a developer in
-                        Australia.
+                        Java, python, c, c++, swift, android studio, spring
+                        Boot, strap, MySQL,MongoDB, Rasberry pi, Arduino uno,
+                        Jupyter notebook, Machine learning, data science,
+                        Matlab, bitbucket, katalon studio, katalon testOps,
+                        Jenkins,
                     </p>
                 </div>
-
                 <div className="education--animation">
                     <div className="row--md">
                         <div className="col-1-of-4 education--image__container__android">

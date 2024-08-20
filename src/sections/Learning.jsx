@@ -36,7 +36,7 @@ export default function Learning() {
                 </div>
                 <div className="col-1-of-3 learning--card__3 learning--card">
                     <img src={SCSS} alt="" className="learning--image" />
-                    <h3 className="learning--name">SCSS</h3>
+                    <h3 className="learning--name">TypeScript</h3>
                 </div>
             </div>
         </>
