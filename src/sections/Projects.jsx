@@ -71,7 +71,7 @@ export default function Projects() {
                                 React + AWS + OpenAI
                             </li>
                             <li className="project--basic-info__link">
-                                <p>
+                                <p className="project--basic-info__link__1">
                                     <img src={Git} className="project--git" />
                                     <a
                                         href="https://github.com/hyeonbinHur/Name_Gacha_aws_lambda"
@@ -80,7 +80,7 @@ export default function Projects() {
                                         Back-End Code
                                     </a>
                                 </p>
-                                <p>
+                                <p className="project--basic-info__link__2">
                                     <img src={Git} className="project--git" />
                                     <a
                                         href="https://github.com/hyeonbinHur/namegacha_frontend"
@@ -89,7 +89,7 @@ export default function Projects() {
                                         Front-End Code
                                     </a>
                                 </p>
-                                <p>
+                                <p className="project--basic-info__link__3">
                                     <BsEyeFill className="project--live" />
                                     <a
                                         href="https://hyeonbinhur.github.io/namegacha/"
@@ -212,7 +212,6 @@ export default function Projects() {
                     <CPTDetail />
                 </div>
             </div>
-
             <Video ref={videoModal} />
             <ImageModal ref={imageModal} />
         </>
