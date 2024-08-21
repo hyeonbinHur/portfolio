@@ -1,4 +1,5 @@
 .education {
+   
     &--container {
         height: 100%;
         display: flex;
@@ -55,7 +56,6 @@
                 background-color: $color-white;
                 opacity: 0;
             }
-
             &__android{
                 animation: bubble 8s ease-in infinite 1.5s;
 
@@ -88,9 +88,11 @@
                 animation: bubble 8s ease infinite 1.5s;
 
             }
-
         }
-
-
+    }
+    &--cpp,
+    &--swift,
+    &--arduino{
+        width: 70%;
     }
 }
