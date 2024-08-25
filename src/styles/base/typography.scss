@@ -4,16 +4,12 @@
         margin: 4rem;
         color: transparent;
         display: inline-block;
-        // background-image: linear-gradient(to right bottom, $color-brown-dark, $color-green-dark,
-        //     );
         background-color: rgba($color-green-dark, .9);
         background-clip: text;
         transition: all .5s;
         &:hover{
             transform: skewX(2deg) skewY(1deg) scale(1.1);
         }
-        @include respond(desk-sm){
-            margin-top: 8rem;
-        }
+      
     }
 }

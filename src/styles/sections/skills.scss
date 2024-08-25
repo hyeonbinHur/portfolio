@@ -1,11 +1,7 @@
 .skills{
     &--container{
-        margin: 0 auto;
         &:hover .skills--card:not(:hover){
             transform: scale(.95)
-        }
-        @include respond(tab-port) {
-            max-width: 90rem;
         }
     }
     &--card{
@@ -21,9 +17,7 @@
         &:hover {
             transform: scale(1.1) translateY(5px);
         }
-        // 부모 요소에 호버가 되지 않은 경우 크기 줄이기
     }
-
     &--image{
         width: 10rem;
         position: absolute;

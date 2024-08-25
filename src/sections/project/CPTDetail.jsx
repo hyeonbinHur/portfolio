@@ -56,40 +56,6 @@ export default function CPTDetail() {
                 {current === 2 && <CPTDetail_2 />}
                 {current === 3 && <CPTDetail_3 />}
                 {current === 4 && <CPTDetail_4 />}
-                {/* 
-                <div className="content--body__2">
-                    <h3 className="heading--tertiary">Tools</h3>
-                    <ul className="content__ul">
-                        <li className="content--tool__li">
-                            <img className="content--tool__logo" src={HTML} />
-                            HTML
-                        </li>
-                        <li className="content--tool__li">
-                            <img className="content--tool__logo" src={CSS} />
-                            CSS
-                        </li>
-                        <li className="content--tool__li">
-                            <img className="content--tool__logo" src={JS} />
-                            JavaScript
-                        </li>
-                        <li className="content--tool__li">
-                            <img className="content--tool__logo" src={JAVA} />
-                            Java
-                        </li>
-                        <li className="content--tool__li">
-                            <img className="content--tool__logo" src={Spring} />
-                            Springboot
-                        </li>
-                        <li className="content--tool__li">
-                            <img className="content--tool__logo" src={PG} />
-                            PostgreSQL
-                        </li>
-                        <li className="content--tool__li">
-                            <img className="content--tool__logo" src={RDS} />
-                            AWS-RDS
-                        </li>
-                    </ul>
-                </div> */}
             </main>
         </div>
     );

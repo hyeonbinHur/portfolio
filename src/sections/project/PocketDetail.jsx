@@ -51,57 +51,7 @@ export default function PocketDetail() {
                 {current === 1 && <PocketDetail_1 />}
                 {current === 2 && <PocketDetail_2 />}
                 {current === 3 && <PocketDetail_3 />}
-                {/* 
-                <div className="content--body__2">
-                    <h3 className="heading--tertiary">Tools</h3>
-                    <ul className="content__ul">
-                        <li className="content--tool__li">
-                            <img className="content--tool__logo" src={React} />
-                            React
-                        </li>
-                        <li className="content--tool__li">
-                            <img className="content--tool__logo" src={Redux} />
-                            Redux
-                        </li>
-                        <li className="content--tool__li">
-                            <img className="content--tool__logo" src={React} />
-                            Context API
-                        </li>
-                        <li className="content--tool__li">
-                            <img
-                                className="content--tool__logo"
-                                src={Tailwind}
-                            />
-                            Tailwind
-                        </li>
-                        <li className="content--tool__li">
-                            <img className="content--tool__logo" src={JS} />
-                            JavaScript
-                        </li>
-                        <li className="content--tool__li">
-                            <img
-                                className="content--tool__logo"
-                                src={GoogleMap}
-                            />
-                            Google Map
-                        </li>
-                        <li className="content--tool__li">
-                            <img className="content--tool__logo" src={Real} />
-                            Firebase realtime database
-                        </li>
-                        <li className="content--tool__li">
-                            <img
-                                className="content--tool__logo"
-                                src={Storage}
-                            />
-                            Firebase Storage
-                        </li>
-                    </ul>
-                </div> */}
             </main>
-
-            {/* <Video ref={videoModal} />
-            <ImageModal ref={imageModal} /> */}
         </div>
     );
 }

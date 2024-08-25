@@ -7,7 +7,10 @@ export default function Header() {
     return (
         <>
             <div className="header--image-container">
-                <div className="header--image"></div>
+                <div
+                    className="header--image"
+                    alt="Hur Hyeonbin profile image"
+                ></div>
             </div>
             <div className="header--text">
                 <span className="header--iam">Hi! I am </span>
@@ -21,7 +24,11 @@ export default function Header() {
                         href="https://github.com/hyeonbinHur"
                         className="header--link"
                     >
-                        <img src={Git} alt="" className="header--logo" />
+                        <img
+                            src={Git}
+                            alt="GitHub logo"
+                            className="header--logo"
+                        />
                         GitHub profile
                     </a>
                 </li>
@@ -39,7 +46,11 @@ export default function Header() {
                         href="https://uncle-hyeonb.tistory.com/"
                         className="header--link"
                     >
-                        <img src={Tstory} alt="" className="header--logo" />
+                        <img
+                            src={Tstory}
+                            alt="Tstory logo"
+                            className="header--logo"
+                        />
                         Personal Blog
                     </a>
                 </li>

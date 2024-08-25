@@ -3,11 +3,7 @@
         color: $color-grey;
         margin-top: 0;
         padding-top: 0;
-        margin-bottom: 7vh;
-
-        @include respond(tab-land) {
-            margin-bottom: 5vh;
-        }
+      
     }
 
     &--live {
@@ -16,7 +12,7 @@
     }
 
     &--period {
-        font-size: 1.9rem;
+        font-size: 2rem;
         margin-bottom: 2rem;
         display: inline-block;
     }
@@ -40,10 +36,7 @@
         &:not(:last-child) {
             margin-right: 20rem;
 
-            @include respond(tab-port) {
-                margin-right: 0rem;
-                margin-bottom: 8rem;
-            }
+           
         }
     }
 
@@ -68,31 +61,15 @@
             transform: scale(1.1);
         }
 
-        &__buyy,
-        &__cpt,
-        &__pocket,
-        &__ng {
-            @include respond (desk-sm) {
-                top: 10%;
-                transform: translate(-50%, -10%);
-            }
-        }
+      
 
         &__cpt {
             width: 12rem;
-
-            @include respond (desk-sm) {
-                width: 16rem;
-            }
         }
 
         &__pocket {
             width: 12rem;
             height: 7rem;
-
-            @include respond (desk-sm) {
-                width: 16rem;
-            }
         }
 
         &__ng {
@@ -152,17 +129,7 @@
         font-size: 3rem;
         font-weight: 600;
         width: 30rem;
-        // &__cpt {
-        //     font-size: 2.5rem;
-        //     font-weight: 600;
-        //     width: 30rem;
-        // }
-
-        // &__ng {
-        //     font-size: 3rem;
-        //     font-weight: 600;
-        //     width: 30rem;
-        // }
+        
     }
 }
 
@@ -172,22 +139,18 @@
     background-color: $color-grey;
     margin: 0 auto;
     margin-bottom: 7vh !important;
-
     width: 155rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     &__circle {
         width: 10px;
         height: 10px;
         background-color: $color-grey;
         border-radius: 50%;
-
         &:first-child {
             margin-left: 20rem;
         }
-
         &:last-child {
             margin-right: 20rem;
         }

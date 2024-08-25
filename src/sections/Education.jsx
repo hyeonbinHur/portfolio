@@ -8,7 +8,7 @@ export default function Education() {
             <h3 className="heading--tertiary experience--header">Experience</h3>
             <div className="education--container">
                 <div className="education--text">
-                    <p className="education--text__content">
+                    <div className="education--text__content">
                         <ul className="experience--list">
                             <li className="experience--list__item">
                                 <img
@@ -171,7 +171,7 @@ export default function Education() {
                                 Figma
                             </li>
                         </ul>
-                    </p>
+                    </div>
                 </div>
                 <div className="education--animation">
                     <div className="row--md">

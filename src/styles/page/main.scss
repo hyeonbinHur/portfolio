@@ -1,50 +1,23 @@
 .header {
-    height: 95vh;
+    height: 100vh;
     display: flex;
     background-image: linear-gradient(90deg, rgba($color-green-dark, .8) 0%,
             rgba($color-green-dark, .8) 35%,
             rgba($color-brown-dark, 1) 35%), url(../assets/images/forest.jpg);
     background-position: center;
-    clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
-
-    @include respond(tab-land) {
-        height: 50vh;
-    }
+    clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
+ 
 }
-
 .projects {
     padding: 18vh 3vh;
-    margin-top: -15vh;
+    margin-top: -10vh;
     height: 115vh;
     background-color: $color-grey-dark-1;
-    @include respond(tab-land) {
-        padding-top: 3vh;
-        height: 85vh;
-    }
-    @include respond(tab-port) {
-        padding-top: 3vh;
-        height: 100vh;
-    }
+   
 }
 .about {
     height: 100vh;
     // margin-top: -15vh;
-    @include respond(desk-md) {
-        padding-top: 13vh;
-
-        height: 125vh;
-    }
-
-    @include respond(tab-land) {
-        margin-top: -10vh;
-        height: 70vh;
-    }
-
-    @include respond(tab-port) {
-        height: auto;
-        padding-bottom: 25rem;
-    }
-
 }
 
 .education {
@@ -54,54 +27,21 @@
     background-color: $color-green-dark;
     clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
     color: $color-grey-light-1;
-    @include respond(desk-sm) {
-        clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
-        padding-top: 10vh;
-        height: 130vh;
-    }
-    @include respond(tab-land) {
-        clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
-        margin-top: -10vh;
-        padding-top: 7vh;
-        height: 55vh;
-    }
-    @include respond(tab-port) {
-        margin-top: -15vh;
-        height: 78vh;
-    }
 }
 
 .skills {
     height: 115vh;
     background-color: rgba($color-brown-dark, 1);
     z-index: 2;
-    @include respond(tab-land) {
-        margin-top: -10vh;
-        padding-top: 10vh;
-        height: 110vh;
-    }
-    @include respond(tab-port) {
-        margin-top: -10vh;
-        padding-top: 10vh;
-        height: 130vh;
-    }
 }
 .currently-learning {
     height: 100vh;
     background-color: rgba($color-brown-dark, .7);
     padding: 0rem 4rem;
-    padding-top: 5rem;
-    @include respond(tab-land) {
-        padding-top: 3vh;
-        height: 50vh;
-    }
-    @include respond(tab-port) {
-        height: 70vh;
-    }
+    padding-top: 4rem;
 }
 .footer {
     background-color: $color-grey-dark-3;
-
 }
 .animation{
     &--right{

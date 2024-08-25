@@ -15,26 +15,25 @@
         }
     }
     &--iam{
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
     &--name{
-        font-size: 4.3rem;
+        font-size: 4.5rem;
     }
     &--role{
         &__1{
             display: inline-block;
-            font-size: 3.5rem;
+            font-size: 3rem;
         }
         &__2{
             display: inline-block;
-            font-size: 3.5rem;
+            font-size: 3rem;
         }
     }
     &--image{
         width: 40rem;
         height: 40rem;
         border-radius: 5px;
-        border: none;
         background-image: url(../assets/images/profile.jpg);
         background-position: center;
         background-size: cover;
@@ -63,12 +62,7 @@
         &__1{
             margin-right: 3rem;
         }
-        @include respond (desk-sm){
-            bottom: 20%;
-        }
-        @include respond (tab-land){
-            bottom: 60%
-        }
+     
 
     }
 

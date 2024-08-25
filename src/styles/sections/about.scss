@@ -1,37 +1,41 @@
 .card {
-    &__1,&__2,&__3{
+    &__1,
+    &__2,
+    &__3 {
         height: 60rem;
         position: relative;
         background-color: transparent;
     }
-    &__1:hover &--back__1{
+    &__1:hover &--back__1 {
         transform: rotateY(0deg);
     }
-    &__1:hover &--front__1{
+    &__1:hover &--front__1 {
         transform: rotateY(-180deg);
     }
-    &__2:hover &--back__2{
+    &__2:hover &--back__2 {
         transform: rotateY(0deg);
     }
-    &__2:hover &--front__2{
+    &__2:hover &--front__2 {
         transform: rotateY(-180deg);
     }
-    &__3:hover &--back__3{
+    &__3:hover &--back__3 {
         transform: rotateY(0deg);
     }
-    &__3:hover &--front__3{
+    &__3:hover &--front__3 {
         transform: rotateY(-180deg);
     }
-    &--side{
+    &--side {
         backface-visibility: hidden;
     }
-    &--front {
-        &__1,&__2,&__3{
-        box-shadow: 0rem 1rem 1rem rgba($color-black, .2);
 
+    &--front {
+        &__1,
+        &__2,
+        &__3 {
+            box-shadow: 0rem 1rem 1rem rgba($color-black, .2);
             width: 100%;
             border-radius: 10px;
-            padding: 3rem;
+            padding: 4rem;
             height: 60rem;
             line-height: 90rem;
             background-image: linear-gradient(to right bottom,
@@ -46,9 +50,13 @@
             transition: 0.8s;
         }
     }
+
     &--back {
-        &__1, &__2, &__3{
-        box-shadow: 0rem 1rem 1rem rgba($color-black, .2);
+
+        &__1,
+        &__2,
+        &__3 {
+            box-shadow: 0rem 1rem 1rem rgba($color-black, .2);
             height: 60rem;
             border-radius: 10px;
             display: flex;
@@ -56,23 +64,23 @@
             text-align: center;
             line-height: 4rem;
             background-image: linear-gradient(to right bottom,
-            rgba($color-brown-dark, .1), rgba($color-brown-dark, .1),
-            rgba($color-white, .2)), linear-gradient(to left bottom,
-            rgba($color-brown-dark, .7), rgba($color-brown-dark, .9),
-            rgba($color-brown-dark, .9)), ;
+                    rgba($color-brown-dark, .1), rgba($color-brown-dark, .1),
+                    rgba($color-white, .2)), linear-gradient(to left bottom,
+                    rgba($color-brown-dark, .7), rgba($color-brown-dark, .9),
+                    rgba($color-brown-dark, .9)), ;
             color: $color-grey-light-1;
             padding: 2rem;
             transform: rotateY(180deg);
             position: absolute;
             top: 0;
-            left:0 ;
+            left: 0;
             transition: 0.8s;
-
         }
-
     }
     &--img {
-        &__1,&__2,&__3{
+        &__1,
+        &__2,
+        &__3 {
             height: 25rem;
             width: 25rem;
             background-size: cover;
@@ -91,16 +99,19 @@
                 animation: hoverRotate 10s infinite;
             }
         }
-        &__1{
+        &__1 {
             background-image: url(../assets/images/responsibility.jpg);
         }
-        &__2{
+
+        &__2 {
             background-image: url(../assets/images/bright.jpg);
         }
-        &__3{
+
+        &__3 {
             background-image: url(../assets/images/Cheerful.jpg);
         }
     }
+
     &--name {
         text-transform: uppercase;
         font-size: 4rem;

@@ -17,10 +17,6 @@ export default function CPTDetail_4() {
         dispatch(openVideoModal({ topic: topic }));
     };
 
-    // const handleOpenVideoModal = (topic) => {
-    //     dispatch(openVideoModal({ topic: topic }));
-    // };
-
     return (
         <div className="content--body__1">
             <h3 className="heading--tertiary">Features</h3>
@@ -133,44 +129,6 @@ export default function CPTDetail_4() {
                         onClick={() => handleOpenImageModal('CPT_diagrams')}
                     />
                 </li>
-
-                {/* <li className="content--features__li">
-                    Supervisor - Edit & View capstone project
-                    <BiImageAlt
-                        className="detail__video"
-                        onClick={() =>
-                            handleOpenImageModal('CPT_supervisor_capstone')
-                        }
-                    />
-                </li>
-                <li className="content--features__li">
-                    Admin - Review & Edit capstone project
-                    <BiImageAlt
-                        className="detail__video"
-                        onClick={() =>
-                            handleOpenImageModal('CPT_admin_capstone')
-                        }
-                    />
-                </li>
-
-                <li className="content--features__li">
-                    Bsic - usecase diagram
-                    <BiImageAlt
-                        className="detail__video"
-                        onClick={() =>
-                            handleOpenImageModal('CPT_basic_diagram')
-                        }
-                    />
-                </li>
-                <li className="content--features__li">
-                    Specific - usecase diagram
-                    <BiImageAlt
-                        className="detail__video"
-                        onClick={() =>
-                            handleOpenImageModal('CPT_specific_diagram')
-                        }
-                    />
-                </li> */}
             </ul>
         </div>
     );

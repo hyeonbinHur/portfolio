@@ -4,45 +4,22 @@
     margin: 0;
     padding: 0;
     box-sizing: inherit;
-}
 
+}
 html {
     font-size: 62.5%;
-    @include respond(desk-md) { // width < 1440
-        font-size: 56%; // 1rem = 8px, 8/16 = 50%
-    }
-    @include respond(desk-sm) { // width < 1366
-        font-size: 54%; // 1rem = 8px, 8/16 = 50%
-    }
-    @include respond(tab-land) { // width:  < 1200;
-        font-size: 48%; //1rem = 9px  9/16 = 56.25%
-    }
-    @include respond(tab-port) { // width < 900
-        font-size: 50%; // 1rem = 8px, 8/16 = 50%
-    }
-    @include respond(desk-bg) { // width > 1800
-        font-size: 62.5%; // 1rem = 12px, 12/16 = 75%
-    }
-
 }
-
 body {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.7;
-    padding: 3rem;
+    // padding: 3rem;
     box-sizing: border-box;
     color: $color-grey;
     overflow-x: hidden;
-    @include respond(tab-land) { // width:  < 1200;
-        padding: 0;
-    }
-
 }
-
 .link {
-
     &:link,
     &:visited {
         color: $color-grey;
@@ -52,16 +29,13 @@ body {
         top: 2.5rem;
         line-height: 1;
     }
-
     &:hover{
         font-size: 2rem;
     }
 }
-
 .ul{
     list-style: none;
 }
 .li{
     padding: 0rem 0rem;
-
 }

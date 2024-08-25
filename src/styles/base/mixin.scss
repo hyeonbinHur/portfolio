@@ -4,7 +4,6 @@
     left: $left;
     transform: translate(-$left, -$top);
 }
-
 @mixin clearFix {
     &::after {
         display: table;
@@ -12,25 +11,20 @@
         content: " ";
     }
 }
-
 @keyframes hoverRotate {
     0% {
         transform: translate(-50%, -50%) rotate(0deg);
     }
-
     25% {
         transform: translate(-50%, -50%) rotate(90deg);
     }
-
     50% {
         transform: translate(-50%, -50%) rotate(180deg);
     }
-
     75% {
         transform: translate(-50%, -50%) rotate(270deg);
     }
 }
-
 @keyframes bubble {
     0% {
         transform: scale(.2) translate(0, 1500%);

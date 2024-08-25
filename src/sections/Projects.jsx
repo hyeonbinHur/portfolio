@@ -23,7 +23,6 @@ export default function Projects() {
     const sliceVideoIsOpen = useSelector((state) => state.videoSlice.isOpen);
     const sliceImageTopic = useSelector((state) => state.imageSlice.topic);
     const sliceImageIsOpen = useSelector((state) => state.imageSlice.isOpen);
-
     useEffect(() => {
         if (sliceVideoIsOpen) {
             if (sliceVideoTopic !== null) {
@@ -31,7 +30,6 @@ export default function Projects() {
             }
         }
     }, [sliceVideoIsOpen, sliceVideoTopic]);
-
     useEffect(() => {
         if (sliceImageIsOpen) {
             if (sliceImageTopic !== null) {
@@ -43,7 +41,6 @@ export default function Projects() {
     return (
         <>
             <h3 className="heading--tertiary project--heading">Projects</h3>
-
             <div className="time_line">
                 <div className="time_line__circle"></div>
                 <div className="time_line__circle"></div>
@@ -54,13 +51,11 @@ export default function Projects() {
                 <div className="project--card">
                     <div className="project--team">Personal Project</div>
                     <span className="project--period">
-                        May.2024 - July.2024 (2 Monthes)
+                        May.2024 - July.2024 (2 Months)
                     </span>
-
                     <div className="project--image">
                         <img className="project--image__ng" src={NG}></img>
                     </div>
-
                     <div className="project--text">
                         <div className="project--name">Name Gacha</div>
                         <ul className="project--ul">
@@ -109,20 +104,18 @@ export default function Projects() {
                             </li>
                         </ul>
                     </div>
-
                     <input
                         type="checkbox"
                         className="detail--checkbox__4"
                         id="detail_toggle__4"
                     />
-
                     <NGDetail />
                 </div>
 
                 <div className="project--card">
                     <div className="project--team">Personal Project</div>
                     <span className="project--period">
-                        May.2024 - July.2024 (2 Monthes)
+                        May.2024 - July.2024 (2 Months)
                     </span>
                     <div className="project--image">
                         <img
@@ -170,7 +163,7 @@ export default function Projects() {
                 <div className="project--card">
                     <div className="project--team">Group of 4</div>
                     <span className="project--period">
-                        May.2024 - July.2024 (2 Monthes)
+                        May.2024 - July.2024 (2 Months)
                     </span>
                     <div className="project--image">
                         <img className="project--image__cpt" src={Cpt}></img>

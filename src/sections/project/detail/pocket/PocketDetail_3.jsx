@@ -112,21 +112,6 @@ export default function PocketDetail_3() {
                         }
                     />
                 </li>
-
-                {/* <li className="content--features__li">
-                    Page Images
-                    <BiImageAlt
-                        className="detail__video"
-                        onClick={() => handleOpenImageModal('Pocket_Desk')}
-                    />
-                </li>
-                <li className="content--features__li">
-                    Additional Responsive design
-                    <BiImageAlt
-                        className="detail__video"
-                        onClick={() => handleOpenImageModal('Pocket_Mobile')}
-                    />
-                </li> */}
             </ul>
         </div>
     );
