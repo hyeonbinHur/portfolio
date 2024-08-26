@@ -1,74 +1,111 @@
-.header{
-    &--text{
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        padding-top: 12%;
-        color: $color-grey-light-2;
+.header {
+    &--header {
+        width: 100%;
+        position: relative;
+        border: 1px solid blue;
+      
     }
-    &--logo{
+    &--logo {
         width: 4rem;
         margin-right: 1rem;
-        &__linked-in{
+        &__linked-in {
             font-size: 3.5rem;
             margin-right: 1rem;
         }
     }
-    &--iam{
+
+    &--iam {
         font-size: 2rem;
     }
-    &--name{
+
+    &--name {
         font-size: 4.5rem;
     }
-    &--role{
-        &__1{
+
+    &--role {
+        &__1 {
             display: inline-block;
             font-size: 3rem;
         }
-        &__2{
+
+        &__2 {
             display: inline-block;
             font-size: 3rem;
         }
     }
-    &--image{
+
+    &--image {
         width: 40rem;
         height: 40rem;
         border-radius: 5px;
         background-image: url(../assets/images/profile.jpg);
         background-position: center;
         background-size: cover;
-        @include absCustom(30%, 80%);
-        &-container{
-            flex: 1;
-            position: relative;
+        &-container {
+            @include absCustom(40%, 30%);
+            @include respond(tap-lg){
+                @include absCustom(40%, 10%);
+            }
+        }
+        @include respond(tap-lg){
+            width: 60rem;
+            height: 60rem;
+        }
+        @media (max-width: 49.375em){ //830
+            width: 50rem;
+            height: 50rem;
         }
     }
-    &--links{
+
+    &--text {
+        display: flex;
+        flex-direction: column;
+        width: 43rem;
+        color: $color-grey-light-2;
+        @include absCustom(40%, 70%);
+        @include respond(tap-lg){
+            @include absCustom(40%, 75%);
+        }
+        @media (max-width: 59.375em ){ //1000
+            @include absCustom(40%, 80%);
+
+        }
+        @media (max-width: 55.625em){ //890
+            @include absCustom(40%, 85%);
+
+        }
+        @media (max-width: 51.875em){ //830
+            @include absCustom(40%, 90%);
+        }
+
+    }
+
+    &--links {
         position: absolute;
         bottom: 15%;
         left: 50%;
         transform: translate(-50%, 15%);
         display: flex;
-        &__1,&__2{
+        &__1,
+        &__2 {
             list-style: none;
             display: flex;
             align-items: center;
             font-size: 2rem;
             transition: all .2s;
-            &:hover{
+            &:hover {
                 transform: scale(1.1);
             }
         }
-        &__1{
+        &__1 {
             margin-right: 3rem;
         }
-     
-
     }
 
-    &--link{
+    &--link {
+
         &:link,
-        &:visited{
+        &:visited {
             color: $color-black;
             display: flex;
             align-items: center;

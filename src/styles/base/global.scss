@@ -4,20 +4,23 @@
     margin: 0;
     padding: 0;
     box-sizing: inherit;
-
 }
 
 html {
     font-size: 62.5%;
     overflow-x: hidden;
-
     @include respond(desk-md) {
-        font-size: 60%;
-    }
-    @include respond(desk-sm) {
         font-size: 55%;
     }
-
+    @include respond(desk-sm) {
+        font-size: 45%;
+    }
+    @include respond(tab-l2) {
+        font-size: 40%;
+    }
+    @include respond(tab-md) {
+        font-size: 39%;
+    }
 }
 
 body {

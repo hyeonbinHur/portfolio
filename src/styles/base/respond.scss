@@ -1,4 +1,9 @@
 @mixin respond($breakpoint){
+    @if $breakpoint == tab-md{
+        @media (max-width: 50em ){ //1000
+            @content;
+        }
+    }
     @if $breakpoint == desk-sm{
         @media (max-width: 85.5em) { //1366
             @content;
@@ -9,4 +14,15 @@
             @content;
         }
     }
+    @if $breakpoint == tab-lg {
+        @media (max-width: 71.875em) { //1100px
+            @content;
+        }
+    }
+    @if $breakpoint == tab-lg2{
+        @media (max-width: 65.625em ){ //1000
+            @content
+        }
+    }
+    
 }

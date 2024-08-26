@@ -27,9 +27,7 @@ export default function NGDetail() {
     const [current, setCurrent] = useState(1);
     const [currentTitle, setCurrentTitle] = useState('Information');
     const max = 5;
-    // const handleOpenImageModal = (topic) => {
-    //     dispatch(openImageModal({ topic: topic }));
-    // };
+
     useEffect(() => {
         if (current === 1) {
             setCurrentTitle('Information');

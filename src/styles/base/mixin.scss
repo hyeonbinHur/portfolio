@@ -51,6 +51,9 @@
             box-shadow: 1rem 1rem 1rem rgba($color-black, .2);
         }
     }
+    &:not(:checked)~ .detail--content__#{$modifier}{
+        display: none;
+    }
     &:checked~.detail--content__#{$modifier} {
         position: fixed;
         top: 0;

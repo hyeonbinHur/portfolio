@@ -6,12 +6,16 @@
             rgba($color-brown-dark, 1) 35%), url(../assets/images/forest.jpg);
     background-position: center;
     clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
+
+ 
 }
 .projects {
     padding: 15vh 3vh;
     margin-top: -10vh;
     height: 115vh;
     background-color: $color-grey-dark-1;
+    padding-bottom: 5vh;
+  
 }
 .about {
     height: 100vh;
@@ -28,7 +32,7 @@
 
 .skills {
     padding: 5vh 3vh;
-    height: 120vh;
+    height: 115vh;
     background-color: rgba($color-brown-dark, 1);
     z-index: 2;
 }

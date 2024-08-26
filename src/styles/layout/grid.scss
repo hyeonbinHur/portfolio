@@ -11,9 +11,14 @@
             &:not(:last-child) {
                 margin-right: 6rem;
             }
+            
         }
     }
+    @include respond (tab-lg){
+        float: none;
+    }
 
+ 
 }
 .col-1-of-3 {
     float: left;
