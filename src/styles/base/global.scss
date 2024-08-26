@@ -6,20 +6,34 @@
     box-sizing: inherit;
 
 }
+
 html {
     font-size: 62.5%;
+    overflow-x: hidden;
+
+    @include respond(desk-md) {
+        font-size: 60%;
+    }
+    @include respond(desk-sm) {
+        font-size: 55%;
+    }
+
 }
+
 body {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.7;
-    // padding: 3rem;
+    padding: 3rem;
     box-sizing: border-box;
     color: $color-grey;
     overflow-x: hidden;
+
 }
+
 .link {
+
     &:link,
     &:visited {
         color: $color-grey;
@@ -29,13 +43,16 @@ body {
         top: 2.5rem;
         line-height: 1;
     }
-    &:hover{
+
+    &:hover {
         font-size: 2rem;
     }
 }
-.ul{
+
+.ul {
     list-style: none;
 }
-.li{
+
+.li {
     padding: 0rem 0rem;
 }

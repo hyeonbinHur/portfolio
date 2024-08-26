@@ -10,42 +10,40 @@ export default function Skills() {
     return (
         <>
             <h3 className="heading--tertiary">Skills</h3>
-            <div className="skills--container">
-                <div className="row">
-                    <div className="col-1-of-4 skills--card ">
-                        <img src={React} alt="" className="skills--image" />
-                        <h3 className="skills--name">React</h3>
-                    </div>
-                    <div className="col-1-of-4 skills--card ">
-                        <img src={redux} alt="" className="skills--image" />
-                        <h3 className="skills--name">Redux</h3>
-                    </div>
-                    <div className="col-1-of-4 skills--card">
-                        <img src={query} alt="" className="skills--image" />
-                        <h3 className="skills--name">React Query</h3>
-                    </div>
-                    <div className="col-1-of-4 skills--card ">
-                        <img src={JS} alt="" className="skills--image" />
-                        <h3 className="skills--name">JavaScript</h3>
-                    </div>
+            <div className="row">
+                <div className="col-1-of-4 skills--card ">
+                    <img src={React} alt="" className="skills--image" />
+                    <h3 className="skills--name">React</h3>
                 </div>
-                <div className="row">
-                    <div className="col-1-of-4 skills--card ">
-                        <img src={SASS} alt="" className="skills--image" />
-                        <h3 className="skills--name">SCSS</h3>
-                    </div>
-                    <div className="col-1-of-4 skills--card ">
-                        <img src={AWS} alt="" className="skills--image" />
-                        <h3 className="skills--name">AWS</h3>
-                    </div>
-                    <div className="col-1-of-4 skills--card ">
-                        <img src={Fire} alt="" className="skills--image" />
-                        <h3 className="skills--name">Firebase</h3>
-                    </div>
-                    <div className="col-1-of-4 skills--card ">
-                        <img src={Pg} alt="" className="skills--image" />
-                        <h3 className="skills--name">postgreSQL</h3>
-                    </div>
+                <div className="col-1-of-4 skills--card ">
+                    <img src={redux} alt="" className="skills--image" />
+                    <h3 className="skills--name">Redux</h3>
+                </div>
+                <div className="col-1-of-4 skills--card">
+                    <img src={query} alt="" className="skills--image" />
+                    <h3 className="skills--name">React Query</h3>
+                </div>
+                <div className="col-1-of-4 skills--card ">
+                    <img src={JS} alt="" className="skills--image" />
+                    <h3 className="skills--name">JavaScript</h3>
+                </div>
+            </div>
+            <div className="row">
+                <div className="col-1-of-4 skills--card ">
+                    <img src={SASS} alt="" className="skills--image" />
+                    <h3 className="skills--name">SCSS</h3>
+                </div>
+                <div className="col-1-of-4 skills--card ">
+                    <img src={AWS} alt="" className="skills--image" />
+                    <h3 className="skills--name">AWS</h3>
+                </div>
+                <div className="col-1-of-4 skills--card ">
+                    <img src={Fire} alt="" className="skills--image" />
+                    <h3 className="skills--name">Firebase</h3>
+                </div>
+                <div className="col-1-of-4 skills--card ">
+                    <img src={Pg} alt="" className="skills--image" />
+                    <h3 className="skills--name">postgreSQL</h3>
                 </div>
             </div>
         </>

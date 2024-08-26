@@ -9,7 +9,11 @@ export default function PocketDetail_2() {
                 justifyContent: 'center',
             }}
         >
-            <img src={Architecture} alt="Pocket project architecture" />
+            <img
+                src={Architecture}
+                alt="Pocket project architecture"
+                className="detail--architecture"
+            />
         </div>
     );
 }

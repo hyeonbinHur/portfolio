@@ -6,22 +6,19 @@
             rgba($color-brown-dark, 1) 35%), url(../assets/images/forest.jpg);
     background-position: center;
     clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
- 
 }
 .projects {
-    padding: 18vh 3vh;
+    padding: 15vh 3vh;
     margin-top: -10vh;
     height: 115vh;
     background-color: $color-grey-dark-1;
-   
 }
 .about {
     height: 100vh;
     // margin-top: -15vh;
 }
-
 .education {
-    height: 130vh;
+    height: 115vh;
     margin-top: -15vh;
     padding-top: 15vh;
     background-color: $color-green-dark;
@@ -30,7 +27,8 @@
 }
 
 .skills {
-    height: 115vh;
+    padding: 5vh 3vh;
+    height: 120vh;
     background-color: rgba($color-brown-dark, 1);
     z-index: 2;
 }

@@ -2,7 +2,7 @@ import Github from '../../../../assets/logos/github.png';
 import { BsEyeFill } from 'react-icons/bs';
 export default function NGDetail_5() {
     return (
-        <div>
+        <div className="ng-detail--url">
             <ul className="link--ul">
                 <li className="link__1 link">
                     <img

@@ -42,9 +42,15 @@ export default function Projects() {
         <>
             <h3 className="heading--tertiary project--heading">Projects</h3>
             <div className="time_line">
-                <div className="time_line__circle"></div>
-                <div className="time_line__circle"></div>
-                <div className="time_line__circle"></div>
+                <div className="time_line__box">
+                    <div className="time_line__circle"></div>
+                </div>
+                <div className="time_line__box">
+                    <div className="time_line__circle"></div>
+                </div>
+                <div className="time_line__box">
+                    <div className="time_line__circle"></div>
+                </div>
             </div>
 
             <div className="row">

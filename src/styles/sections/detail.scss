@@ -129,6 +129,9 @@
         background-color: $color-white;
         padding-right: 1rem;
     } 
+    &--url{
+        height: 100%;
+    }
 }
 .detail{
     z-index: 2;
@@ -153,6 +156,13 @@
         background-color: $color-white;
         text-align: left;
         padding-right: 1rem;
+    }
+    &--architecture{
+        width: 100%;
+        height: 100%;
+    }
+    &--erd{
+        max-height: 100%;
     }
 }
 .cpt-detail--logo{

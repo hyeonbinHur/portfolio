@@ -3,9 +3,8 @@
         color: $color-grey;
         margin-top: 0;
         padding-top: 0;
-      
-    }
 
+    }
     &--live {
         color: $color-grey;
         margin-right: 1rem;
@@ -36,7 +35,7 @@
         &:not(:last-child) {
             margin-right: 20rem;
 
-           
+
         }
     }
 
@@ -57,11 +56,12 @@
         justify-content: center;
         margin: 1rem auto;
         transition: transform .2s ease;
-        &:hover{
+
+        &:hover {
             transform: scale(1.1);
         }
 
-      
+
 
         &__cpt {
             width: 12rem;
@@ -86,11 +86,13 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
         &:not(:last-child) {
             padding-bottom: 1rem;
             border-bottom: 2px solid rgba($color-grey, .4);
             margin: 0 5rem;
         }
+
         &__link {
             display: flex;
             flex-direction: column;
@@ -103,33 +105,38 @@
                 border-bottom: 2px solid rgba($color-grey, .4);
                 margin: 0 5rem;
             }
-            &__1{
+
+            &__1 {
                 display: flex;
                 align-items: center;
                 margin-bottom: 1.4rem;
             }
-            &__2{
+
+            &__2 {
                 display: flex;
                 align-items: center;
                 margin-bottom: 1.4rem;
             }
-            &__3{
+
+            &__3 {
                 display: flex;
                 align-items: center;
             }
         }
     }
+
     &--text {
         font-size: 1.9rem;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+
     &--name {
         font-size: 3rem;
         font-weight: 600;
         width: 30rem;
-        
+
     }
 }
 
@@ -139,21 +146,25 @@
     background-color: $color-grey;
     margin: 0 auto;
     margin-bottom: 7vh !important;
-    width: 155rem;
+    max-width: 155rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    &__box {
+        position: relative;
+        float: left;
+        width: calc((100% - 40rem)/3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:not(:last-child) {
+            margin-right: 20rem;
+        }
+    }
     &__circle {
         width: 10px;
         height: 10px;
         background-color: $color-grey;
         border-radius: 50%;
-        &:first-child {
-            margin-left: 20rem;
-        }
-        &:last-child {
-            margin-right: 20rem;
-        }
-    }
 
+    }
 }
