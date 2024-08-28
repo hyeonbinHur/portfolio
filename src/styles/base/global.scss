@@ -15,7 +15,7 @@ html {
     @include respond(desk-sm) {
         font-size: 45%;
     }
-    @include respond(tab-l2) {
+    @include respond(tab-lg) {
         font-size: 40%;
     }
     @include respond(tab-md) {
@@ -36,7 +36,6 @@ body {
 }
 
 .link {
-
     &:link,
     &:visited {
         color: $color-grey;

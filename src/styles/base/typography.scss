@@ -7,10 +7,7 @@
         display: inline-block;
         background-color: rgba($color-green-dark, .9);
         background-clip: text;
-        transition: all .5s;
-        &:hover{
-            transform: skewX(2deg) skewY(1deg) scale(1.1);
-        }
+       
       
     }
 }

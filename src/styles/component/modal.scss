@@ -34,6 +34,7 @@
             right: 2.5%;
         }
     }
+
     &--images {
         top: 50%;
         left: 50%;
@@ -48,5 +49,20 @@
             outline: none;
         }
     }
-   
+    &--email{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50rem;
+        height: 65rem;
+        border: none;
+        overflow: hidden;
+        border-radius: 5px;
+        box-shadow: 1rem 1rem 2rem rgba($color-black, .2);
+       
+        &:focus{
+            outline: none;
+        }
+        
+    }
 }

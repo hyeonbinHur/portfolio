@@ -31,16 +31,16 @@
 }
 
 .skills {
+    display: grid;
+    grid-template-columns: minmax(5rem, 1fr) repeat(3, minmax(min-content, 50rem)) minmax(5rem, 1fr);
     padding: 5vh 3vh;
-    height: 115vh;
+    min-height: 110vh;
     background-color: rgba($color-brown-dark, 1);
     z-index: 2;
 }
 .currently-learning {
-    height: 100vh;
     background-color: rgba($color-brown-dark, .7);
-    padding: 0rem 4rem;
-    padding-top: 4rem;
+    padding: 10rem 4rem;
 }
 .footer {
     background-color: $color-grey-dark-3;

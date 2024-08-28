@@ -6,23 +6,18 @@
         max-width: 45vw;
         margin: 0 auto;
         @include clearFix;
-        [class ^='col-'] {
+s        [class ^='col-'] {
             float: left;
             &:not(:last-child) {
                 margin-right: 6rem;
             }
-            
         }
     }
-    @include respond (tab-lg){
-        float: none;
-    }
-
- 
 }
 .col-1-of-3 {
     float: left;
     width: calc((100% - 12rem)/3);
+
     &:not(:last-child) {
         margin-right: 6rem;
     }
@@ -30,7 +25,9 @@
 .col-1-of-4 {
     width: calc((100% - 18rem)/4);
     float: left;
+
     &:not(:last-child) {
         margin-right: 6rem;
     }
+
 }

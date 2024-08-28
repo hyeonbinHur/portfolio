@@ -1,12 +1,13 @@
 import './styles/index.scss';
 import Header from './sections/Header';
 // import AboutMe from './sections/AboutMe';
-import Education from './sections/Education';
 import Skills from './sections/Skills';
 import Projects from './sections/Projects';
 import Learning from './sections/Learning';
 import Footer from './sections/Footer';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import Experience from './sections/Experience';
+
 const queryClient = new QueryClient({
     defaultOptions: {
         queries: {},
@@ -33,7 +34,7 @@ function App() {
                         <Skills />
                     </section>
                     <section className="education">
-                        <Education />
+                        <Experience />
                     </section>
                     <section className="currently-learning">
                         <Learning />

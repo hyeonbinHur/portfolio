@@ -1,0 +1,27 @@
+.email{
+    &--form{
+        display: flex;
+        flex-direction: column;
+        min-width: 90%;
+        margin-bottom: 4rem;
+    }
+
+    &--label{
+        display: block;
+    }
+    &--input{
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        height: 3rem;
+        padding: 1rem 1rem;
+        outline: none;
+        border: none;
+        border: 1px solid $color-grey;
+    }
+    &--message{
+        height: 18rem;
+    }
+    &--btn{
+        height: 5rem;
+    }
+}

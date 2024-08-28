@@ -19,10 +19,12 @@ import CPTDetail from './project/CPTDetail.jsx';
 export default function Projects() {
     const videoModal = useRef(null);
     const imageModal = useRef(null);
+
     const sliceVideoTopic = useSelector((state) => state.videoSlice.topic);
     const sliceVideoIsOpen = useSelector((state) => state.videoSlice.isOpen);
     const sliceImageTopic = useSelector((state) => state.imageSlice.topic);
     const sliceImageIsOpen = useSelector((state) => state.imageSlice.isOpen);
+
     useEffect(() => {
         if (sliceVideoIsOpen) {
             if (sliceVideoTopic !== null) {
@@ -30,6 +32,7 @@ export default function Projects() {
             }
         }
     }, [sliceVideoIsOpen, sliceVideoTopic]);
+
     useEffect(() => {
         if (sliceImageIsOpen) {
             if (sliceImageTopic !== null) {
@@ -229,7 +232,6 @@ export default function Projects() {
                     </div>
                 </div>
             </div>
-
             <Video ref={videoModal} />
             <ImageModal ref={imageModal} />
         </>

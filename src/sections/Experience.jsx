@@ -2,13 +2,13 @@
 import Katalon from '../assets/logos/katalon.png';
 import SolidWorks from '../assets/logos/solidworks.png';
 import ML from '../assets/logos/ml.png';
-export default function Education() {
+export default function Experience() {
     return (
         <>
             <h3 className="heading--tertiary experience--header">Experience</h3>
-            <div className="education--container">
-                <div className="education--text">
-                    <div className="education--text__content">
+            <div className="experience--container">
+                <div className="experience--text">
+                    <div className="experience--text__content">
                         <ul className="experience--list">
                             <li className="experience--list__item">
                                 <img
@@ -90,6 +90,9 @@ export default function Education() {
                                 />
                                 Android stduio
                             </li>
+                        </ul>
+
+                        <ul className="experience--list">
                             <li className="experience--list__item">
                                 <img
                                     className="experience--list__logo"
@@ -173,53 +176,53 @@ export default function Education() {
                         </ul>
                     </div>
                 </div>
-                <div className="education--animation">
+                <div className="experience--animation">
                     <div className="row--md">
                         <img
-                            className="col-1-of-4 education--image__container__android"
+                            className="col-1-of-4 experience--image__container__android"
                             src="https://skillicons.dev/icons?i=java&theme=light"
                             alt="Java logo"
                         />
                         <img
-                            className="col-1-of-4 education--image__container__aws"
+                            className="col-1-of-4 experience--image__container__aws"
                             src="https://skillicons.dev/icons?i=jenkins&theme=light"
                             alt="Jenkins logo"
                         />
-                        <div className="col-1-of-4 education--image__container__java">
+                        <div className="col-1-of-4 experience--image__container__java">
                             <img
-                                className="education--swift"
+                                className="experience--swift"
                                 src="https://skillicons.dev/icons?i=swift&theme=light"
                                 alt="Swift logo"
                             />
                         </div>
                         <img
-                            className="col-1-of-4 education--image__container__js"
+                            className="col-1-of-4 experience--image__container__js"
                             src="https://skillicons.dev/icons?i=raspberrypi&theme=light"
                             alt="Raspberry pi logo"
                         />
                     </div>
                     <div className="row--md">
-                        <div className="col-1-of-4 education--image__container__react">
+                        <div className="col-1-of-4 experience--image__container__react">
                             <img
-                                className="education--arduino"
+                                className="experience--arduino"
                                 src="https://skillicons.dev/icons?i=arduino&theme=light"
                                 alt="Arduino Uno logo"
                             />
                         </div>
-                        <div className="col-1-of-4 education--image__container__rmit">
+                        <div className="col-1-of-4 experience--image__container__rmit">
                             <img
-                                className="education--cpp"
+                                className="experience--cpp"
                                 src="https://skillicons.dev/icons?i=cpp&theme=light"
                                 alt="C++ logo"
                             />
                         </div>
                         <img
-                            className="col-1-of-4 education--image__container__sass"
+                            className="col-1-of-4 experience--image__container__sass"
                             src="https://skillicons.dev/icons?i=spring&theme=light"
                             alt="Spring logo"
                         />
                         <img
-                            className="col-1-of-4 education--image__container__spring"
+                            className="col-1-of-4 experience--image__container__spring"
                             src="https://skillicons.dev/icons?i=py&theme=light"
                             alt="Python logo"
                         />

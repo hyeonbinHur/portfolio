@@ -1,11 +1,4 @@
 import Learn from '../assets/logos/learn.png';
-
-import Jest from '../assets/logos/jest.png';
-import React from '../assets/logos/react.png';
-import Redux from '../assets/logos/redux.png';
-import Query from '../assets/logos/query.svg';
-import SCSS from '../assets/logos/sass.png';
-
 export default function Learning() {
     return (
         <>
@@ -25,17 +18,27 @@ export default function Learning() {
             </p>
             <div className="row learning--card__container">
                 <div className="col-1-of-3 learning--card__1 learning--card">
-                    <img src={React} alt="" className="learning--image__1" />
-                    <img src={Redux} alt="" className="learning--image__2" />
-                    <img src={Query} alt="" className="learning--image__3" />
+                    <img
+                        className="learning--image"
+                        src="https://skillicons.dev/icons?i=react&theme=light"
+                        alt="Android Studio logo"
+                    />
                     <h3 className="learning--name">React</h3>
                 </div>
                 <div className="col-1-of-3 learning--card__2 learning--card">
-                    <img src={Jest} alt="" className="learning--image" />
+                    <img
+                        className="learning--image"
+                        src="https://skillicons.dev/icons?i=jest&theme=light"
+                        alt="Android Studio logo"
+                    />
                     <h3 className="learning--name">Jest</h3>
                 </div>
                 <div className="col-1-of-3 learning--card__3 learning--card">
-                    <img src={SCSS} alt="" className="learning--image" />
+                    <img
+                        className="learning--image"
+                        src="https://skillicons.dev/icons?i=ts&theme=light"
+                        alt="Android Studio logo"
+                    />
                     <h3 className="learning--name">TypeScript</h3>
                 </div>
             </div>
