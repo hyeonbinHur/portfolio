@@ -59,23 +59,20 @@
         display: flex;
         flex-direction: column;
         width: 43rem;
-        color: $color-grey-light-2;
+        color: $color-grey-light-1;
         @include absCustom(40%, 70%);
         @include respond(tap-lg){
             @include absCustom(40%, 75%);
         }
         @media (max-width: 62.5em ){ //1000
             @include absCustom(40%, 80%);
-
         }
         @media (max-width: 55.625em){ //890
             @include absCustom(40%, 85%);
-
         }
         @media (max-width: 51.875em){ //830
             @include absCustom(40%, 90%);
         }
-
     }
 
     &--links {
@@ -94,6 +91,7 @@
             &:hover {
                 transform: scale(1.1);
             }
+         
         }
         &__1 {
             margin-right: 3rem;
@@ -101,10 +99,9 @@
     }
 
     &--link {
-
         &:link,
         &:visited {
-            color: $color-black;
+            color:$color-black;
             display: flex;
             align-items: center;
         }

@@ -35,7 +35,7 @@
     grid-template-columns: minmax(5rem, 1fr) repeat(3, minmax(min-content, 50rem)) minmax(5rem, 1fr);
     padding: 5vh 3vh;
     min-height: 110vh;
-    background-color: rgba($color-brown-dark, 1);
+    background-color: rgba($color-brown-dark, .95);
     z-index: 2;
 }
 .currently-learning {
