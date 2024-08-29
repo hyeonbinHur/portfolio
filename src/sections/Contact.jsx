@@ -1,14 +1,19 @@
+import { AiOutlineCheck } from 'react-icons/ai';
+import { AiOutlineClose } from 'react-icons/ai';
+import { BsSend } from 'react-icons/bs';
 import { AiOutlineLinkedin } from 'react-icons/ai';
 import { BsGithub } from 'react-icons/bs';
 import { AiOutlineMail } from 'react-icons/ai';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
+import Spinner from '../assets/logos/loading.svg';
 import emailjs from '@emailjs/browser';
 
 export default function Contact() {
     const form = useRef(null);
-
+    const [emailStatus, setEmailStatus] = useState('idle'); // 상태 초기화
     const sendEmail = (e) => {
         e.preventDefault();
+        setEmailStatus('loading');
         emailjs
             .sendForm(
                 import.meta.env.VITE_SERVICE_ID,
@@ -20,10 +25,12 @@ export default function Contact() {
             )
             .then(
                 () => {
-                    console.log('SUCCESS!');
+                    setEmailStatus('success');
+                    form.current.reset();
                 },
                 (error) => {
-                    console.log('FAILED...', error.text);
+                    setEmailStatus('failed');
+                    console.error('FAILED...', error.text);
                 }
             );
     };
@@ -53,6 +60,7 @@ export default function Contact() {
                     <a
                         href="https://www.linkedin.com/in/hyeonbin-hur-755a87319/"
                         className="contact--link"
+                        target="_blank"
                     >
                         Linkedin Profile
                     </a>
@@ -64,6 +72,7 @@ export default function Contact() {
                     <a
                         href="https://github.com/hyeonbinHur"
                         className="contact--link"
+                        target="_blank"
                     >
                         GitHub Profile
                     </a>
@@ -137,12 +146,32 @@ export default function Contact() {
                         />
                     </div>
                     <div className="form--group form--send">
-                        <input
-                            type="submit"
-                            value="Send"
-                            className="email--btn"
-                        />
+                        <button type="submit" className="email--btn">
+                            send
+                            <span>
+                                {emailStatus === 'idle' && (
+                                    <BsSend className="email--status" />
+                                )}
+                                {emailStatus === 'loading' && (
+                                    <img
+                                        src={Spinner}
+                                        className="email--status"
+                                    />
+                                )}
+                                {emailStatus === 'failed' && (
+                                    <AiOutlineClose className="email--status" />
+                                )}
+                                {emailStatus === 'success' && (
+                                    <AiOutlineCheck className="email--status" />
+                                )}
+                            </span>
+                        </button>
                     </div>
+                    {emailStatus === 'failed' && (
+                        <p className="email--error">
+                            Unexpected Error occured please send email again
+                        </p>
+                    )}
                 </form>
             </div>
         </>

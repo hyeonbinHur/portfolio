@@ -26,6 +26,7 @@ export default function Header() {
                     <a
                         href="https://github.com/hyeonbinHur"
                         className="header--link"
+                        target="_blank"
                     >
                         <img
                             src={Git}
@@ -39,6 +40,7 @@ export default function Header() {
                     <a
                         href="https://www.linkedin.com/in/hyeonbin-hur-755a87319/"
                         className="header--link"
+                        target="_blank"
                     >
                         <BsLinkedin className="header--logo__linked-in" />
                         Linked in
@@ -48,6 +50,7 @@ export default function Header() {
                     <a
                         href="https://uncle-hyeonb.tistory.com/"
                         className="header--link"
+                        target="_blank"
                     >
                         <img
                             src={Tstory}
