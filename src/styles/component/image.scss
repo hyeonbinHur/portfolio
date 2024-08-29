@@ -1,5 +1,4 @@
 @use 'sass:math';
-
 .image {
     &--heading {
         font-size: 2rem;
@@ -27,7 +26,6 @@
             transform: scale(1);
         }
     }
-
     &--prev {
         left: 3%;
     }
@@ -37,7 +35,7 @@
     @for $i from 2 through 10 {
         &--container__#{$i} {
             height: 80%;
-            width: #{($i + 1) * 10}rem; // 변수 없이 직접 계산하여 사용
+            width: #{($i + 1) * 10}rem;
             display: flex;
             margin: auto;
             align-items: end;
@@ -75,6 +73,7 @@
             position: fixed;
             $calculated-margin: $i * 5rem;
             margin-left: $calculated-margin;
+            
         }
         &--#{$i} {
             width: 20rem;
@@ -85,6 +84,7 @@
             position: fixed;
             $calculated-margin: $i * 10rem;
             margin-left: $calculated-margin;
+            
         }
     }
 }

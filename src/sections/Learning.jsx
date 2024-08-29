@@ -21,7 +21,7 @@ export default function Learning() {
                     <img
                         className="learning--image"
                         src="https://skillicons.dev/icons?i=react&theme=light"
-                        alt="Android Studio logo"
+                        alt="Ract logo"
                     />
                     <h3 className="learning--name">React</h3>
                 </div>
@@ -29,7 +29,7 @@ export default function Learning() {
                     <img
                         className="learning--image"
                         src="https://skillicons.dev/icons?i=jest&theme=light"
-                        alt="Android Studio logo"
+                        alt="Jest logo"
                     />
                     <h3 className="learning--name">Jest</h3>
                 </div>
@@ -37,7 +37,7 @@ export default function Learning() {
                     <img
                         className="learning--image"
                         src="https://skillicons.dev/icons?i=ts&theme=light"
-                        alt="Android Studio logo"
+                        alt="TypeScript logo"
                     />
                     <h3 className="learning--name">TypeScript</h3>
                 </div>

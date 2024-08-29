@@ -8,7 +8,7 @@ export default function CPTDetail_1() {
             <header className="detail--header__main">
                 <img
                     src={Cpt}
-                    alt="Name Gacha logo"
+                    alt="Capston project management logo"
                     className="cpt-detail--logo"
                 />
                 &#124; RMIT Students' capstone project management system
@@ -62,7 +62,7 @@ export default function CPTDetail_1() {
             </table>
             <img
                 src={Background}
-                alt="Namge Gacha Detail page background image"
+                alt="Cpastone project detail page background image"
                 className="detail--background"
             />
         </div>

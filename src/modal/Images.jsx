@@ -282,7 +282,10 @@ const ImageModal = forwardRef(function ImageModal(props, ref) {
                         className="image--prev"
                         onClick={() => setCurrentIdx((prev) => prev - 1)}
                     >
-                        <GrPrevious className="image--prev" />
+                        <GrPrevious
+                            className="image--prev"
+                            aria-label="Previous image"
+                        />
                     </button>
                 )}
 
@@ -291,13 +294,17 @@ const ImageModal = forwardRef(function ImageModal(props, ref) {
                         className="image--next"
                         onClick={() => setCurrentIdx((prev) => prev + 1)}
                     >
-                        <GrNext className="image--next" />
+                        <GrNext
+                            className="image--next"
+                            aria-label="Next image"
+                        />
                     </button>
                 )}
 
                 <AiOutlineClose
                     onClick={() => ref.current.close()}
                     className="modal--close__image"
+                    aria-label="Close image modal"
                 />
                 <div
                     className={`image--container image--container__${
@@ -308,6 +315,7 @@ const ImageModal = forwardRef(function ImageModal(props, ref) {
                         return (
                             <img
                                 src={URL.createObjectURL(image)} // create url using blob
+                                alt="Project views"
                                 key={index}
                                 className={`${
                                     isResponsive

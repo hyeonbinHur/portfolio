@@ -21,10 +21,12 @@ export default function PocketDetail_3() {
                     <AiFillPlaySquare
                         onClick={() => handleOpenVideoModal('Pocket_auth')}
                         className="detail__video"
+                        aria-label="Pocket authentication views"
                     />
                     <BiImageAlt
                         className="detail__gallery"
                         onClick={() => handleOpenImageModal('Pocket_auth')}
+                        aria-label="Pocket authentication video"
                     />
                 </li>
                 <li className="content--features__li">
@@ -32,10 +34,12 @@ export default function PocketDetail_3() {
                     <AiFillPlaySquare
                         onClick={() => handleOpenVideoModal('Pocket_main')}
                         className="detail__video"
+                        aria-label="Pocket main page views"
                     />
                     <BiImageAlt
                         className="detail__gallery"
                         onClick={() => handleOpenImageModal('Pocket_main')}
+                        aria-label="Pocket main page views video"
                     />
                 </li>
                 <li className="content--features__li">
@@ -43,10 +47,12 @@ export default function PocketDetail_3() {
                     <AiFillPlaySquare
                         onClick={() => handleOpenVideoModal('Pocket_location')}
                         className="detail__video"
+                        aria-label="Pocket location setting views"
                     />
                     <BiImageAlt
                         className="detail__gallery"
                         onClick={() => handleOpenImageModal('Pocket_location')}
+                        aria-label="Pocket location setting video"
                     />
                 </li>
                 <li className="content--features__li">
@@ -54,10 +60,12 @@ export default function PocketDetail_3() {
                     <AiFillPlaySquare
                         onClick={() => handleOpenVideoModal('Pocket_personal')}
                         className="detail__video"
+                        aria-label="Pocket personal page views"
                     />
                     <BiImageAlt
                         className="detail__gallery"
                         onClick={() => handleOpenImageModal('Pocket_personal')}
+                        aria-label="Pocket personal page video"
                     />
                 </li>
                 <li className="content--features__li">
@@ -65,10 +73,12 @@ export default function PocketDetail_3() {
                     <AiFillPlaySquare
                         onClick={() => handleOpenVideoModal('Pocket_chatting')}
                         className="detail__video"
+                        aria-label="Pocket realtime chatting views"
                     />
                     <BiImageAlt
                         className="detail__gallery"
                         onClick={() => handleOpenImageModal('Pocket_chatting')}
+                        aria-label="Pocket realtime chatting video"
                     />
                 </li>
                 <li className="content--features__li">
@@ -76,10 +86,12 @@ export default function PocketDetail_3() {
                     <AiFillPlaySquare
                         onClick={() => handleOpenVideoModal('Pocket_comment')}
                         className="detail__video"
+                        aria-label="Pocket comment and reply views"
                     />
                     <BiImageAlt
                         className="detail__gallery"
                         onClick={() => handleOpenImageModal('Pocket_comment')}
+                        aria-label="Pocket comment and reply video"
                     />
                 </li>
                 <li className="content--features__li">
@@ -89,12 +101,14 @@ export default function PocketDetail_3() {
                             handleOpenVideoModal('Pocket_create_post')
                         }
                         className="detail__video"
+                        aria-label="Pocket create post views"
                     />
                     <BiImageAlt
                         className="detail__gallery"
                         onClick={() =>
                             handleOpenImageModal('Pocket_create_post')
                         }
+                        aria-label="Pocket create post video"
                     />
                 </li>
                 <li className="content--features__li">
@@ -104,12 +118,14 @@ export default function PocketDetail_3() {
                             handleOpenVideoModal('Pocket_update_post')
                         }
                         className="detail__video"
+                        aria-label="Pocket update and delete post views"
                     />
                     <BiImageAlt
                         className="detail__gallery"
                         onClick={() =>
                             handleOpenImageModal('Pocket_update_post')
                         }
+                        aria-label="Pocket update and delete post video"
                     />
                 </li>
             </ul>

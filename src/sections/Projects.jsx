@@ -63,7 +63,11 @@ export default function Projects() {
                             May.2024 - July.2024 (2 Months)
                         </span>
                         <div className="project--image">
-                            <img className="project--image__ng" src={NG}></img>
+                            <img
+                                className="project--image__ng"
+                                alt="Name Gacha logo"
+                                src={NG}
+                            ></img>
                         </div>
                         <div className="project--text">
                             <div className="project--name">Name Gacha</div>
@@ -79,6 +83,7 @@ export default function Projects() {
                                         <img
                                             src={Git}
                                             className="project--git"
+                                            alt="GitHub logo"
                                         />
                                         <a
                                             href="https://github.com/hyeonbinHur/Name_Gacha_aws_lambda"
@@ -91,6 +96,7 @@ export default function Projects() {
                                         <img
                                             src={Git}
                                             className="project--git"
+                                            alt="GitHub logo"
                                         />
                                         <a
                                             href="https://github.com/hyeonbinHur/namegacha_frontend"
@@ -100,7 +106,10 @@ export default function Projects() {
                                         </a>
                                     </p>
                                     <p className="project--basic-info__link__3">
-                                        <BsEyeFill className="project--live" />
+                                        <BsEyeFill
+                                            className="project--live"
+                                            aria-label="Name chacha live serer link"
+                                        />
                                         <a
                                             href="https://hyeonbinhur.github.io/namegacha/"
                                             className="link"
@@ -138,6 +147,7 @@ export default function Projects() {
                             <img
                                 className="project--image__pocket"
                                 src={Pocket}
+                                alt="Pocket logo"
                             ></img>
                         </div>
                         <div className="project--text">
@@ -154,6 +164,7 @@ export default function Projects() {
                                         <img
                                             src={Git}
                                             className="project--git"
+                                            alt="GitHub logo"
                                         />
                                         <a
                                             href="https://github.com/hyeonbinHur/DDock-DDock"
@@ -189,6 +200,7 @@ export default function Projects() {
                             <img
                                 className="project--image__cpt"
                                 src={Cpt}
+                                alt="Capstone project logo"
                             ></img>
                         </div>
                         <div className="project--text">
@@ -205,6 +217,7 @@ export default function Projects() {
                                         <img
                                             src={Git}
                                             className="project--git"
+                                            alt="Github logo"
                                         />
                                         <a
                                             href="https://github.com/hyeonbinHur/CapstoneProjectManagementSystem"

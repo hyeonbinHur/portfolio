@@ -7,7 +7,7 @@ export default function PocketDetail_1() {
             <header className="pocket-detail--header__main">
                 <img
                     src={Pocket}
-                    alt="Pocket Gacha logo"
+                    alt="Pocket logo"
                     className="pocket-detail--logo"
                 />
                 &#124; Second hand trading service for poeple living in
@@ -65,7 +65,7 @@ export default function PocketDetail_1() {
             </table>
             <img
                 src={Background}
-                alt="Namge Gacha Detail page background image"
+                alt="Pocket Detail page background image"
                 className="detail--background"
             />
         </div>

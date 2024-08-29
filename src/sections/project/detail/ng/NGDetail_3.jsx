@@ -1,5 +1,21 @@
 import ERD from '../../../../assets/projects/ng-erd.png';
 
 export default function NGDetail_3() {
-    return <img src={ERD} alt="Name Gacha erd" className="detail--erd" />;
+    return (
+        <div
+            style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                height: '100%',
+            }}
+        >
+            <img
+                style={{ width: '95%' }}
+                src={ERD}
+                alt="Name Gacha erd"
+                className="detail--erd"
+            />
+        </div>
+    );
 }

@@ -12,36 +12,60 @@ export default function Skills() {
             <h3 className="heading--tertiary skills--heading">Skills</h3>
             <div className="skills--container">
                 <div className="skills--card ">
-                    <img src={React} alt="" className="skills--image" />
+                    <img
+                        src={React}
+                        alt="React logo"
+                        className="skills--image"
+                    />
                     <h3 className="skills--name">React</h3>
                 </div>
                 <div className="skills--card ">
-                    <img src={redux} alt="" className="skills--image" />
+                    <img
+                        src={redux}
+                        alt="Redux logo"
+                        className="skills--image"
+                    />
                     <h3 className="skills--name">Redux</h3>
                 </div>
                 <div className="skills--card">
-                    <img src={query} alt="" className="skills--image" />
+                    <img
+                        src={query}
+                        alt="React Query logo"
+                        className="skills--image"
+                    />
                     <h3 className="skills--name">React Query</h3>
                 </div>
                 <div className="skills--card ">
-                    <img src={JS} alt="" className="skills--image" />
+                    <img
+                        src={JS}
+                        alt="JavaScript logo"
+                        className="skills--image"
+                    />
                     <h3 className="skills--name">JavaScript</h3>
                 </div>
                 <div className="skills--card ">
-                    <img src={SASS} alt="" className="skills--image" />
-                    <h3 className="skills--name">SCSS</h3>
+                    <img src={SASS} alt="SASS logo" className="skills--image" />
+                    <h3 className="skills--name">SASS</h3>
                 </div>
                 <div className="skills--card ">
-                    <img src={AWS} alt="" className="skills--image" />
+                    <img src={AWS} alt="AWS logo" className="skills--image" />
                     <h3 className="skills--name">AWS</h3>
                 </div>
                 <div className="skills--card ">
-                    <img src={Fire} alt="" className="skills--image" />
+                    <img
+                        src={Fire}
+                        alt="Firebase logo"
+                        className="skills--image"
+                    />
                     <h3 className="skills--name">Firebase</h3>
                 </div>
                 <div className="skills--card ">
-                    <img src={Pg} alt="" className="skills--image" />
-                    <h3 className="skills--name">postgreSQL</h3>
+                    <img
+                        src={Pg}
+                        alt="PostgrSQL logo"
+                        className="skills--image"
+                    />
+                    <h3 className="skills--name">PostgreSQL</h3>
                 </div>
             </div>
         </>

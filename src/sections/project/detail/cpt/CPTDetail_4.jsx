@@ -26,10 +26,12 @@ export default function CPTDetail_4() {
                     <AiFillPlaySquare
                         className="detail__video"
                         onClick={() => handleOpenVideoModal('CPT_auth')}
+                        aria-label="Open capstone project authenticaion views"
                     />
                     <BiImageAlt
                         className="detail__gallery"
                         onClick={() => handleOpenImageModal('CPT_auth')}
+                        aria-label="Open capstone project authenticaion video"
                     />
                 </li>
                 <li className="content--features__li">
@@ -39,12 +41,14 @@ export default function CPTDetail_4() {
                         onClick={() =>
                             handleOpenVideoModal('CPT_create_project')
                         }
+                        aria-label="Open capstone project create project views"
                     />
                     <BiImageAlt
                         className="detail__gallery"
                         onClick={() =>
                             handleOpenImageModal('CPT_create_project')
                         }
+                        aria-label="Open capstone project create project video"
                     />
                 </li>
                 <li className="content--features__li">
@@ -54,12 +58,14 @@ export default function CPTDetail_4() {
                         onClick={() =>
                             handleOpenVideoModal('CPT_delete_project')
                         }
+                        aria-label="Open capstone project delete project views"
                     />
                     <BiImageAlt
                         className="detail__gallery"
                         onClick={() =>
                             handleOpenImageModal('CPT_delete_project')
                         }
+                        aria-label="Open capstone project delete project video"
                     />
                 </li>
                 <li className="content--features__li">
@@ -69,12 +75,14 @@ export default function CPTDetail_4() {
                         onClick={() =>
                             handleOpenVideoModal('CPT_review_project')
                         }
+                        aria-label="Open capstone project review project views"
                     />
                     <BiImageAlt
                         className="detail__gallery"
                         onClick={() =>
                             handleOpenImageModal('CPT_review_project')
                         }
+                        aria-label="Open capstone project review project video"
                     />
                 </li>
                 <li className="content--features__li">
@@ -84,12 +92,14 @@ export default function CPTDetail_4() {
                         onClick={() =>
                             handleOpenVideoModal('CPT_apply_project')
                         }
+                        aria-label="Open capstone project apply project views"
                     />
                     <BiImageAlt
                         className="detail__gallery"
                         onClick={() =>
                             handleOpenImageModal('CPT_apply_project')
                         }
+                        aria-label="Open capstone project apply project video"
                     />
                 </li>
                 <li className="content--features__li">
@@ -99,12 +109,14 @@ export default function CPTDetail_4() {
                         onClick={() =>
                             handleOpenVideoModal('CPT_create_join_group')
                         }
+                        aria-label="Open capstone project create group views"
                     />
                     <BiImageAlt
                         className="detail__gallery"
                         onClick={() =>
                             handleOpenImageModal('CPT_create_join_group')
                         }
+                        aria-label="Open capstone project create group video"
                     />
                 </li>
                 <li className="content--features__li">
@@ -114,12 +126,14 @@ export default function CPTDetail_4() {
                         onClick={() =>
                             handleOpenVideoModal('CPT_update_project')
                         }
+                        aria-label="Open capstone project update project views"
                     />
                     <BiImageAlt
                         className="detail__gallery"
                         onClick={() =>
                             handleOpenImageModal('CPT_update_project')
                         }
+                        aria-label="Open capstone project update project video"
                     />
                 </li>
                 <li className="content--features__li">
@@ -127,6 +141,7 @@ export default function CPTDetail_4() {
                     <BiImageAlt
                         className="detail__gallery"
                         onClick={() => handleOpenImageModal('CPT_diagrams')}
+                        aria-label="Open capstone project diagrams"
                     />
                 </li>
             </ul>

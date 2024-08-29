@@ -41,7 +41,10 @@ export default function Contact() {
             <div className="contact--container">
                 <div className="contact--email">
                     <div className="contact--icon__container">
-                        <AiOutlineMail className="contact--icon" />
+                        <AiOutlineMail
+                            className="contact--icon"
+                            aria-label="Email icon"
+                        />
                     </div>
                     <div className="contact--email__container">
                         <div className="contact--email__address">
@@ -55,7 +58,10 @@ export default function Contact() {
 
                 <div className="contact--sns">
                     <div className="contact--icon__container">
-                        <AiOutlineLinkedin className="contact--icon__link" />
+                        <AiOutlineLinkedin
+                            aria-label="Linkedin icon"
+                            className="contact--icon__link"
+                        />
                     </div>
                     <a
                         href="https://www.linkedin.com/in/hyeonbin-hur-755a87319/"
@@ -67,7 +73,10 @@ export default function Contact() {
                 </div>
                 <div className="contact--sns">
                     <div className="contact--icon__container">
-                        <BsGithub className="contact--icon__github" />
+                        <BsGithub
+                            aria-label="Github icon"
+                            className="contact--icon__github"
+                        />
                     </div>
                     <a
                         href="https://github.com/hyeonbinHur"
@@ -150,19 +159,29 @@ export default function Contact() {
                             send
                             <span>
                                 {emailStatus === 'idle' && (
-                                    <BsSend className="email--status" />
+                                    <BsSend
+                                        aria-label="Send email icon"
+                                        className="email--status"
+                                    />
                                 )}
                                 {emailStatus === 'loading' && (
                                     <img
                                         src={Spinner}
                                         className="email--status"
+                                        alt="Loading, please wait while the email is being sent."
                                     />
                                 )}
                                 {emailStatus === 'failed' && (
-                                    <AiOutlineClose className="email--status" />
+                                    <AiOutlineClose
+                                        className="email--status"
+                                        aria-label="Email failed to sends"
+                                    />
                                 )}
                                 {emailStatus === 'success' && (
-                                    <AiOutlineCheck className="email--status" />
+                                    <AiOutlineCheck
+                                        className="email--status"
+                                        aria-label="Email successfully sent"
+                                    />
                                 )}
                             </span>
                         </button>

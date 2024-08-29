@@ -42,7 +42,10 @@ export default function Header() {
                         className="header--link"
                         target="_blank"
                     >
-                        <BsLinkedin className="header--logo__linked-in" />
+                        <BsLinkedin
+                            className="header--logo__linked-in"
+                            aria-label="LinkedIn logo"
+                        />
                         Linked in
                     </a>
                 </li>

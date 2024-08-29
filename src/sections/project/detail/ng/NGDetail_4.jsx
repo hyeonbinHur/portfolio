@@ -22,10 +22,12 @@ export default function NGDetail_4() {
                     <AiFillPlaySquare
                         className="detail__video"
                         onClick={() => handleOpenVideoModal('NG_auth')}
+                        aria-label="Open name gacha authentication views"
                     />
                     <BiImageAlt
                         className="detail__gallery"
                         onClick={() => handleOpenImageModal('NG_auth')}
+                        aria-label="Open name gacha authentication video"
                     />
                 </li>
                 <li className="content--features__li">
@@ -33,10 +35,12 @@ export default function NGDetail_4() {
                     <AiFillPlaySquare
                         className="detail__video"
                         onClick={() => handleOpenVideoModal('NG_chatting')}
+                        aria-label="Open name gacha ai chatting views"
                     />
                     <BiImageAlt
                         className="detail__gallery"
                         onClick={() => handleOpenImageModal('NG_chatting')}
+                        aria-label="Open name gacha ai chatting video"
                     />
                 </li>
                 <li className="content--features__li">
@@ -44,10 +48,12 @@ export default function NGDetail_4() {
                     <AiFillPlaySquare
                         className="detail__video"
                         onClick={() => handleOpenVideoModal('NG_sidebar')}
+                        aria-label="Open name gacha sidebar views"
                     />
                     <BiImageAlt
                         className="detail__gallery"
                         onClick={() => handleOpenImageModal('NG_sidebar')}
+                        aria-label="Open name gacha sidebar video"
                     />
                 </li>
                 <li className="content--features__li">
@@ -55,10 +61,12 @@ export default function NGDetail_4() {
                     <AiFillPlaySquare
                         className="detail__video"
                         onClick={() => handleOpenVideoModal('NG_detail')}
+                        aria-label="Open name gacha detail page views"
                     />
                     <BiImageAlt
                         className="detail__gallery"
                         onClick={() => handleOpenImageModal('NG_detail')}
+                        aria-label="Open name gacha detail page video"
                     />
                 </li>
                 {/* <li className="content--features__li">
@@ -73,14 +81,16 @@ export default function NGDetail_4() {
                     />
                 </li> */}
                 <li className="content--features__li">
-                    Responsible Design
+                    Responsive Design
                     <AiFillPlaySquare
                         className="detail__video"
                         onClick={() => handleOpenVideoModal('NG_response')}
+                        aria-label="Open name gacha responsive views"
                     />
                     <BiImageAlt
                         className="detail__gallery"
                         onClick={() => handleOpenImageModal('NG_response')}
+                        aria-label="Open name gacha responsive view video"
                     />
                 </li>
             </ul>

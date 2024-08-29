@@ -27,7 +27,10 @@ export default function NGDetail_5() {
                     </a>
                 </li>
                 <li className="link__3 link">
-                    <BsEyeFill className="link--eye" />
+                    <BsEyeFill
+                        className="link--eye"
+                        aria-label="Live server svg"
+                    />
                     Live sever : &nbsp;
                     <a href="https://hyeonbinhur.github.io/namegacha/"> here</a>
                 </li>

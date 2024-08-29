@@ -12,7 +12,9 @@ export default function PocketDetail_2() {
             <img
                 src={Architecture}
                 alt="Pocket project architecture"
-                className="detail--architecture"
+                style={{
+                    width: '100%',
+                }}
             />
         </div>
     );

@@ -46,7 +46,7 @@ export default function NGDetail() {
             <header className="content__header">
                 <label htmlFor="detail_toggle__4">
                     <span className="detail--close">
-                        <AiOutlineClose />
+                        <AiOutlineClose aria-label="Close Name gacha detail" />
                     </span>
                 </label>
                 <span className="content--title__current">{currentTitle}</span>
@@ -58,7 +58,7 @@ export default function NGDetail() {
                     onClick={() => setCurrent((prev) => prev - 1)}
                     className="content--prev"
                 >
-                    <GrPrevious />
+                    <GrPrevious aria-label="Previous name gacha detail" />
                 </button>
             )}
             {current < max && (
@@ -66,7 +66,7 @@ export default function NGDetail() {
                     onClick={() => setCurrent((prev) => prev + 1)}
                     className="content--next"
                 >
-                    <GrNext />
+                    <GrNext aria-label="Next name gacha detail" />
                 </button>
             )}
             <main className="content--body">

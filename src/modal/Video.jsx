@@ -73,6 +73,7 @@ const VideoModal = forwardRef(function VideoModal(props, ref) {
                 <AiOutlineClose
                     onClick={() => ref.current.close()}
                     className="modal--close"
+                    aria-label="Close video modal"
                 />
                 <ReactPlayer
                     url={videoUrl}

@@ -25,7 +25,7 @@ export default function PocketDetail() {
             <header className="content__header">
                 <label htmlFor="detail_toggle__3" className="detail--close">
                     <span>
-                        <AiOutlineClose />
+                        <AiOutlineClose aria-label="Close Pocket detail" />
                     </span>
                 </label>
                 <span className="content--title">Pocket</span>
@@ -35,7 +35,7 @@ export default function PocketDetail() {
                     onClick={() => setCurrent((prev) => prev - 1)}
                     className="content--prev"
                 >
-                    <GrPrevious />
+                    <GrPrevious aria-label="Previous Pocket detail" />
                 </button>
             )}
             {current < max && (
@@ -43,7 +43,7 @@ export default function PocketDetail() {
                     onClick={() => setCurrent((prev) => prev + 1)}
                     className="content--next"
                 >
-                    <GrNext />
+                    <GrNext aria-label="Next Pocket detail" />
                 </button>
             )}
 
