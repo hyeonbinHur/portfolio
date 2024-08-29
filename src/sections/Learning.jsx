@@ -5,18 +5,18 @@ export default function Learning() {
     return (
         <>
             <h3 className="learning--heading">
-                <img src={Learn} className="learning--heading__logo" />{' '}
+                <img src={Learn} className="learning--heading__logo" />
                 Currently Learning
             </h3>
             <p className="learning--paragraph">
-                While trying to complete multiple projects, I am understanding
-                myself better, identifying my weaknesses and strengths. I
-                usually focused on implementing new features, but these days, I
-                am striving to create solid programs. Although these programs
-                may not include many features, I aim to handle errors as much as
-                possible. Additionally, I am studying advanced CSS with SCSS,
-                which is one of the most fundamental skills for a Front-End
-                Engineer.
+                While trying to complete multiple projects, I was able to
+                understand myself better, identifying my strengths and
+                weaknesses. I usually focused on implementing new features, but
+                these days, I am striving to create solid programs. Although
+                these programs may not include many features, I aim to handle
+                errors as much as possible. Additionally, I am studying advanced
+                CSS with SCSS, which is one of the most fundamental skills for a
+                Front-End Engineer.
             </p>
             <div className="row learning--card__container">
                 <div className="col-1-of-3 learning--card__1 learning--card">

@@ -5,7 +5,9 @@ import ML from '../assets/logos/ml.png';
 export default function Experience() {
     return (
         <>
-            <h3 className="heading--tertiary experience--header">Experience</h3>
+            <h3 className="heading--tertiary experience--header">
+                Experiences
+            </h3>
             <div className="experience--container">
                 <div className="experience--text">
                     <div className="experience--text__content">
