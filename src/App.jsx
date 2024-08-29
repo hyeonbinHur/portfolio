@@ -7,6 +7,7 @@ import Learning from './sections/Learning';
 import Footer from './sections/Footer';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import Experience from './sections/Experience';
+import Contact from './sections/Contact';
 
 const queryClient = new QueryClient({
     defaultOptions: {
@@ -38,6 +39,9 @@ function App() {
                     </section>
                     <section className="currently-learning">
                         <Learning />
+                    </section>
+                    <section className="contact">
+                        <Contact />
                     </section>
                     <footer className="footer">
                         <Footer />
