@@ -1,4 +1,6 @@
 import Learn from '../assets/logos/learn.png';
+import React from '../assets/logos/react.png';
+
 export default function Learning() {
     return (
         <>
@@ -20,7 +22,7 @@ export default function Learning() {
                 <div className="col-1-of-3 learning--card__1 learning--card">
                     <img
                         className="learning--image"
-                        src="https://skillicons.dev/icons?i=react&theme=light"
+                        src={React}
                         alt="Ract logo"
                     />
                     <h3 className="learning--name">React</h3>

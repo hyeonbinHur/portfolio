@@ -13,7 +13,7 @@ export default function PocketDetail_2() {
                 src={Architecture}
                 alt="Pocket project architecture"
                 style={{
-                    width: '100%',
+                    maxWidth: '80%',
                 }}
             />
         </div>
