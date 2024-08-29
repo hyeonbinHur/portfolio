@@ -11,7 +11,7 @@ export default function NGDetail_3() {
             }}
         >
             <img
-                style={{ width: '95%' }}
+                style={{ maxHeight: '100%', maxWidth: '60%' }}
                 src={ERD}
                 alt="Name Gacha erd"
                 className="detail--erd"
