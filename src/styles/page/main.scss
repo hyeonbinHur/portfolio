@@ -39,8 +39,12 @@
     z-index: 2;
 }
 .currently-learning {
-    background-color: rgba($color-brown-dark, .7);
+    background-color: rgba($color-brown-dark, .9);
     padding: 4rem 4rem;
+    background-image: url(../assets/images/background-test.png);
+    background-position: center;
+    background-size: cover;
+  
 }
 .footer {
     background-color: $color-grey-dark-3;
