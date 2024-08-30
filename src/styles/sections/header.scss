@@ -35,10 +35,27 @@
     &--image {
         width: 40rem;
         height: 40rem;
-        border-radius: 5px;
-        background-image: url(../assets/images/profile.jpg);
-        background-position: center;
+        // border-radius: 50%;
+        background-image: url(../assets/images/profile_2.png);
+        background-position: top;
         background-size: cover;
+        position: relative;
+        // border: 1px solid red;
+        // &::after {
+        //     position: absolute;
+        //     top: 50%;
+        //     left: 30%;
+        //     // transform: translate(-30%, -50%);
+        //     content: '';
+        //     background-color: transparent;
+        //     width: 50.8%;
+        //     height: 102%;
+        //     border-top-right-radius: 200px;
+        //     border-bottom-right-radius: 200px;
+        //     border: 10px solid $color-white;
+        //     z-index: -1;            
+        // }
+
         &-container {
             @include absCustom(40%, 30%);
             @include respond(tap-lg){
@@ -77,10 +94,12 @@
 
     &--links {
         position: absolute;
-        bottom: 15%;
+        bottom: -70%;
         left: 50%;
         transform: translate(-50%, 15%);
         display: flex;
+        width: 100rem;
+        justify-content: center;
         &__1,
         &__2 {
             list-style: none;

@@ -37,7 +37,7 @@ export default function Contact() {
 
     return (
         <>
-            <h3 className="heading--tertiary">Get in touch</h3>
+            <h3 className="heading--tertiary contact--header">Get in touch</h3>
             <div className="contact--container">
                 <div className="contact--email">
                     <div className="contact--icon__container">

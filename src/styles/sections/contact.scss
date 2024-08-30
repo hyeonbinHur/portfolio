@@ -70,7 +70,7 @@
         height: 4rem;
         width: 100%;
         cursor: pointer;
-        background-color: $color-green-dark;
+        background-color: $color-brown-dark;
         border: 1px solid $color-grey;
         outline: none;
         text-transform: uppercase;
@@ -94,6 +94,9 @@
     }
 }
 .contact {
+    &--header{
+        color:$color-brown-dark;
+    }
     &--container {
         display: grid;
         grid-template-columns: repeat(2, minmax(min-content, 1fr));

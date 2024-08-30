@@ -28,7 +28,9 @@ export default function CPTDetail() {
             <header className="content__header">
                 <label htmlFor="detail_toggle__2">
                     <span className="detail--close">
-                        <AiOutlineClose aria-label="Close capstone project detail" />
+                        <AiOutlineClose 
+                        aria-label="Close capstone project detail" 
+                        />
                     </span>
                 </label>
                 {/* <img src={Cpt} alt="" className="content__logo" /> */}
@@ -39,7 +41,9 @@ export default function CPTDetail() {
                     onClick={() => setCurrent((prev) => prev - 1)}
                     className="content--prev"
                 >
-                    <GrPrevious aria-label="Previous capstone project detail" />
+                    <GrPrevious 
+                    aria-label="Previous capstone project detail" 
+                    />
                 </button>
             )}
             {current < max && (
@@ -47,7 +51,9 @@ export default function CPTDetail() {
                     onClick={() => setCurrent((prev) => prev + 1)}
                     className="content--next"
                 >
-                    <GrNext aria-label="Next capstone project detail" />
+                    <GrNext
+                     aria-label="Next capstone project detail"
+                      />
                 </button>
             )}
 

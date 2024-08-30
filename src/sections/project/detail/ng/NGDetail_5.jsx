@@ -11,7 +11,10 @@ export default function NGDetail_5() {
                         className="link--logo"
                     />
                     GitHub Front-End : &nbsp;
-                    <a href="https://github.com/hyeonbinHur/namegacha_frontend">
+                    <a
+                        href="https://github.com/hyeonbinHur/namegacha_frontend"
+                        target="_blank"
+                    >
                         here
                     </a>
                 </li>
@@ -22,7 +25,10 @@ export default function NGDetail_5() {
                         className="link--logo"
                     />
                     GitHub Back-End : &nbsp;
-                    <a href="https://github.com/hyeonbinHur/Name_Gacha_aws_lambda">
+                    <a
+                        href="https://github.com/hyeonbinHur/Name_Gacha_aws_lambda"
+                        target="_blank"
+                    >
                         here
                     </a>
                 </li>
@@ -32,7 +38,13 @@ export default function NGDetail_5() {
                         aria-label="Live server svg"
                     />
                     Live sever : &nbsp;
-                    <a href="https://hyeonbinhur.github.io/namegacha/"> here</a>
+                    <a
+                        href="https://hyeonbinhur.github.io/namegacha/"
+                        target="_blank"
+                    >
+                        {' '}
+                        here
+                    </a>
                 </li>
                 <li className="link__4 link">
                     Test ID : <span>&nbsp; test7</span>

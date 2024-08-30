@@ -3,12 +3,15 @@
     display: flex;
     background-image: linear-gradient(90deg, rgba($color-green-dark, .8) 0%,
             rgba($color-green-dark, .8) 35%,
-            rgba($color-brown-dark, 1) 35%), url(../assets/images/forest.jpg);
+            rgba($color-white, 1) 35%,
+            rgba($color-white, 1) 35.5%,
+            rgba($color-brown-dark, 1) 35%), url(../assets/images/background2.jpg);
     background-position: center;
     clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
 
- 
+
 }
+
 .projects {
     padding: 15vh 3vh;
     margin-top: -10vh;
@@ -18,12 +21,14 @@
     background-image: url(../assets/images/background-test.png);
     background-position: center;
     background-size: cover;
-  
+
 }
+
 .about {
     height: 100vh;
     // margin-top: -15vh;
 }
+
 .education {
     height: 115vh;
     margin-top: -15vh;
@@ -39,9 +44,10 @@
     grid-template-columns: minmax(5rem, 1fr) repeat(3, minmax(min-content, 50rem)) minmax(5rem, 1fr);
     padding: 5vh 3vh;
     min-height: 110vh;
-    background-color: rgba($color-brown-dark, .93);
+    background-image: linear-gradient(90deg, rgba($color-brown-dark, .95) 0%, rgba($color-brown-dark, .95) 100%), url(../assets/images/background2.jpg);
     z-index: 2;
 }
+
 .currently-learning {
     background-color: rgba($color-brown-dark, .9);
     padding: 4rem 4rem;
@@ -49,13 +55,15 @@
     background-position: center;
     background-size: cover;
     padding-bottom: 12rem;
-  
+
 }
+
 .footer {
     background-color: $color-grey-dark-3;
 }
-.animation{
-    &--right{
+
+.animation {
+    &--right {
         position: absolute;
         height: 100vh;
         top: 0;
@@ -65,7 +73,8 @@
         background-color: $color-brown-dark;
         opacity: 0;
     }
-    &--bottom{
+
+    &--bottom {
         position: absolute;
         width: 100vw;
         bottom: 0;
@@ -76,7 +85,8 @@
         background-color: $color-green-dark;
     }
 }
-.contact{
+
+.contact {
     padding: 0vh 3vh;
 
     background-color: $color-grey-dark-1;
