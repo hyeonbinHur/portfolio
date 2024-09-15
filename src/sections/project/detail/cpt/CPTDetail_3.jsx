@@ -10,7 +10,7 @@ export default function CPTDetail_3() {
             }}
         >
             <img
-                style={{ width: '100%' }}
+                style={{ width: '70%', maxHeight: '100%' }}
                 src={ClassDiagram}
                 alt="Capstone project class diagram"
             />

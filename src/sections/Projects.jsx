@@ -141,7 +141,7 @@ export default function Projects() {
                     <div className="project--card">
                         <div className="project--team">Personal Project</div>
                         <span className="project--period">
-                            May.2024 - July.2024 (2 Months)
+                            March.2024 - May.2024 (2 Months)
                         </span>
                         <div className="project--image">
                             <img
@@ -194,7 +194,7 @@ export default function Projects() {
                     <div className="project--card">
                         <div className="project--team">Group of 4</div>
                         <span className="project--period">
-                            May.2024 - July.2024 (2 Months)
+                            March.2023 - June.2023 (4 Months)
                         </span>
                         <div className="project--image">
                             <img

@@ -16,8 +16,8 @@ export default function Header() {
                 <div className="header--text">
                     <span className="header--iam">Hi! I am </span>
                     <span className="header--name">Hur HyeonBin (Max) </span>
-                    <span className="header--role__1">Front-End Developer</span>
                     <span className="header--role__2">React Developer</span>
+                    <span className="header--role__2">Software Developer</span>
                     <ul className="header--links">
                         <li className="header--links__1">
                             <a
