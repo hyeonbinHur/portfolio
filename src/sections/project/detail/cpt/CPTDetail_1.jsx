@@ -15,8 +15,8 @@ export default function CPTDetail_1() {
             </header>
 
             <header className="detail--header__sub">
-                This project is for RMIT Capstone project that helps interaction
-                between student, school and industry.
+                This web service is for the RMIT Capstone project that required
+                interaction between students, schools, and industry.
             </header>
 
             <h3 style={{ marginBottom: '2rem', fontSize: '2rem' }}>
