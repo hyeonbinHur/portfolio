@@ -15,8 +15,8 @@ export default function CPTDetail_1() {
             </header>
 
             <header className="detail--header__sub">
-                This is a web service where AI suggests names for identifiers to
-                developers who struggle with naming.
+                This project is for RMIT Capstone project that helps interaction
+                between student, school and industry.
             </header>
 
             <h3 style={{ marginBottom: '2rem', fontSize: '2rem' }}>

@@ -10,7 +10,9 @@ export default function Skills() {
     return (
         <>
             <h3 className="heading--tertiary skills--heading">Skills</h3>
-            <h3 className="heading--quarternary skills--heading">Proficient</h3>
+            <h3 className="heading--quarternary skills--heading__2">
+                Proficient
+            </h3>
             <div className="skills--container">
                 <div className="skills--card ">
                     <img
